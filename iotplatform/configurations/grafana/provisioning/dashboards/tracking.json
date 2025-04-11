@@ -1,0 +1,627 @@
+{
+    "annotations":
+    {
+        "list":
+        [
+            {
+                "builtIn": 1,
+                "datasource":
+                {
+                    "type": "grafana",
+                    "uid": "-- Grafana --"
+                },
+                "enable": true,
+                "hide": true,
+                "iconColor": "rgba(0, 211, 255, 1)",
+                "name": "Annotations & Alerts",
+                "type": "dashboard"
+            }
+        ]
+    },
+    "editable": true,
+    "fiscalYearStartMonth": 0,
+    "graphTooltip": 0,
+    "id": 7,
+    "links":
+    [],
+    "liveNow": false,
+    "panels":
+    [
+        {
+            "datasource":
+            {
+                "type": "influxdb",
+                "uid": "P951FEA4DE68E13C5"
+            },
+            "fieldConfig":
+            {
+                "defaults":
+                {
+                    "mappings":
+                    [],
+                    "thresholds":
+                    {
+                        "mode": "absolute",
+                        "steps":
+                        [
+                            {
+                                "color": "green",
+                                "value": null
+                            },
+                            {
+                                "color": "red",
+                                "value": 80
+                            }
+                        ]
+                    },
+                    "unit": "short",
+                    "unitScale": true
+                },
+                "overrides":
+                []
+            },
+            "gridPos":
+            {
+                "h": 5,
+                "w": 4,
+                "x": 0,
+                "y": 0
+            },
+            "id": 5,
+            "options":
+            {
+                "colorMode": "value",
+                "graphMode": "area",
+                "justifyMode": "auto",
+                "orientation": "auto",
+                "reduceOptions":
+                {
+                    "calcs":
+                    [
+                        "lastNotNull"
+                    ],
+                    "fields": "",
+                    "values": false
+                },
+                "showPercentChange": false,
+                "textMode": "auto",
+                "wideLayout": true
+            },
+            "pluginVersion": "10.3.1",
+            "targets":
+            [
+                {
+                    "datasource":
+                    {
+                        "type": "influxdb",
+                        "uid": "P951FEA4DE68E13C5"
+                    },
+                    "query": "from(bucket: \"main\")\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\n  |> filter(fn: (r) => r[\"_measurement\"] == \"total_mileage\")\n  |> filter(fn: (r) => r[\"_field\"] == \"value\")\n  |> group(columns: [\"device_IMEI\"])\n  |> keep(columns: [\"_value\", \"_time\"])\n  |> aggregateWindow(every: v.windowPeriod, fn: last, createEmpty: false)\n  |> yield(name: \"mean\")",
+                    "refId": "A"
+                }
+            ],
+            "title": "Denní nájezd",
+            "transformations":
+            [
+                {
+                    "id": "calculateField",
+                    "options":
+                    {
+                        "binary":
+                        {
+                            "left": "Value",
+                            "operator": "/",
+                            "right": "1000"
+                        },
+                        "mode": "binary",
+                        "reduce":
+                        {
+                            "reducer": "sum"
+                        },
+                        "replaceFields": true
+                    }
+                }
+            ],
+            "type": "stat"
+        },
+        {
+            "datasource":
+            {
+                "type": "datasource",
+                "uid": "-- Dashboard --"
+            },
+            "fieldConfig":
+            {
+                "defaults":
+                {
+                    "color":
+                    {
+                        "mode": "continuous-GrYlRd"
+                    },
+                    "mappings":
+                    [],
+                    "thresholds":
+                    {
+                        "mode": "absolute",
+                        "steps":
+                        [
+                            {
+                                "color": "green",
+                                "value": null
+                            },
+                            {
+                                "color": "red",
+                                "value": 80
+                            }
+                        ]
+                    },
+                    "unit": "none",
+                    "unitScale": true
+                },
+                "overrides":
+                [
+                    {
+                        "matcher":
+                        {
+                            "id": "byName",
+                            "options": "speed"
+                        },
+                        "properties":
+                        [
+                            {
+                                "id": "unit",
+                                "value": "velocitykmh"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "gridPos":
+            {
+                "h": 5,
+                "w": 3,
+                "x": 4,
+                "y": 0
+            },
+            "id": 6,
+            "options":
+            {
+                "colorMode": "value",
+                "graphMode": "none",
+                "justifyMode": "auto",
+                "orientation": "auto",
+                "reduceOptions":
+                {
+                    "calcs":
+                    [
+                        "mean"
+                    ],
+                    "fields": "/^speed 353201357544748$/",
+                    "values": false
+                },
+                "showPercentChange": false,
+                "textMode": "auto",
+                "wideLayout": true
+            },
+            "pluginVersion": "10.3.1",
+            "targets":
+            [
+                {
+                    "datasource":
+                    {
+                        "type": "datasource",
+                        "uid": "-- Dashboard --"
+                    },
+                    "panelId": 3,
+                    "refId": "A"
+                }
+            ],
+            "title": "Průměrná rychlost",
+            "transformations":
+            [],
+            "type": "stat"
+        },
+        {
+            "datasource":
+            {
+                "type": "datasource",
+                "uid": "-- Dashboard --"
+            },
+            "fieldConfig":
+            {
+                "defaults":
+                {
+                    "color":
+                    {
+                        "mode": "continuous-GrYlRd"
+                    },
+                    "mappings":
+                    [],
+                    "thresholds":
+                    {
+                        "mode": "absolute",
+                        "steps":
+                        [
+                            {
+                                "color": "green",
+                                "value": null
+                            },
+                            {
+                                "color": "red",
+                                "value": 80
+                            }
+                        ]
+                    },
+                    "unit": "none",
+                    "unitScale": true
+                },
+                "overrides":
+                [
+                    {
+                        "matcher":
+                        {
+                            "id": "byName",
+                            "options": "speed"
+                        },
+                        "properties":
+                        [
+                            {
+                                "id": "unit",
+                                "value": "velocitykmh"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "gridPos":
+            {
+                "h": 5,
+                "w": 3,
+                "x": 7,
+                "y": 0
+            },
+            "id": 7,
+            "options":
+            {
+                "colorMode": "value",
+                "graphMode": "none",
+                "justifyMode": "auto",
+                "orientation": "auto",
+                "reduceOptions":
+                {
+                    "calcs":
+                    [
+                        "max"
+                    ],
+                    "fields": "/^speed 353201357544748$/",
+                    "values": false
+                },
+                "showPercentChange": false,
+                "textMode": "auto",
+                "wideLayout": true
+            },
+            "pluginVersion": "10.3.1",
+            "targets":
+            [
+                {
+                    "datasource":
+                    {
+                        "type": "datasource",
+                        "uid": "-- Dashboard --"
+                    },
+                    "panelId": 3,
+                    "refId": "A"
+                }
+            ],
+            "title": "Maximální rychlost",
+            "transformations":
+            [],
+            "type": "stat"
+        },
+        {
+            "datasource":
+            {
+                "type": "influxdb",
+                "uid": "P951FEA4DE68E13C5"
+            },
+            "fieldConfig":
+            {
+                "defaults":
+                {
+                    "color":
+                    {
+                        "mode": "continuous-GrYlRd"
+                    },
+                    "custom":
+                    {
+                        "hideFrom":
+                        {
+                            "legend": false,
+                            "tooltip": false,
+                            "viz": false
+                        }
+                    },
+                    "mappings":
+                    [],
+                    "thresholds":
+                    {
+                        "mode": "absolute",
+                        "steps":
+                        [
+                            {
+                                "color": "green",
+                                "value": null
+                            },
+                            {
+                                "color": "red",
+                                "value": 80
+                            }
+                        ]
+                    },
+                    "unit": "none",
+                    "unitScale": true
+                },
+                "overrides":
+                [
+                    {
+                        "matcher":
+                        {
+                            "id": "byName",
+                            "options": "speed"
+                        },
+                        "properties":
+                        [
+                            {
+                                "id": "unit",
+                                "value": "velocitykmh"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "gridPos":
+            {
+                "h": 18,
+                "w": 13,
+                "x": 11,
+                "y": 0
+            },
+            "id": 3,
+            "options":
+            {
+                "basemap":
+                {
+                    "config":
+                    {},
+                    "name": "Layer 0",
+                    "type": "default"
+                },
+                "controls":
+                {
+                    "mouseWheelZoom": true,
+                    "showAttribution": true,
+                    "showDebug": false,
+                    "showMeasure": false,
+                    "showScale": false,
+                    "showZoom": true
+                },
+                "layers":
+                [
+                    {
+                        "config":
+                        {
+                            "showLegend": true,
+                            "style":
+                            {
+                                "color":
+                                {
+                                    "field": "speed",
+                                    "fixed": "dark-green"
+                                },
+                                "opacity": 0.2,
+                                "rotation":
+                                {
+                                    "fixed": 0,
+                                    "max": 360,
+                                    "min": -360,
+                                    "mode": "mod"
+                                },
+                                "size":
+                                {
+                                    "field": "speed",
+                                    "fixed": 5,
+                                    "max": 3,
+                                    "min": 1
+                                },
+                                "symbol":
+                                {
+                                    "fixed": "img/icons/marker/circle.svg",
+                                    "mode": "fixed"
+                                },
+                                "symbolAlign":
+                                {
+                                    "horizontal": "center",
+                                    "vertical": "center"
+                                },
+                                "textConfig":
+                                {
+                                    "fontSize": 12,
+                                    "offsetX": 0,
+                                    "offsetY": 0,
+                                    "textAlign": "center",
+                                    "textBaseline": "middle"
+                                }
+                            }
+                        },
+                        "location":
+                        {
+                            "mode": "auto"
+                        },
+                        "name": "Layer 1",
+                        "tooltip": true,
+                        "type": "markers"
+                    }
+                ],
+                "tooltip":
+                {
+                    "mode": "details"
+                },
+                "view":
+                {
+                    "allLayers": true,
+                    "id": "fit",
+                    "lat": 0,
+                    "lon": 0,
+                    "zoom": 15
+                }
+            },
+            "pluginVersion": "10.3.1",
+            "targets":
+            [
+                {
+                    "datasource":
+                    {
+                        "type": "influxdb",
+                        "uid": "P951FEA4DE68E13C5"
+                    },
+                    "query": "from(bucket: \"main\")\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\n  |> filter(fn: (r) => r[\"_measurement\"] == \"movement\") // Filter relevant measurement\n  |> keep(columns: [\"latitude\", \"longitude\", \"speed\", \"_time\", \"device_IMEI\"]) // Retain relevant columns\n  |> group(columns: [\"device_IMEI\"]) // Group only by device_IMEI\n  |> window(every: 30s) // Group data into 5-minute intervals\n  |> map(fn: (r) => ({\n      r with \n      speed: float(v: r[\"speed\"]) // Convert speed to float\n  })) // Convert speed to float while preserving other columns\n  |> last(column: \"latitude\") // Get the last latitude for each interval\n  |> last(column: \"longitude\") // Get the last longitude for each interval\n  |> last(column: \"speed\") // Get the last speed for each interval\n  |> keep(columns: [\"_time\", \"device_IMEI\", \"latitude\", \"longitude\", \"speed\"])\n  |> yield(name: \"last_values_every_5_minutes\")\n  \n",
+                    "refId": "A"
+                }
+            ],
+            "title": "Panel Title",
+            "transformations":
+            [
+                {
+                    "id": "organize",
+                    "options":
+                    {
+                        "excludeByName":
+                        {
+                            "latitude 353201357544748": false,
+                            "longitude 353201357544748": false
+                        },
+                        "includeByName":
+                        {},
+                        "indexByName":
+                        {},
+                        "renameByName":
+                        {}
+                    }
+                }
+            ],
+            "type": "geomap"
+        },
+        {
+            "datasource":
+            {
+                "type": "influxdb",
+                "uid": "P951FEA4DE68E13C5"
+            },
+            "fieldConfig":
+            {
+                "defaults":
+                {
+                    "color":
+                    {
+                        "mode": "continuous-RdYlGr"
+                    },
+                    "custom":
+                    {
+                        "fillOpacity": 70,
+                        "hideFrom":
+                        {
+                            "legend": false,
+                            "tooltip": false,
+                            "viz": false
+                        },
+                        "insertNulls": false,
+                        "lineWidth": 0,
+                        "spanNulls": false
+                    },
+                    "fieldMinMax": false,
+                    "mappings":
+                    [],
+                    "thresholds":
+                    {
+                        "mode": "absolute",
+                        "steps":
+                        [
+                            {
+                                "color": "red",
+                                "value": null
+                            },
+                            {
+                                "color": "green",
+                                "value": 1
+                            }
+                        ]
+                    },
+                    "unitScale": true
+                },
+                "overrides":
+                []
+            },
+            "gridPos":
+            {
+                "h": 8,
+                "w": 11,
+                "x": 0,
+                "y": 5
+            },
+            "id": 4,
+            "options":
+            {
+                "alignValue": "center",
+                "legend":
+                {
+                    "displayMode": "table",
+                    "placement": "bottom",
+                    "showLegend": true
+                },
+                "mergeValues": true,
+                "rowHeight": 0.9,
+                "showValue": "always",
+                "tooltip":
+                {
+                    "mode": "single",
+                    "sort": "none"
+                }
+            },
+            "targets":
+            [
+                {
+                    "datasource":
+                    {
+                        "type": "influxdb",
+                        "uid": "P951FEA4DE68E13C5"
+                    },
+                    "query": "from(bucket: \"main\")\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\n  |> filter(fn: (r) => r[\"_measurement\"] == \"movement\")\n  |> filter(fn: (r) => r[\"_field\"] == \"value\")\n  |> keep(columns: [\"_value\", \"_time\"])\n  |> aggregateWindow(every: 30s, fn: last, createEmpty: false)\n  |> yield(name: \"mean\")",
+                    "refId": "A"
+                }
+            ],
+            "title": "Pohyb vozidla",
+            "type": "state-timeline"
+        }
+    ],
+    "refresh": "",
+    "schemaVersion": 39,
+    "tags":
+    [],
+    "templating":
+    {
+        "list":
+        []
+    },
+    "time":
+    {
+        "from": "now/d",
+        "to": "now/d"
+    },
+    "timepicker":
+    {},
+    "timezone": "",
+    "title": "tracking",
+    "uid": "c29ffcae-0852-45a0-b7db-9bd781fe69b1",
+    "version": 15,
+    "weekStart": ""
+}

@@ -1,0 +1,50 @@
+version: '3.8'
+
+services:
+  influxdb:
+    image: influxdb:2.7.10
+    container_name: influxdb
+    restart: always
+    ports:
+      - "8086:8086"
+    volumes:
+      - ~/iotplatform/configurations/influxdb/influxdb.conf:/etc/influxdb/influxdb.conf
+      - ~/iotplatform/influx_data:/var/lib/influxdb2
+    networks:
+      - grafana_network
+
+  fastapi:
+    build: ./fastapi_app
+    container_name: fastapi
+    restart: always
+    environment:
+      INFLUX_TOKEN: viGZA7zu-lkoFQpplbBZjTezXAKvmxRwziZFcU-xzF0Qq_wiERbCc6tbFVQ7cDW2WlHOunAALlUuyGdlgU0FDg==
+      INFLUX_ORG: 9934126df83fdfe2
+    ports:
+      - "80:8000"
+    depends_on:
+      - influxdb
+    volumes:
+      - ~/iotplatform/fastapi_data:/app/data
+    networks:
+      - grafana_network
+
+  grafana:
+    image: grafana/grafana:10.3.1
+    container_name: grafana
+    restart: always
+    ports:
+      - "3000:3000"
+    depends_on:
+      - influxdb
+    environment:
+      GF_SECURITY_ADMIN_PASSWORD: fI4Qur7Y7p46MEFqbZy0iosM
+    volumes:
+      - ~/iotplatform/configurations/grafana:/etc/grafana
+      - ~/iotplatform/grafana_data:/var/lib/grafana
+    networks:
+      - grafana_network
+
+
+networks:
+  grafana_network:
