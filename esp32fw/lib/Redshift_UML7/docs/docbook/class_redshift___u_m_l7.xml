@@ -1,0 +1,1992 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_redshift___u_m_l7" xml:lang="en-US">
+<title>Redshift_UML7 Class Reference</title>
+<indexterm><primary>Redshift_UML7</primary></indexterm>
+<para>
+
+<para>Class to interface with the UM7 sensor. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;Redshift_UML7.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_redshift___u_m_l7_1ae347879fc59c484a4a896d1bcb2d5e5a">Redshift_UML7</link> (Stream &amp;serial)</para>
+
+<para>Constructor for the <link linkend="_class_redshift___u_m_l7">Redshift_UML7</link> class. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_redshift___u_m_l7_1a382fd7bf140d8a22c515c36b18e33f44"/>void <emphasis role="strong">begin</emphasis> ()</para>
+
+<para>Initializes the UM7 sensor. </para>
+</listitem>
+            <listitem><para>String <link linkend="_class_redshift___u_m_l7_1a384c44d7960485756d1ae4f49d3d0a51">getData</link> ()</para>
+
+<para>Retrieves data from the UM7 sensor. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_redshift___u_m_l7_1abe5f0512e1e1884276de7141d7b4d6b0">sendCommand</link> (const String &amp;command)</para>
+
+<para>Sends a command to the UM7 sensor. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_redshift___u_m_l7_1adb719463f0d5f83a685aa6e9692796be">setBaudRate</link> (unsigned long baudRate)</para>
+
+<para>Sets the baud rate for communication. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_redshift___u_m_l7_1a6b748b23609691e123cb6fe65f9b6c3e">parseNmeaPacket</link> (String nmeaString)</para>
+
+<para>Parses an NMEA packet. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_redshift___u_m_l7_1a5cb2858c8ed0b98b58e6915a5111b7e1">read_register_data</link> (uint8_t registerAddress, uint8_t *data, size_t length)</para>
+
+<para>Reads register data. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_redshift___u_m_l7_1adf3f3fc98cdb959768a9ffcebc4b6231">sendBinaryCommand</link> (uint8_t command)</para>
+
+<para>Sends a binary command to the UM7 sensor. </para>
+</listitem>
+            <listitem><para>float <link linkend="_class_redshift___u_m_l7_1a45807306c8b1b3a3c63634e2f8f98155">read_register_as_float</link> (uint8_t *data)</para>
+
+<para>Reads a register as a float value. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_redshift___u_m_l7_1a175c29d800706c78c3ff31280745608c">readPacket</link> (<link linkend="__redshift___u_m_l7_8h_1ab61dddf71d3fb0bfa520aeae95099245">UM7_packet</link> &amp;packet, u_int8_t address)</para>
+
+<para>Reads a packet from the UM7 sensor. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_redshift___u_m_l7_1a94885049fd4d2559ae934c10d0673afe">readPacket</link> (<link linkend="__redshift___u_m_l7_8h_1ab61dddf71d3fb0bfa520aeae95099245">UM7_packet</link> &amp;packet, int packet_size, u_int8_t address)</para>
+
+<para>Reads a packet from the UM7 sensor. </para>
+</listitem>
+            <listitem><para>String <link linkend="_class_redshift___u_m_l7_1a51a32df641b7b5b632bec03277701f3d">getFirmwareVersion</link> ()</para>
+
+<para>Retrieves the firmware version of the UM7 sensor. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_redshift___u_m_l7_1a4848d863423685560bf6e2417a54d58c">getHealthData</link> (uint16_t &amp;time, uint8_t &amp;sats_used, uint8_t &amp;sats_in_view, float &amp;HDOP, uint8_t &amp;mode, uint8_t &amp;COM, uint8_t &amp;accel, uint8_t &amp;gyro, uint8_t &amp;mag, uint8_t &amp;GPS)</para>
+
+<para>Retrieves health data from the UM7 sensor. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_redshift___u_m_l7_1aacd97941f30f4227230f65ce66ad5b24">readRegister</link> (uint8_t registerAddress, uint8_t *data, size_t length)</para>
+
+<para>Reads the content of a register. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_redshift___u_m_l7_1adc8a43c42a8fbd849286260dfec0bcff">getTemperature</link> (float &amp;temp)</para>
+
+<para>Retrieves the temperature from the UM7 sensor. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_redshift___u_m_l7_1a86c9c530e64cadc757859398dd45d538">getGpsTime</link> (float &amp;gpsTime)</para>
+
+<para>Retrieves the GPS time from the UM7 sensor. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_redshift___u_m_l7_1a97f93d0f9008a2cd311e799b0c0c8b35">getHealthRegisterData</link> (uint16_t &amp;time, uint8_t &amp;sats_used, uint8_t &amp;sats_in_view, float &amp;HDOP, uint8_t &amp;mode, uint8_t &amp;COM, uint8_t &amp;accel, uint8_t &amp;gyro, uint8_t &amp;mag, uint8_t &amp;GPS)</para>
+
+<para>Retrieves health register data from the UM7 sensor. </para>
+</listitem>
+            <listitem><para>uint8_t <link linkend="_class_redshift___u_m_l7_1a3caf8fe1319aedf7cd298b271ea04edc">parse_serial_data</link> (uint8_t *rx_data, uint8_t rx_length, <link linkend="__redshift___u_m_l7_8h_1ab61dddf71d3fb0bfa520aeae95099245">UM7_packet</link> *packet, uint8_t expectedAddress)</para>
+
+<para>Parses serial data received from the UM7 sensor. </para>
+</listitem>
+            <listitem><para>float <link linkend="_class_redshift___u_m_l7_1aea2611cdc7c7d50b11043a23f694a5a6">getRoll</link> ()</para>
+
+<para>Retrieves the roll angle from the UM7 sensor. </para>
+</listitem>
+            <listitem><para>float <link linkend="_class_redshift___u_m_l7_1a5aeefa473cc213298734c859905fa43c">getPitch</link> ()</para>
+
+<para>Retrieves the pitch angle from the UM7 sensor. </para>
+</listitem>
+            <listitem><para>float <link linkend="_class_redshift___u_m_l7_1a34ff58826f81b6fd257891743b0f4601">getYaw</link> ()</para>
+
+<para>Retrieves the yaw angle from the UM7 sensor. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_redshift___u_m_l7_1af1d8a5a843c0524b9acd2b7edfcaca1a">getOrientation</link> (float &amp;yaw, float &amp;pitch, float &amp;roll)</para>
+
+<para>Retrieves the orientation (yaw, pitch, roll) from the UM7 sensor. </para>
+</listitem>
+            <listitem><para>float <link linkend="_class_redshift___u_m_l7_1a7f2369df1ad96711c54119f14a3b0129">getMagX</link> ()</para>
+
+<para>Retrieves the magnetometer X-axis data. </para>
+</listitem>
+            <listitem><para>float <link linkend="_class_redshift___u_m_l7_1a391c370eb34357a96868b78eba3b1592">getMagY</link> ()</para>
+
+<para>Retrieves the magnetometer Y-axis data. </para>
+</listitem>
+            <listitem><para>float <link linkend="_class_redshift___u_m_l7_1ad9730512fa68b36d82d81cd330d2cf11">getMagZ</link> ()</para>
+
+<para>Retrieves the magnetometer Z-axis data. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_redshift___u_m_l7_1a34d7e9f9fa094b4cc1924751d6da9b6c">getGyroProcZ</link> (float &amp;gyroZ)</para>
+
+<para>Retrieves the processed gyroscope Z-axis data. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_redshift___u_m_l7_1a13fd27638b5a6a00d8cf2f0727db00f8">resetToFactoryDefaults</link> ()</para>
+
+<para>Resets the UM7 sensor to factory defaults. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_redshift___u_m_l7_1a13873300ea3da88397cfcf0ac9ebde4e">zeroGyroscopes</link> ()</para>
+
+<para>Zeros the gyroscopes of the UM7 sensor. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_redshift___u_m_l7_1a52263799b45bca3e815a28f0c7c8fe8c">setHomePosition</link> ()</para>
+
+<para>Sets the home position for the UM7 sensor. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_redshift___u_m_l7_1a55a1027532cef713d5a70e57633a05de">resetEKF</link> ()</para>
+
+<para>Resets the Extended Kalman Filter (EKF) of the UM7 sensor. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_redshift___u_m_l7_1a96b3e4c39f0d579a3e80f5ae67a1ad8d">flashCommit</link> ()</para>
+
+<para>Commits the current configuration settings to FLASH. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_redshift___u_m_l7_1a2c23fce0a4b6f1483d4ac118006a1330">readDregData</link> (uint8_t dregAddress, uint8_t *data, size_t length)</para>
+
+<para>Reads data from a data register. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_redshift___u_m_l7_1a2ebb72f4d1e6bf2eecad45ff805ce233">getGyroRawMeasurements</link> (int16_t &amp;gyroX, int16_t &amp;gyroY, int16_t &amp;gyroZ)</para>
+
+<para>Retrieves raw gyroscope measurements. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_redshift___u_m_l7_1a629aba415fd0474447dda6a232535632">getAccelRawXY</link> (int16_t &amp;accelX, int16_t &amp;accelY)</para>
+
+<para>Retrieves raw accelerometer X and Y-axis measurements. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_redshift___u_m_l7_1a49706965e19a9ac9e4ee93446b635db8">getAccelRawZ</link> (int16_t &amp;accelZ)</para>
+
+<para>Retrieves raw accelerometer Z-axis measurements. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_redshift___u_m_l7_1a3018e9653d11ee5de4ca50cf7cef0b82">getGyroProcessedMeasurements</link> (<link linkend="_struct_gyro_measurement">GyroMeasurement</link> &amp;gyroData)</para>
+
+<para>Retrieves processed gyroscope measurements. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_redshift___u_m_l7_1a137001536d425d0495d7a7baed780192">getAccelRawMeasurements</link> (int16_t &amp;accelX, int16_t &amp;accelY, int16_t &amp;accelZ)</para>
+
+<para>Retrieves raw accelerometer measurements. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_redshift___u_m_l7_1a115b4c1c521a1540eae09931867986af">getAccelProcX</link> (float &amp;accelX)</para>
+
+<para>Retrieves processed accelerometer X-axis data. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_redshift___u_m_l7_1a2fe91d39b1a14c906fc49696f39aedcb">getAccelProcY</link> (float &amp;accelY)</para>
+
+<para>Retrieves processed accelerometer Y-axis data. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_redshift___u_m_l7_1ab816896dce19d17487e8edbafb9779dd">getAccelProcZ</link> (float &amp;accelZ)</para>
+
+<para>Retrieves processed accelerometer Z-axis data. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_redshift___u_m_l7_1a488d6ad2ee01f48adefc07c0d6cf6174">getGyroProcX</link> (float &amp;gyroX)</para>
+
+<para>Retrieves processed gyroscope X-axis data. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_redshift___u_m_l7_1ad9df8a0c099b03e2f72411aef9e8f36a">getGyroProcY</link> (float &amp;gyroY)</para>
+
+<para>Retrieves processed gyroscope Y-axis data. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_redshift___u_m_l7_1a57bc8c666408a94fa6446c4a5a5b2811">getAccelProcessedMeasurements</link> (float &amp;accelX, float &amp;accelY, float &amp;accelZ, float &amp;accelTime)</para>
+
+<para>Retrieves processed accelerometer measurements. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_redshift___u_m_l7_1a58593e4ed4de6764625b43da1ddf34d3"/>void <emphasis role="strong">printAllMeasurements</emphasis> ()</para>
+
+<para>Prints all measurements to the serial output. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_redshift___u_m_l7_1a602689d2745f2b2d5d56e70b6c1d32ae">getMagRawXY</link> (int16_t &amp;magX, int16_t &amp;magY)</para>
+
+<para>Retrieves raw magnetometer X and Y-axis measurements. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_redshift___u_m_l7_1a8265f4384802d0b519fbffab84b647f0">printPacket</link> (const <link linkend="__redshift___u_m_l7_8h_1ab61dddf71d3fb0bfa520aeae95099245">UM7_packet</link> &amp;packet)</para>
+
+<para>Prints the contents of a packet to the serial output. </para>
+</listitem>
+            <listitem><para>size_t <link linkend="_class_redshift___u_m_l7_1a8dc0c4be7140637c14c7886b9ca59738">readSerialData</link> (uint8_t *buffer, size_t bufferSize)</para>
+
+<para>Reads serial data from the UM7 sensor. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_redshift___u_m_l7_1af5855047d371f6499bb0b1a7d7b6caff">parsePacket</link> (const uint8_t *rx_data, size_t rx_length, <link linkend="__redshift___u_m_l7_8h_1ab61dddf71d3fb0bfa520aeae95099245">UM7_packet</link> &amp;packet, uint8_t expectedAddress)</para>
+
+<para>Parses a packet received from the UM7 sensor. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_redshift___u_m_l7_1a36cb8a1b0ac68768c9887901976d6d31">getMagneticData</link> (float &amp;magX, float &amp;magY, float &amp;magZ, float &amp;time)</para>
+
+<para>Retrieves magnetic data from the UM7 sensor. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_redshift___u_m_l7_1a0eff8f414e9834638fb4b24ca9ea130f">getGyroTime</link> (float &amp;time)</para>
+
+<para>Retrieves the gyroscope timestamp from the UM7 sensor. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_redshift___u_m_l7_1ad680e52c4bf660ad7eea6c6c1182bf7f">getAccelTime</link> (float &amp;time)</para>
+
+<para>Retrieves the accelerometer timestamp from the UM7 sensor. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_redshift___u_m_l7_1a1bc97183d7d857a10af6a69007b0fcde">getAccelRawMeasurements</link> (<link linkend="_struct_accel_measurement">AccelMeasurement</link> &amp;accelData)</para>
+
+<para>Retrieves raw accelerometer measurements. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_redshift___u_m_l7_1adfe050b2a56a708a605a62b68dd0123a">getMagRawMeasurements</link> (<link linkend="_struct_mag_measurement">MagMeasurement</link> &amp;magData)</para>
+
+<para>Retrieves raw magnetometer measurements. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Class to interface with the UM7 sensor. </para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_redshift___u_m_l7_1ae347879fc59c484a4a896d1bcb2d5e5a"/><section>
+    <title>Redshift_UML7()</title>
+<indexterm><primary>Redshift_UML7</primary><secondary>Redshift_UML7</secondary></indexterm>
+<indexterm><primary>Redshift_UML7</primary><secondary>Redshift_UML7</secondary></indexterm>
+<para><computeroutput>Redshift_UML7::Redshift_UML7 (Stream &amp; serial)</computeroutput></para><para>
+
+<para>Constructor for the <link linkend="_class_redshift___u_m_l7">Redshift_UML7</link> class. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>serial</entry><entry>
+<para>Reference to the serial stream used for communication. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_redshift___u_m_l7_1a96b3e4c39f0d579a3e80f5ae67a1ad8d"/><section>
+    <title>flashCommit()</title>
+<indexterm><primary>flashCommit</primary><secondary>Redshift_UML7</secondary></indexterm>
+<indexterm><primary>Redshift_UML7</primary><secondary>flashCommit</secondary></indexterm>
+<para><computeroutput>bool Redshift_UML7::flashCommit ( )</computeroutput></para><para>
+
+<para>Commits the current configuration settings to FLASH. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>True if the settings were successfully committed, false otherwise. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_redshift___u_m_l7_1a57bc8c666408a94fa6446c4a5a5b2811"/><section>
+    <title>getAccelProcessedMeasurements()</title>
+<indexterm><primary>getAccelProcessedMeasurements</primary><secondary>Redshift_UML7</secondary></indexterm>
+<indexterm><primary>Redshift_UML7</primary><secondary>getAccelProcessedMeasurements</secondary></indexterm>
+<para><computeroutput>bool Redshift_UML7::getAccelProcessedMeasurements (float &amp; accelX, float &amp; accelY, float &amp; accelZ, float &amp; accelTime)</computeroutput></para><para>
+
+<para>Retrieves processed accelerometer measurements. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>accelX</entry><entry>
+<para>Reference to store the processed accelerometer X-axis data. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>accelY</entry><entry>
+<para>Reference to store the processed accelerometer Y-axis data. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>accelZ</entry><entry>
+<para>Reference to store the processed accelerometer Z-axis data. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>accelTime</entry><entry>
+<para>Reference to store the timestamp of the accelerometer data. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>True if the data was successfully retrieved, false otherwise. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_redshift___u_m_l7_1a115b4c1c521a1540eae09931867986af"/><section>
+    <title>getAccelProcX()</title>
+<indexterm><primary>getAccelProcX</primary><secondary>Redshift_UML7</secondary></indexterm>
+<indexterm><primary>Redshift_UML7</primary><secondary>getAccelProcX</secondary></indexterm>
+<para><computeroutput>bool Redshift_UML7::getAccelProcX (float &amp; accelX)</computeroutput></para><para>
+
+<para>Retrieves processed accelerometer X-axis data. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>accelX</entry><entry>
+<para>Reference to store the processed accelerometer X-axis data. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>True if the data was successfully retrieved, false otherwise. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_redshift___u_m_l7_1a2fe91d39b1a14c906fc49696f39aedcb"/><section>
+    <title>getAccelProcY()</title>
+<indexterm><primary>getAccelProcY</primary><secondary>Redshift_UML7</secondary></indexterm>
+<indexterm><primary>Redshift_UML7</primary><secondary>getAccelProcY</secondary></indexterm>
+<para><computeroutput>bool Redshift_UML7::getAccelProcY (float &amp; accelY)</computeroutput></para><para>
+
+<para>Retrieves processed accelerometer Y-axis data. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>accelY</entry><entry>
+<para>Reference to store the processed accelerometer Y-axis data. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>True if the data was successfully retrieved, false otherwise. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_redshift___u_m_l7_1ab816896dce19d17487e8edbafb9779dd"/><section>
+    <title>getAccelProcZ()</title>
+<indexterm><primary>getAccelProcZ</primary><secondary>Redshift_UML7</secondary></indexterm>
+<indexterm><primary>Redshift_UML7</primary><secondary>getAccelProcZ</secondary></indexterm>
+<para><computeroutput>bool Redshift_UML7::getAccelProcZ (float &amp; accelZ)</computeroutput></para><para>
+
+<para>Retrieves processed accelerometer Z-axis data. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>accelZ</entry><entry>
+<para>Reference to store the processed accelerometer Z-axis data. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>True if the data was successfully retrieved, false otherwise. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_redshift___u_m_l7_1a1bc97183d7d857a10af6a69007b0fcde"/><section>
+    <title>getAccelRawMeasurements()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>getAccelRawMeasurements</primary><secondary>Redshift_UML7</secondary></indexterm>
+<indexterm><primary>Redshift_UML7</primary><secondary>getAccelRawMeasurements</secondary></indexterm>
+<para><computeroutput>bool Redshift_UML7::getAccelRawMeasurements (<link linkend="_struct_accel_measurement">AccelMeasurement</link> &amp; accelData)</computeroutput></para><para>
+
+<para>Retrieves raw accelerometer measurements. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>accelData</entry><entry>
+<para>Reference to an <link linkend="_struct_accel_measurement">AccelMeasurement</link> structure to store the data. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>True if the data was successfully retrieved, false otherwise. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_redshift___u_m_l7_1a137001536d425d0495d7a7baed780192"/><section>
+    <title>getAccelRawMeasurements()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>getAccelRawMeasurements</primary><secondary>Redshift_UML7</secondary></indexterm>
+<indexterm><primary>Redshift_UML7</primary><secondary>getAccelRawMeasurements</secondary></indexterm>
+<para><computeroutput>bool Redshift_UML7::getAccelRawMeasurements (int16_t &amp; accelX, int16_t &amp; accelY, int16_t &amp; accelZ)</computeroutput></para><para>
+
+<para>Retrieves raw accelerometer measurements. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>accelX</entry><entry>
+<para>Reference to store the raw accelerometer X-axis data. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>accelY</entry><entry>
+<para>Reference to store the raw accelerometer Y-axis data. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>accelZ</entry><entry>
+<para>Reference to store the raw accelerometer Z-axis data. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>True if the data was successfully retrieved, false otherwise. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_redshift___u_m_l7_1a629aba415fd0474447dda6a232535632"/><section>
+    <title>getAccelRawXY()</title>
+<indexterm><primary>getAccelRawXY</primary><secondary>Redshift_UML7</secondary></indexterm>
+<indexterm><primary>Redshift_UML7</primary><secondary>getAccelRawXY</secondary></indexterm>
+<para><computeroutput>bool Redshift_UML7::getAccelRawXY (int16_t &amp; accelX, int16_t &amp; accelY)</computeroutput></para><para>
+
+<para>Retrieves raw accelerometer X and Y-axis measurements. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>accelX</entry><entry>
+<para>Reference to store the raw accelerometer X-axis data. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>accelY</entry><entry>
+<para>Reference to store the raw accelerometer Y-axis data. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>True if the data was successfully retrieved, false otherwise. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_redshift___u_m_l7_1a49706965e19a9ac9e4ee93446b635db8"/><section>
+    <title>getAccelRawZ()</title>
+<indexterm><primary>getAccelRawZ</primary><secondary>Redshift_UML7</secondary></indexterm>
+<indexterm><primary>Redshift_UML7</primary><secondary>getAccelRawZ</secondary></indexterm>
+<para><computeroutput>bool Redshift_UML7::getAccelRawZ (int16_t &amp; accelZ)</computeroutput></para><para>
+
+<para>Retrieves raw accelerometer Z-axis measurements. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>accelZ</entry><entry>
+<para>Reference to store the raw accelerometer Z-axis data. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>True if the data was successfully retrieved, false otherwise. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_redshift___u_m_l7_1ad680e52c4bf660ad7eea6c6c1182bf7f"/><section>
+    <title>getAccelTime()</title>
+<indexterm><primary>getAccelTime</primary><secondary>Redshift_UML7</secondary></indexterm>
+<indexterm><primary>Redshift_UML7</primary><secondary>getAccelTime</secondary></indexterm>
+<para><computeroutput>bool Redshift_UML7::getAccelTime (float &amp; time)</computeroutput></para><para>
+
+<para>Retrieves the accelerometer timestamp from the UM7 sensor. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>time</entry><entry>
+<para>Reference to store the accelerometer timestamp. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>True if the timestamp was successfully retrieved, false otherwise. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_redshift___u_m_l7_1a384c44d7960485756d1ae4f49d3d0a51"/><section>
+    <title>getData()</title>
+<indexterm><primary>getData</primary><secondary>Redshift_UML7</secondary></indexterm>
+<indexterm><primary>Redshift_UML7</primary><secondary>getData</secondary></indexterm>
+<para><computeroutput>String Redshift_UML7::getData ( )</computeroutput></para><para>
+
+<para>Retrieves data from the UM7 sensor. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>A string containing the data. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_redshift___u_m_l7_1a51a32df641b7b5b632bec03277701f3d"/><section>
+    <title>getFirmwareVersion()</title>
+<indexterm><primary>getFirmwareVersion</primary><secondary>Redshift_UML7</secondary></indexterm>
+<indexterm><primary>Redshift_UML7</primary><secondary>getFirmwareVersion</secondary></indexterm>
+<para><computeroutput>String Redshift_UML7::getFirmwareVersion ( )</computeroutput></para><para>
+
+<para>Retrieves the firmware version of the UM7 sensor. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>A string containing the firmware version. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_redshift___u_m_l7_1a86c9c530e64cadc757859398dd45d538"/><section>
+    <title>getGpsTime()</title>
+<indexterm><primary>getGpsTime</primary><secondary>Redshift_UML7</secondary></indexterm>
+<indexterm><primary>Redshift_UML7</primary><secondary>getGpsTime</secondary></indexterm>
+<para><computeroutput>bool Redshift_UML7::getGpsTime (float &amp; gpsTime)</computeroutput></para><para>
+
+<para>Retrieves the GPS time from the UM7 sensor. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>gpsTime</entry><entry>
+<para>Reference to store the GPS time. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>True if the GPS time was successfully retrieved, false otherwise. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_redshift___u_m_l7_1a3018e9653d11ee5de4ca50cf7cef0b82"/><section>
+    <title>getGyroProcessedMeasurements()</title>
+<indexterm><primary>getGyroProcessedMeasurements</primary><secondary>Redshift_UML7</secondary></indexterm>
+<indexterm><primary>Redshift_UML7</primary><secondary>getGyroProcessedMeasurements</secondary></indexterm>
+<para><computeroutput>bool Redshift_UML7::getGyroProcessedMeasurements (<link linkend="_struct_gyro_measurement">GyroMeasurement</link> &amp; gyroData)</computeroutput></para><para>
+
+<para>Retrieves processed gyroscope measurements. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>gyroData</entry><entry>
+<para>Reference to a <link linkend="_struct_gyro_measurement">GyroMeasurement</link> structure to store the data. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>True if the data was successfully retrieved, false otherwise. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_redshift___u_m_l7_1a488d6ad2ee01f48adefc07c0d6cf6174"/><section>
+    <title>getGyroProcX()</title>
+<indexterm><primary>getGyroProcX</primary><secondary>Redshift_UML7</secondary></indexterm>
+<indexterm><primary>Redshift_UML7</primary><secondary>getGyroProcX</secondary></indexterm>
+<para><computeroutput>bool Redshift_UML7::getGyroProcX (float &amp; gyroX)</computeroutput></para><para>
+
+<para>Retrieves processed gyroscope X-axis data. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>gyroX</entry><entry>
+<para>Reference to store the processed gyroscope X-axis data. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>True if the data was successfully retrieved, false otherwise. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_redshift___u_m_l7_1ad9df8a0c099b03e2f72411aef9e8f36a"/><section>
+    <title>getGyroProcY()</title>
+<indexterm><primary>getGyroProcY</primary><secondary>Redshift_UML7</secondary></indexterm>
+<indexterm><primary>Redshift_UML7</primary><secondary>getGyroProcY</secondary></indexterm>
+<para><computeroutput>bool Redshift_UML7::getGyroProcY (float &amp; gyroY)</computeroutput></para><para>
+
+<para>Retrieves processed gyroscope Y-axis data. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>gyroY</entry><entry>
+<para>Reference to store the processed gyroscope Y-axis data. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>True if the data was successfully retrieved, false otherwise. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_redshift___u_m_l7_1a34d7e9f9fa094b4cc1924751d6da9b6c"/><section>
+    <title>getGyroProcZ()</title>
+<indexterm><primary>getGyroProcZ</primary><secondary>Redshift_UML7</secondary></indexterm>
+<indexterm><primary>Redshift_UML7</primary><secondary>getGyroProcZ</secondary></indexterm>
+<para><computeroutput>bool Redshift_UML7::getGyroProcZ (float &amp; gyroZ)</computeroutput></para><para>
+
+<para>Retrieves the processed gyroscope Z-axis data. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>gyroZ</entry><entry>
+<para>Reference to store the gyroscope Z-axis data. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>True if the data was successfully retrieved, false otherwise. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_redshift___u_m_l7_1a2ebb72f4d1e6bf2eecad45ff805ce233"/><section>
+    <title>getGyroRawMeasurements()</title>
+<indexterm><primary>getGyroRawMeasurements</primary><secondary>Redshift_UML7</secondary></indexterm>
+<indexterm><primary>Redshift_UML7</primary><secondary>getGyroRawMeasurements</secondary></indexterm>
+<para><computeroutput>bool Redshift_UML7::getGyroRawMeasurements (int16_t &amp; gyroX, int16_t &amp; gyroY, int16_t &amp; gyroZ)</computeroutput></para><para>
+
+<para>Retrieves raw gyroscope measurements. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>gyroX</entry><entry>
+<para>Reference to store the raw gyroscope X-axis data. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>gyroY</entry><entry>
+<para>Reference to store the raw gyroscope Y-axis data. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>gyroZ</entry><entry>
+<para>Reference to store the raw gyroscope Z-axis data. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>True if the data was successfully retrieved, false otherwise. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_redshift___u_m_l7_1a0eff8f414e9834638fb4b24ca9ea130f"/><section>
+    <title>getGyroTime()</title>
+<indexterm><primary>getGyroTime</primary><secondary>Redshift_UML7</secondary></indexterm>
+<indexterm><primary>Redshift_UML7</primary><secondary>getGyroTime</secondary></indexterm>
+<para><computeroutput>bool Redshift_UML7::getGyroTime (float &amp; time)</computeroutput></para><para>
+
+<para>Retrieves the gyroscope timestamp from the UM7 sensor. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>time</entry><entry>
+<para>Reference to store the gyroscope timestamp. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>True if the timestamp was successfully retrieved, false otherwise. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_redshift___u_m_l7_1a4848d863423685560bf6e2417a54d58c"/><section>
+    <title>getHealthData()</title>
+<indexterm><primary>getHealthData</primary><secondary>Redshift_UML7</secondary></indexterm>
+<indexterm><primary>Redshift_UML7</primary><secondary>getHealthData</secondary></indexterm>
+<para><computeroutput>bool Redshift_UML7::getHealthData (uint16_t &amp; time, uint8_t &amp; sats_used, uint8_t &amp; sats_in_view, float &amp; HDOP, uint8_t &amp; mode, uint8_t &amp; COM, uint8_t &amp; accel, uint8_t &amp; gyro, uint8_t &amp; mag, uint8_t &amp; GPS)</computeroutput></para><para>
+
+<para>Retrieves health data from the UM7 sensor. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>time</entry><entry>
+<para>Reference to store the time. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>sats_used</entry><entry>
+<para>Reference to store the number of satellites used. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>sats_in_view</entry><entry>
+<para>Reference to store the number of satellites in view. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>HDOP</entry><entry>
+<para>Reference to store the HDOP value. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>mode</entry><entry>
+<para>Reference to store the mode. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>COM</entry><entry>
+<para>Reference to store the COM value. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>accel</entry><entry>
+<para>Reference to store the accelerometer status. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>gyro</entry><entry>
+<para>Reference to store the gyroscope status. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>mag</entry><entry>
+<para>Reference to store the magnetometer status. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>GPS</entry><entry>
+<para>Reference to store the GPS status. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>True if the health data was successfully retrieved, false otherwise. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_redshift___u_m_l7_1a97f93d0f9008a2cd311e799b0c0c8b35"/><section>
+    <title>getHealthRegisterData()</title>
+<indexterm><primary>getHealthRegisterData</primary><secondary>Redshift_UML7</secondary></indexterm>
+<indexterm><primary>Redshift_UML7</primary><secondary>getHealthRegisterData</secondary></indexterm>
+<para><computeroutput>bool Redshift_UML7::getHealthRegisterData (uint16_t &amp; time, uint8_t &amp; sats_used, uint8_t &amp; sats_in_view, float &amp; HDOP, uint8_t &amp; mode, uint8_t &amp; COM, uint8_t &amp; accel, uint8_t &amp; gyro, uint8_t &amp; mag, uint8_t &amp; GPS)</computeroutput></para><para>
+
+<para>Retrieves health register data from the UM7 sensor. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>time</entry><entry>
+<para>Reference to store the time. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>sats_used</entry><entry>
+<para>Reference to store the number of satellites used. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>sats_in_view</entry><entry>
+<para>Reference to store the number of satellites in view. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>HDOP</entry><entry>
+<para>Reference to store the HDOP value. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>mode</entry><entry>
+<para>Reference to store the mode. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>COM</entry><entry>
+<para>Reference to store the COM value. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>accel</entry><entry>
+<para>Reference to store the accelerometer status. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>gyro</entry><entry>
+<para>Reference to store the gyroscope status. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>mag</entry><entry>
+<para>Reference to store the magnetometer status. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>GPS</entry><entry>
+<para>Reference to store the GPS status. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>True if the health register data was successfully retrieved, false otherwise. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_redshift___u_m_l7_1a36cb8a1b0ac68768c9887901976d6d31"/><section>
+    <title>getMagneticData()</title>
+<indexterm><primary>getMagneticData</primary><secondary>Redshift_UML7</secondary></indexterm>
+<indexterm><primary>Redshift_UML7</primary><secondary>getMagneticData</secondary></indexterm>
+<para><computeroutput>bool Redshift_UML7::getMagneticData (float &amp; magX, float &amp; magY, float &amp; magZ, float &amp; time)</computeroutput></para><para>
+
+<para>Retrieves magnetic data from the UM7 sensor. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>magX</entry><entry>
+<para>Reference to store the magnetometer X-axis data. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>magY</entry><entry>
+<para>Reference to store the magnetometer Y-axis data. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>magZ</entry><entry>
+<para>Reference to store the magnetometer Z-axis data. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>time</entry><entry>
+<para>Reference to store the timestamp of the magnetometer data. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>True if the data was successfully retrieved, false otherwise. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_redshift___u_m_l7_1adfe050b2a56a708a605a62b68dd0123a"/><section>
+    <title>getMagRawMeasurements()</title>
+<indexterm><primary>getMagRawMeasurements</primary><secondary>Redshift_UML7</secondary></indexterm>
+<indexterm><primary>Redshift_UML7</primary><secondary>getMagRawMeasurements</secondary></indexterm>
+<para><computeroutput>bool Redshift_UML7::getMagRawMeasurements (<link linkend="_struct_mag_measurement">MagMeasurement</link> &amp; magData)</computeroutput></para><para>
+
+<para>Retrieves raw magnetometer measurements. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>magData</entry><entry>
+<para>Reference to a <link linkend="_struct_mag_measurement">MagMeasurement</link> structure to store the data. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>True if the data was successfully retrieved, false otherwise. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_redshift___u_m_l7_1a602689d2745f2b2d5d56e70b6c1d32ae"/><section>
+    <title>getMagRawXY()</title>
+<indexterm><primary>getMagRawXY</primary><secondary>Redshift_UML7</secondary></indexterm>
+<indexterm><primary>Redshift_UML7</primary><secondary>getMagRawXY</secondary></indexterm>
+<para><computeroutput>bool Redshift_UML7::getMagRawXY (int16_t &amp; magX, int16_t &amp; magY)</computeroutput></para><para>
+
+<para>Retrieves raw magnetometer X and Y-axis measurements. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>magX</entry><entry>
+<para>Reference to store the raw magnetometer X-axis data. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>magY</entry><entry>
+<para>Reference to store the raw magnetometer Y-axis data. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>True if the data was successfully retrieved, false otherwise. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_redshift___u_m_l7_1a7f2369df1ad96711c54119f14a3b0129"/><section>
+    <title>getMagX()</title>
+<indexterm><primary>getMagX</primary><secondary>Redshift_UML7</secondary></indexterm>
+<indexterm><primary>Redshift_UML7</primary><secondary>getMagX</secondary></indexterm>
+<para><computeroutput>float Redshift_UML7::getMagX ( )</computeroutput></para><para>
+
+<para>Retrieves the magnetometer X-axis data. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>The magnetometer X-axis data. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_redshift___u_m_l7_1a391c370eb34357a96868b78eba3b1592"/><section>
+    <title>getMagY()</title>
+<indexterm><primary>getMagY</primary><secondary>Redshift_UML7</secondary></indexterm>
+<indexterm><primary>Redshift_UML7</primary><secondary>getMagY</secondary></indexterm>
+<para><computeroutput>float Redshift_UML7::getMagY ( )</computeroutput></para><para>
+
+<para>Retrieves the magnetometer Y-axis data. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>The magnetometer Y-axis data. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_redshift___u_m_l7_1ad9730512fa68b36d82d81cd330d2cf11"/><section>
+    <title>getMagZ()</title>
+<indexterm><primary>getMagZ</primary><secondary>Redshift_UML7</secondary></indexterm>
+<indexterm><primary>Redshift_UML7</primary><secondary>getMagZ</secondary></indexterm>
+<para><computeroutput>float Redshift_UML7::getMagZ ( )</computeroutput></para><para>
+
+<para>Retrieves the magnetometer Z-axis data. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>The magnetometer Z-axis data. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_redshift___u_m_l7_1af1d8a5a843c0524b9acd2b7edfcaca1a"/><section>
+    <title>getOrientation()</title>
+<indexterm><primary>getOrientation</primary><secondary>Redshift_UML7</secondary></indexterm>
+<indexterm><primary>Redshift_UML7</primary><secondary>getOrientation</secondary></indexterm>
+<para><computeroutput>bool Redshift_UML7::getOrientation (float &amp; yaw, float &amp; pitch, float &amp; roll)</computeroutput></para><para>
+
+<para>Retrieves the orientation (yaw, pitch, roll) from the UM7 sensor. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>yaw</entry><entry>
+<para>Reference to store the yaw angle. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>pitch</entry><entry>
+<para>Reference to store the pitch angle. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>roll</entry><entry>
+<para>Reference to store the roll angle. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>True if the orientation was successfully retrieved, false otherwise. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_redshift___u_m_l7_1a5aeefa473cc213298734c859905fa43c"/><section>
+    <title>getPitch()</title>
+<indexterm><primary>getPitch</primary><secondary>Redshift_UML7</secondary></indexterm>
+<indexterm><primary>Redshift_UML7</primary><secondary>getPitch</secondary></indexterm>
+<para><computeroutput>float Redshift_UML7::getPitch ( )</computeroutput></para><para>
+
+<para>Retrieves the pitch angle from the UM7 sensor. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>The pitch angle in degrees. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_redshift___u_m_l7_1aea2611cdc7c7d50b11043a23f694a5a6"/><section>
+    <title>getRoll()</title>
+<indexterm><primary>getRoll</primary><secondary>Redshift_UML7</secondary></indexterm>
+<indexterm><primary>Redshift_UML7</primary><secondary>getRoll</secondary></indexterm>
+<para><computeroutput>float Redshift_UML7::getRoll ( )</computeroutput></para><para>
+
+<para>Retrieves the roll angle from the UM7 sensor. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>The roll angle in degrees. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_redshift___u_m_l7_1adc8a43c42a8fbd849286260dfec0bcff"/><section>
+    <title>getTemperature()</title>
+<indexterm><primary>getTemperature</primary><secondary>Redshift_UML7</secondary></indexterm>
+<indexterm><primary>Redshift_UML7</primary><secondary>getTemperature</secondary></indexterm>
+<para><computeroutput>bool Redshift_UML7::getTemperature (float &amp; temp)</computeroutput></para><para>
+
+<para>Retrieves the temperature from the UM7 sensor. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>temp</entry><entry>
+<para>Reference to store the temperature value. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>True if the temperature was successfully retrieved, false otherwise. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_redshift___u_m_l7_1a34ff58826f81b6fd257891743b0f4601"/><section>
+    <title>getYaw()</title>
+<indexterm><primary>getYaw</primary><secondary>Redshift_UML7</secondary></indexterm>
+<indexterm><primary>Redshift_UML7</primary><secondary>getYaw</secondary></indexterm>
+<para><computeroutput>float Redshift_UML7::getYaw ( )</computeroutput></para><para>
+
+<para>Retrieves the yaw angle from the UM7 sensor. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>The yaw angle in degrees. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_redshift___u_m_l7_1a3caf8fe1319aedf7cd298b271ea04edc"/><section>
+    <title>parse_serial_data()</title>
+<indexterm><primary>parse_serial_data</primary><secondary>Redshift_UML7</secondary></indexterm>
+<indexterm><primary>Redshift_UML7</primary><secondary>parse_serial_data</secondary></indexterm>
+<para><computeroutput>uint8_t Redshift_UML7::parse_serial_data (uint8_t * rx_data, uint8_t rx_length, <link linkend="__redshift___u_m_l7_8h_1ab61dddf71d3fb0bfa520aeae95099245">UM7_packet</link> * packet, uint8_t expectedAddress)</computeroutput></para><para>
+
+<para>Parses serial data received from the UM7 sensor. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>rx_data</entry><entry>
+<para>Pointer to the buffer containing the received data. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>rx_length</entry><entry>
+<para>The length of the received data. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>packet</entry><entry>
+<para>Pointer to the packet structure to store the parsed data. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>expectedAddress</entry><entry>
+<para>The expected address of the packet. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The number of bytes parsed. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_redshift___u_m_l7_1a6b748b23609691e123cb6fe65f9b6c3e"/><section>
+    <title>parseNmeaPacket()</title>
+<indexterm><primary>parseNmeaPacket</primary><secondary>Redshift_UML7</secondary></indexterm>
+<indexterm><primary>Redshift_UML7</primary><secondary>parseNmeaPacket</secondary></indexterm>
+<para><computeroutput>bool Redshift_UML7::parseNmeaPacket (String nmeaString)</computeroutput></para><para>
+
+<para>Parses an NMEA packet. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>nmeaString</entry><entry>
+<para>The NMEA string to parse. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>True if parsing was successful, false otherwise. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_redshift___u_m_l7_1af5855047d371f6499bb0b1a7d7b6caff"/><section>
+    <title>parsePacket()</title>
+<indexterm><primary>parsePacket</primary><secondary>Redshift_UML7</secondary></indexterm>
+<indexterm><primary>Redshift_UML7</primary><secondary>parsePacket</secondary></indexterm>
+<para><computeroutput>bool Redshift_UML7::parsePacket (const uint8_t * rx_data, size_t rx_length, <link linkend="__redshift___u_m_l7_8h_1ab61dddf71d3fb0bfa520aeae95099245">UM7_packet</link> &amp; packet, uint8_t expectedAddress)</computeroutput></para><para>
+
+<para>Parses a packet received from the UM7 sensor. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>rx_data</entry><entry>
+<para>Pointer to the buffer containing the received data. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>rx_length</entry><entry>
+<para>The length of the received data. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>packet</entry><entry>
+<para>Reference to the packet structure to store the parsed data. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>expectedAddress</entry><entry>
+<para>The expected address of the packet. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>True if the packet was successfully parsed, false otherwise. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_redshift___u_m_l7_1a8265f4384802d0b519fbffab84b647f0"/><section>
+    <title>printPacket()</title>
+<indexterm><primary>printPacket</primary><secondary>Redshift_UML7</secondary></indexterm>
+<indexterm><primary>Redshift_UML7</primary><secondary>printPacket</secondary></indexterm>
+<para><computeroutput>void Redshift_UML7::printPacket (const <link linkend="__redshift___u_m_l7_8h_1ab61dddf71d3fb0bfa520aeae95099245">UM7_packet</link> &amp; packet)</computeroutput></para><para>
+
+<para>Prints the contents of a packet to the serial output. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>packet</entry><entry>
+<para>The packet to print. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_redshift___u_m_l7_1a45807306c8b1b3a3c63634e2f8f98155"/><section>
+    <title>read_register_as_float()</title>
+<indexterm><primary>read_register_as_float</primary><secondary>Redshift_UML7</secondary></indexterm>
+<indexterm><primary>Redshift_UML7</primary><secondary>read_register_as_float</secondary></indexterm>
+<para><computeroutput>float Redshift_UML7::read_register_as_float (uint8_t * data)</computeroutput></para><para>
+
+<para>Reads a register as a float value. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>data</entry><entry>
+<para>Pointer to the buffer containing the register data. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The float value read from the register. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_redshift___u_m_l7_1a5cb2858c8ed0b98b58e6915a5111b7e1"/><section>
+    <title>read_register_data()</title>
+<indexterm><primary>read_register_data</primary><secondary>Redshift_UML7</secondary></indexterm>
+<indexterm><primary>Redshift_UML7</primary><secondary>read_register_data</secondary></indexterm>
+<para><computeroutput>bool Redshift_UML7::read_register_data (uint8_t registerAddress, uint8_t * data, size_t length)</computeroutput></para><para>
+
+<para>Reads register data. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>registerAddress</entry><entry>
+<para>The address of the register to read. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>data</entry><entry>
+<para>Pointer to the buffer to store the read data. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>length</entry><entry>
+<para>The length of the data to read. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>True if the data was successfully read, false otherwise. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_redshift___u_m_l7_1a2c23fce0a4b6f1483d4ac118006a1330"/><section>
+    <title>readDregData()</title>
+<indexterm><primary>readDregData</primary><secondary>Redshift_UML7</secondary></indexterm>
+<indexterm><primary>Redshift_UML7</primary><secondary>readDregData</secondary></indexterm>
+<para><computeroutput>bool Redshift_UML7::readDregData (uint8_t dregAddress, uint8_t * data, size_t length)</computeroutput></para><para>
+
+<para>Reads data from a data register. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>dregAddress</entry><entry>
+<para>The address of the data register to read. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>data</entry><entry>
+<para>Pointer to the buffer to store the read data. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>length</entry><entry>
+<para>The length of the data to read. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>True if the data was successfully read, false otherwise. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_redshift___u_m_l7_1a94885049fd4d2559ae934c10d0673afe"/><section>
+    <title>readPacket()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>readPacket</primary><secondary>Redshift_UML7</secondary></indexterm>
+<indexterm><primary>Redshift_UML7</primary><secondary>readPacket</secondary></indexterm>
+<para><computeroutput>bool Redshift_UML7::readPacket (<link linkend="__redshift___u_m_l7_8h_1ab61dddf71d3fb0bfa520aeae95099245">UM7_packet</link> &amp; packet, int packet_size, u_int8_t address)</computeroutput></para><para>
+
+<para>Reads a packet from the UM7 sensor. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>packet</entry><entry>
+<para>Reference to the packet structure to store the read data. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>packet_size</entry><entry>
+<para>The size of the packet to read. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>address</entry><entry>
+<para>The address of the packet to read. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>True if the packet was successfully read, false otherwise. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_redshift___u_m_l7_1a175c29d800706c78c3ff31280745608c"/><section>
+    <title>readPacket()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>readPacket</primary><secondary>Redshift_UML7</secondary></indexterm>
+<indexterm><primary>Redshift_UML7</primary><secondary>readPacket</secondary></indexterm>
+<para><computeroutput>bool Redshift_UML7::readPacket (<link linkend="__redshift___u_m_l7_8h_1ab61dddf71d3fb0bfa520aeae95099245">UM7_packet</link> &amp; packet, u_int8_t address)</computeroutput></para><para>
+
+<para>Reads a packet from the UM7 sensor. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>packet</entry><entry>
+<para>Reference to the packet structure to store the read data. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>address</entry><entry>
+<para>The address of the packet to read. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>True if the packet was successfully read, false otherwise. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_redshift___u_m_l7_1aacd97941f30f4227230f65ce66ad5b24"/><section>
+    <title>readRegister()</title>
+<indexterm><primary>readRegister</primary><secondary>Redshift_UML7</secondary></indexterm>
+<indexterm><primary>Redshift_UML7</primary><secondary>readRegister</secondary></indexterm>
+<para><computeroutput>bool Redshift_UML7::readRegister (uint8_t registerAddress, uint8_t * data, size_t length)</computeroutput></para><para>
+
+<para>Reads the content of a register. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>registerAddress</entry><entry>
+<para>The address of the register to read. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>data</entry><entry>
+<para>Pointer to the buffer to store the read data. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>length</entry><entry>
+<para>The length of the data to read. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>True if the data was successfully read, false otherwise. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_redshift___u_m_l7_1a8dc0c4be7140637c14c7886b9ca59738"/><section>
+    <title>readSerialData()</title>
+<indexterm><primary>readSerialData</primary><secondary>Redshift_UML7</secondary></indexterm>
+<indexterm><primary>Redshift_UML7</primary><secondary>readSerialData</secondary></indexterm>
+<para><computeroutput>size_t Redshift_UML7::readSerialData (uint8_t * buffer, size_t bufferSize)</computeroutput></para><para>
+
+<para>Reads serial data from the UM7 sensor. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>buffer</entry><entry>
+<para>Pointer to the buffer to store the read data. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>bufferSize</entry><entry>
+<para>The size of the buffer. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The number of bytes read. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_redshift___u_m_l7_1a55a1027532cef713d5a70e57633a05de"/><section>
+    <title>resetEKF()</title>
+<indexterm><primary>resetEKF</primary><secondary>Redshift_UML7</secondary></indexterm>
+<indexterm><primary>Redshift_UML7</primary><secondary>resetEKF</secondary></indexterm>
+<para><computeroutput>bool Redshift_UML7::resetEKF ( )</computeroutput></para><para>
+
+<para>Resets the Extended Kalman Filter (EKF) of the UM7 sensor. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>True if the EKF was successfully reset, false otherwise. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_redshift___u_m_l7_1a13fd27638b5a6a00d8cf2f0727db00f8"/><section>
+    <title>resetToFactoryDefaults()</title>
+<indexterm><primary>resetToFactoryDefaults</primary><secondary>Redshift_UML7</secondary></indexterm>
+<indexterm><primary>Redshift_UML7</primary><secondary>resetToFactoryDefaults</secondary></indexterm>
+<para><computeroutput>bool Redshift_UML7::resetToFactoryDefaults ( )</computeroutput></para><para>
+
+<para>Resets the UM7 sensor to factory defaults. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>True if the reset was successful, false otherwise. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_redshift___u_m_l7_1adf3f3fc98cdb959768a9ffcebc4b6231"/><section>
+    <title>sendBinaryCommand()</title>
+<indexterm><primary>sendBinaryCommand</primary><secondary>Redshift_UML7</secondary></indexterm>
+<indexterm><primary>Redshift_UML7</primary><secondary>sendBinaryCommand</secondary></indexterm>
+<para><computeroutput>bool Redshift_UML7::sendBinaryCommand (uint8_t command)</computeroutput></para><para>
+
+<para>Sends a binary command to the UM7 sensor. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>command</entry><entry>
+<para>The command to send. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>True if the command was successfully sent, false otherwise. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_redshift___u_m_l7_1abe5f0512e1e1884276de7141d7b4d6b0"/><section>
+    <title>sendCommand()</title>
+<indexterm><primary>sendCommand</primary><secondary>Redshift_UML7</secondary></indexterm>
+<indexterm><primary>Redshift_UML7</primary><secondary>sendCommand</secondary></indexterm>
+<para><computeroutput>void Redshift_UML7::sendCommand (const String &amp; command)</computeroutput></para><para>
+
+<para>Sends a command to the UM7 sensor. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>command</entry><entry>
+<para>The command string to send. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_redshift___u_m_l7_1adb719463f0d5f83a685aa6e9692796be"/><section>
+    <title>setBaudRate()</title>
+<indexterm><primary>setBaudRate</primary><secondary>Redshift_UML7</secondary></indexterm>
+<indexterm><primary>Redshift_UML7</primary><secondary>setBaudRate</secondary></indexterm>
+<para><computeroutput>void Redshift_UML7::setBaudRate (unsigned long baudRate)</computeroutput></para><para>
+
+<para>Sets the baud rate for communication. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>baudRate</entry><entry>
+<para>The desired baud rate. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_redshift___u_m_l7_1a52263799b45bca3e815a28f0c7c8fe8c"/><section>
+    <title>setHomePosition()</title>
+<indexterm><primary>setHomePosition</primary><secondary>Redshift_UML7</secondary></indexterm>
+<indexterm><primary>Redshift_UML7</primary><secondary>setHomePosition</secondary></indexterm>
+<para><computeroutput>bool Redshift_UML7::setHomePosition ( )</computeroutput></para><para>
+
+<para>Sets the home position for the UM7 sensor. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>True if the home position was successfully set, false otherwise. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_redshift___u_m_l7_1a13873300ea3da88397cfcf0ac9ebde4e"/><section>
+    <title>zeroGyroscopes()</title>
+<indexterm><primary>zeroGyroscopes</primary><secondary>Redshift_UML7</secondary></indexterm>
+<indexterm><primary>Redshift_UML7</primary><secondary>zeroGyroscopes</secondary></indexterm>
+<para><computeroutput>bool Redshift_UML7::zeroGyroscopes ( )</computeroutput></para><para>
+
+<para>Zeros the gyroscopes of the UM7 sensor. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>True if the gyroscopes were successfully zeroed, false otherwise. </para>
+</formalpara>
+</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+lib/Redshift_UML7/src/<link linkend="__redshift___u_m_l7_8h">Redshift_UML7.h</link>lib/Redshift_UML7/src/Redshift_UML7.cpp</section>
+</section>

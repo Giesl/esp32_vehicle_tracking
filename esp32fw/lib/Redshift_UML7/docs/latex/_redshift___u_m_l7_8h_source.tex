@@ -1,0 +1,287 @@
+\doxysection{Redshift\+\_\+\+UML7.\+h}
+\hypertarget{_redshift___u_m_l7_8h_source}{}\label{_redshift___u_m_l7_8h_source}\index{lib/Redshift\_UML7/src/Redshift\_UML7.h@{lib/Redshift\_UML7/src/Redshift\_UML7.h}}
+\mbox{\hyperlink{_redshift___u_m_l7_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#ifndef\ REDSHIFT\_UML7\_H}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#define\ REDSHIFT\_UML7\_H}}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ <Arduino.h>}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ <stdint.h>}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#include\ <stddef.h>}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#define\ CREG\_COM\_SETTINGS\ 0x00\ }}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#define\ CREG\_COM\_RATES1\ 0x01\ }}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#define\ CREG\_COM\_RATES2\ 0x02\ }}
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#define\ CREG\_COM\_RATES3\ 0x03\ }}
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#define\ CREG\_COM\_RATES4\ 0x04\ }}
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\#define\ CREG\_COM\_RATES5\ 0x05\ }}
+\DoxyCodeLine{00033\ \textcolor{preprocessor}{\#define\ CREG\_COM\_RATES6\ 0x06\ }}
+\DoxyCodeLine{00034\ \textcolor{preprocessor}{\#define\ CREG\_COM\_RATES7\ 0x07\ }}
+\DoxyCodeLine{00035\ \textcolor{preprocessor}{\#define\ CREG\_MISC\_SETTINGS\ 0x08\ }}
+\DoxyCodeLine{00036\ \textcolor{preprocessor}{\#define\ CREG\_HOME\_NORTH\ 0x09\ }}
+\DoxyCodeLine{00037\ \textcolor{preprocessor}{\#define\ CREG\_HOME\_EAST\ 0x0A\ }}
+\DoxyCodeLine{00038\ \textcolor{preprocessor}{\#define\ CREG\_HOME\_UP\ 0x0B\ }}
+\DoxyCodeLine{00039\ \textcolor{preprocessor}{\#define\ CREG\_GYRO\_TRIM\_X\ 0x0C\ }}
+\DoxyCodeLine{00040\ \textcolor{preprocessor}{\#define\ CREG\_GYRO\_TRIM\_Y\ 0x0D\ }}
+\DoxyCodeLine{00041\ \textcolor{preprocessor}{\#define\ CREG\_GYRO\_TRIM\_Z\ 0x0E\ }}
+\DoxyCodeLine{00042\ \textcolor{preprocessor}{\#define\ CREG\_MAG\_CAL1\_1\ 0x0F\ }}
+\DoxyCodeLine{00043\ \textcolor{preprocessor}{\#define\ CREG\_MAG\_CAL1\_2\ 0x10\ }}
+\DoxyCodeLine{00044\ \textcolor{preprocessor}{\#define\ CREG\_MAG\_CAL1\_3\ 0x11\ }}
+\DoxyCodeLine{00045\ \textcolor{preprocessor}{\#define\ CREG\_MAG\_CAL2\_1\ 0x12\ }}
+\DoxyCodeLine{00046\ \textcolor{preprocessor}{\#define\ CREG\_MAG\_CAL2\_2\ 0x13\ }}
+\DoxyCodeLine{00047\ \textcolor{preprocessor}{\#define\ CREG\_MAG\_CAL2\_3\ 0x14\ }}
+\DoxyCodeLine{00048\ \textcolor{preprocessor}{\#define\ CREG\_MAG\_CAL3\_1\ 0x15\ }}
+\DoxyCodeLine{00049\ \textcolor{preprocessor}{\#define\ CREG\_MAG\_CAL3\_2\ 0x16\ }}
+\DoxyCodeLine{00050\ \textcolor{preprocessor}{\#define\ CREG\_MAG\_CAL3\_3\ 0x17\ }}
+\DoxyCodeLine{00051\ \textcolor{preprocessor}{\#define\ CREG\_MAG\_BIAS\_X\ 0x18\ }}
+\DoxyCodeLine{00052\ \textcolor{preprocessor}{\#define\ CREG\_MAG\_BIAS\_Y\ 0x19\ }}
+\DoxyCodeLine{00053\ \textcolor{preprocessor}{\#define\ CREG\_MAG\_BIAS\_Z\ 0x1A\ }}
+\DoxyCodeLine{00054\ \textcolor{preprocessor}{\#define\ CREG\_ACCEL\_CAL1\_1\ 0x1B\ }}
+\DoxyCodeLine{00055\ \textcolor{preprocessor}{\#define\ CREG\_ACCEL\_CAL1\_2\ 0x1C\ }}
+\DoxyCodeLine{00056\ \textcolor{preprocessor}{\#define\ CREG\_ACCEL\_CAL1\_3\ 0x1D\ }}
+\DoxyCodeLine{00057\ \textcolor{preprocessor}{\#define\ CREG\_ACCEL\_CAL2\_1\ 0x1E\ }}
+\DoxyCodeLine{00058\ \textcolor{preprocessor}{\#define\ CREG\_ACCEL\_CAL2\_2\ 0x1F\ }}
+\DoxyCodeLine{00059\ \textcolor{preprocessor}{\#define\ CREG\_ACCEL\_CAL2\_3\ 0x20\ }}
+\DoxyCodeLine{00060\ \textcolor{preprocessor}{\#define\ CREG\_ACCEL\_CAL3\_1\ 0x21\ }}
+\DoxyCodeLine{00061\ \textcolor{preprocessor}{\#define\ CREG\_ACCEL\_CAL3\_2\ 0x22\ }}
+\DoxyCodeLine{00062\ \textcolor{preprocessor}{\#define\ CREG\_ACCEL\_CAL3\_3\ 0x23\ }}
+\DoxyCodeLine{00063\ \textcolor{preprocessor}{\#define\ CREG\_ACCEL\_BIAS\_X\ 0x24\ }}
+\DoxyCodeLine{00064\ \textcolor{preprocessor}{\#define\ CREG\_ACCEL\_BIAS\_Y\ 0x25\ }}
+\DoxyCodeLine{00065\ \textcolor{preprocessor}{\#define\ CREG\_ACCEL\_BIAS\_Z\ 0x26\ }\textcolor{preprocessor}{}}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00073\ \textcolor{preprocessor}{\#define\ DREG\_HEALTH\ 0x55\ }}
+\DoxyCodeLine{00074\ \textcolor{preprocessor}{\#define\ DREG\_GYRO\_RAW\_XY\ 0x56\ }}
+\DoxyCodeLine{00075\ \textcolor{preprocessor}{\#define\ DREG\_GYRO\_RAW\_Z\ 0x57\ }}
+\DoxyCodeLine{00076\ \textcolor{preprocessor}{\#define\ DREG\_GYRO\_RAW\_TIME\ 0x58\ }}
+\DoxyCodeLine{00077\ \textcolor{preprocessor}{\#define\ DREG\_ACCEL\_RAW\_XY\ 0x59\ }}
+\DoxyCodeLine{00078\ \textcolor{preprocessor}{\#define\ DREG\_ACCEL\_RAW\_Z\ 0x5A\ }}
+\DoxyCodeLine{00079\ \textcolor{preprocessor}{\#define\ DREG\_ACCEL\_RAW\_TIME\ 0x5B\ }}
+\DoxyCodeLine{00080\ \textcolor{preprocessor}{\#define\ DREG\_MAG\_RAW\_XY\ 0x5C\ }}
+\DoxyCodeLine{00081\ \textcolor{preprocessor}{\#define\ DREG\_MAG\_RAW\_Z\ 0x5D\ }}
+\DoxyCodeLine{00082\ \textcolor{preprocessor}{\#define\ DREG\_MAG\_RAW\_TIME\ 0x5E\ }}
+\DoxyCodeLine{00083\ \textcolor{preprocessor}{\#define\ DREG\_TEMPERATURE\ 0x5F\ }}
+\DoxyCodeLine{00084\ \textcolor{preprocessor}{\#define\ DREG\_TEMPERATURE\_TIME\ 0x60\ }}
+\DoxyCodeLine{00085\ \textcolor{preprocessor}{\#define\ DREG\_GYRO\_PROC\_X\ 0x61\ }}
+\DoxyCodeLine{00086\ \textcolor{preprocessor}{\#define\ DREG\_GYRO\_PROC\_Y\ 0x62\ }}
+\DoxyCodeLine{00087\ \textcolor{preprocessor}{\#define\ DREG\_GYRO\_PROC\_Z\ 0x63\ }}
+\DoxyCodeLine{00088\ \textcolor{preprocessor}{\#define\ DREG\_GYRO\_PROC\_TIME\ 0x64\ }}
+\DoxyCodeLine{00089\ \textcolor{preprocessor}{\#define\ DREG\_ACCEL\_PROC\_X\ 0x65\ }}
+\DoxyCodeLine{00090\ \textcolor{preprocessor}{\#define\ DREG\_ACCEL\_PROC\_Y\ 0x66\ }}
+\DoxyCodeLine{00091\ \textcolor{preprocessor}{\#define\ DREG\_ACCEL\_PROC\_Z\ 0x67\ }}
+\DoxyCodeLine{00092\ \textcolor{preprocessor}{\#define\ DREG\_ACCEL\_PROC\_TIME\ 0x68\ }}
+\DoxyCodeLine{00093\ \textcolor{preprocessor}{\#define\ DREG\_MAG\_PROC\_X\ 0x69\ }}
+\DoxyCodeLine{00094\ \textcolor{preprocessor}{\#define\ DREG\_MAG\_PROC\_Y\ 0x6A\ }}
+\DoxyCodeLine{00095\ \textcolor{preprocessor}{\#define\ DREG\_MAG\_PROC\_Z\ 0x6B\ }}
+\DoxyCodeLine{00096\ \textcolor{preprocessor}{\#define\ DREG\_MAG\_PROC\_TIME\ 0x6C\ }}
+\DoxyCodeLine{00097\ \textcolor{preprocessor}{\#define\ DREG\_QUAT\_AB\ 0x6D\ }}
+\DoxyCodeLine{00098\ \textcolor{preprocessor}{\#define\ DREG\_QUAT\_CD\ 0x6E\ }}
+\DoxyCodeLine{00099\ \textcolor{preprocessor}{\#define\ DREG\_QUAT\_TIME\ 0x6F\ }}
+\DoxyCodeLine{00100\ \textcolor{preprocessor}{\#define\ DREG\_EULER\_PHI\_THETA\ 0x70\ }}
+\DoxyCodeLine{00101\ \textcolor{preprocessor}{\#define\ DREG\_EULER\_PSI\ 0x71\ }}
+\DoxyCodeLine{00102\ \textcolor{preprocessor}{\#define\ DREG\_EULER\_PHI\_THETA\_DOT\ 0x72\ }}
+\DoxyCodeLine{00103\ \textcolor{preprocessor}{\#define\ DREG\_EULER\_PSI\_DOT\ 0x73\ }}
+\DoxyCodeLine{00104\ \textcolor{preprocessor}{\#define\ DREG\_EULER\_TIME\ 0x74\ }}
+\DoxyCodeLine{00105\ \textcolor{preprocessor}{\#define\ DREG\_POSITION\_N\ 0x75\ }}
+\DoxyCodeLine{00106\ \textcolor{preprocessor}{\#define\ DREG\_POSITION\_E\ 0x76\ }}
+\DoxyCodeLine{00107\ \textcolor{preprocessor}{\#define\ DREG\_POSITION\_UP\ 0x77\ }}
+\DoxyCodeLine{00108\ \textcolor{preprocessor}{\#define\ DREG\_POSITION\_TIME\ 0x78\ }}
+\DoxyCodeLine{00109\ \textcolor{preprocessor}{\#define\ DREG\_VELOCITY\_N\ 0x79\ }}
+\DoxyCodeLine{00110\ \textcolor{preprocessor}{\#define\ DREG\_VELOCITY\_E\ 0x7A\ }}
+\DoxyCodeLine{00111\ \textcolor{preprocessor}{\#define\ DREG\_VELOCITY\_UP\ 0x7B\ }}
+\DoxyCodeLine{00112\ \textcolor{preprocessor}{\#define\ DREG\_VELOCITY\_TIME\ 0x7C\ }}
+\DoxyCodeLine{00113\ \textcolor{preprocessor}{\#define\ DREG\_GPS\_LATITUDE\ 0x7D\ }}
+\DoxyCodeLine{00114\ \textcolor{preprocessor}{\#define\ DREG\_GPS\_LONGITUDE\ 0x7E\ }}
+\DoxyCodeLine{00115\ \textcolor{preprocessor}{\#define\ DREG\_GPS\_ALTITUDE\ 0x7F\ }}
+\DoxyCodeLine{00116\ \textcolor{preprocessor}{\#define\ DREG\_GPS\_COURSE\ 0x80\ }}
+\DoxyCodeLine{00117\ \textcolor{preprocessor}{\#define\ DREG\_GPS\_SPEED\ 0x81\ }}
+\DoxyCodeLine{00118\ \textcolor{preprocessor}{\#define\ DREG\_GPS\_TIME\ 0x82\ }}
+\DoxyCodeLine{00119\ \textcolor{preprocessor}{\#define\ DREG\_GPS\_SAT\_1\_2\ 0x83\ }}
+\DoxyCodeLine{00120\ \textcolor{preprocessor}{\#define\ DREG\_GPS\_SAT\_3\_4\ 0x84\ }}
+\DoxyCodeLine{00121\ \textcolor{preprocessor}{\#define\ DREG\_GPS\_SAT\_5\_6\ 0x85\ }}
+\DoxyCodeLine{00122\ \textcolor{preprocessor}{\#define\ DREG\_GPS\_SAT\_7\_8\ 0x86\ }}
+\DoxyCodeLine{00123\ \textcolor{preprocessor}{\#define\ DREG\_GPS\_SAT\_9\_10\ 0x87\ }}
+\DoxyCodeLine{00124\ \textcolor{preprocessor}{\#define\ DREG\_GPS\_SAT\_11\_12\ 0x88\ }}
+\DoxyCodeLine{00125\ \textcolor{preprocessor}{\#define\ DREG\_GYRO\_BIAS\_X\ 0x89\ }}
+\DoxyCodeLine{00126\ \textcolor{preprocessor}{\#define\ DREG\_GYRO\_BIAS\_Y\ 0x8A\ }}
+\DoxyCodeLine{00127\ \textcolor{preprocessor}{\#define\ DREG\_GYRO\_BIAS\_Z\ 0x8B\ }\textcolor{preprocessor}{}}
+\DoxyCodeLine{00129\ }
+\DoxyCodeLine{00135\ \textcolor{preprocessor}{\#define\ GET\_FW\_REVISION\ 0xAA\ }}
+\DoxyCodeLine{00136\ \textcolor{preprocessor}{\#define\ FLASH\_COMMIT\ 0xAB\ }}
+\DoxyCodeLine{00137\ \textcolor{preprocessor}{\#define\ RESET\_TO\_FACTORY\ 0xAC\ }}
+\DoxyCodeLine{00138\ \textcolor{preprocessor}{\#define\ ZERO\_GYROS\ 0xAD\ }}
+\DoxyCodeLine{00139\ \textcolor{preprocessor}{\#define\ SET\_HOME\_POSITION\ 0xAE\ }}
+\DoxyCodeLine{00140\ \textcolor{preprocessor}{\#define\ SET\_MAG\_REFERENCE\ 0xB0\ }}
+\DoxyCodeLine{00141\ \textcolor{preprocessor}{\#define\ CALIBRATE\_ACCELEROMETERS\ 0xB1\ }}
+\DoxyCodeLine{00142\ \textcolor{preprocessor}{\#define\ RESET\_EKF\ 0xB3\ }\textcolor{preprocessor}{}}
+\DoxyCodeLine{00144\ }
+\DoxyCodeLine{00145\ }
+\DoxyCodeLine{00146\ \textcolor{preprocessor}{\#define\ READ\_DELAY\ 100}}
+\DoxyCodeLine{00147\ \textcolor{preprocessor}{\#define\ BUFFER\_LENGTH\ 128}}
+\DoxyCodeLine{00148\ \textcolor{preprocessor}{\#define\ GET\_PACKET\_ATTEMPS\ 5}}
+\DoxyCodeLine{00149\ }
+\DoxyCodeLine{00153\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_u_m7__packet__struct}{UM7\_packet\_struct}}\ \{}
+\DoxyCodeLine{00154\ \ \ \ \ uint8\_t\ \mbox{\hyperlink{struct_u_m7__packet__struct_a36ea4f01adb74ab46893f8dced8a7897}{Address}};\ \ \ \ \ \ \ }
+\DoxyCodeLine{00155\ \ \ \ \ uint8\_t\ \mbox{\hyperlink{struct_u_m7__packet__struct_a7a28de9c510ef4912f5fca928cb992df}{PT}};\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00156\ \ \ \ \ uint16\_t\ \mbox{\hyperlink{struct_u_m7__packet__struct_a0c75ae8d3689f9111a122a545de2bde3}{Checksum}};\ \ \ \ \ }
+\DoxyCodeLine{00157\ \ \ \ \ uint8\_t\ \mbox{\hyperlink{struct_u_m7__packet__struct_a6fb8ff6d4e3aa959f6e64bfe4ef429cd}{data\_length}};\ \ \ }
+\DoxyCodeLine{00158\ \ \ \ \ uint8\_t\ \mbox{\hyperlink{struct_u_m7__packet__struct_aa5e4ce7efbceecdb2eecd40293fa2ed7}{data}}[30];\ \ \ \ \ \ }
+\DoxyCodeLine{00159\ \}\ UM7\_packet;}
+\DoxyCodeLine{00160\ }
+\DoxyCodeLine{00168\ uint8\_t\ \mbox{\hyperlink{_redshift___u_m_l7_8h_a8d9dba22e719fe66c1dfdafbe7e189ad}{extract\_bits}}(uint8\_t\ \textcolor{keywordtype}{byte},\ uint8\_t\ start\_bit,\ uint8\_t\ num\_bits);}
+\DoxyCodeLine{00169\ }
+\DoxyCodeLine{00173\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00174\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{struct_gyro_measurement_a4abcb16d235472808b277643f49bc79a}{gyroX}};\ \ \ }
+\DoxyCodeLine{00175\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{struct_gyro_measurement_ab37508e55b3dc66e2a202d94137baf4d}{gyroY}};\ \ \ }
+\DoxyCodeLine{00176\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{struct_gyro_measurement_a7f8cba5276a1ea72b1d5b28a9c132f27}{gyroZ}};\ \ \ }
+\DoxyCodeLine{00177\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{struct_gyro_measurement_a3fb2032fccf9de830d5465f2baeceb65}{gyroTime}};\ }
+\DoxyCodeLine{00178\ \}\ \mbox{\hyperlink{struct_gyro_measurement}{GyroMeasurement}};}
+\DoxyCodeLine{00179\ }
+\DoxyCodeLine{00183\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00184\ \ \ \ \ int16\_t\ \mbox{\hyperlink{struct_accel_measurement_a2ab6572704089fb11a9adde0b97e091b}{accelX}};\ }
+\DoxyCodeLine{00185\ \ \ \ \ int16\_t\ \mbox{\hyperlink{struct_accel_measurement_a65572f9ed3e3c1a1b04ff4985dad3247}{accelY}};\ }
+\DoxyCodeLine{00186\ \ \ \ \ int16\_t\ \mbox{\hyperlink{struct_accel_measurement_af65c7275f8cd6586928521cf7ace2583}{accelZ}};\ }
+\DoxyCodeLine{00187\ \}\ \mbox{\hyperlink{struct_accel_measurement}{AccelMeasurement}};}
+\DoxyCodeLine{00188\ }
+\DoxyCodeLine{00192\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00193\ \ \ \ \ int16\_t\ \mbox{\hyperlink{struct_mag_measurement_a0a46902665e9a8f056786a862a22c429}{magX}};\ }
+\DoxyCodeLine{00194\ \ \ \ \ int16\_t\ \mbox{\hyperlink{struct_mag_measurement_a5bd977fb282c4c30011625f3d8ef715c}{magY}};\ }
+\DoxyCodeLine{00195\ \ \ \ \ int16\_t\ \mbox{\hyperlink{struct_mag_measurement_a453ce4445702aeaf37382779181d28d8}{magZ}};\ }
+\DoxyCodeLine{00196\ \}\ \mbox{\hyperlink{struct_mag_measurement}{MagMeasurement}};}
+\DoxyCodeLine{00197\ }
+\DoxyCodeLine{00202\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_redshift___u_m_l7_ae347879fc59c484a4a896d1bcb2d5e5a}{Redshift\_UML7}}\ \{}
+\DoxyCodeLine{00203\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00208\ \ \ \ \ \mbox{\hyperlink{class_redshift___u_m_l7_ae347879fc59c484a4a896d1bcb2d5e5a}{Redshift\_UML7}}(Stream\ \&serial);}
+\DoxyCodeLine{00209\ }
+\DoxyCodeLine{00213\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_redshift___u_m_l7_a382fd7bf140d8a22c515c36b18e33f44}{begin}}();}
+\DoxyCodeLine{00214\ }
+\DoxyCodeLine{00219\ \ \ \ \ String\ \mbox{\hyperlink{class_redshift___u_m_l7_a384c44d7960485756d1ae4f49d3d0a51}{getData}}();}
+\DoxyCodeLine{00220\ }
+\DoxyCodeLine{00225\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_redshift___u_m_l7_abe5f0512e1e1884276de7141d7b4d6b0}{sendCommand}}(\textcolor{keyword}{const}\ String\ \&command);}
+\DoxyCodeLine{00226\ }
+\DoxyCodeLine{00231\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_redshift___u_m_l7_adb719463f0d5f83a685aa6e9692796be}{setBaudRate}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ baudRate);}
+\DoxyCodeLine{00232\ }
+\DoxyCodeLine{00238\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_redshift___u_m_l7_a6b748b23609691e123cb6fe65f9b6c3e}{parseNmeaPacket}}(String\ nmeaString);}
+\DoxyCodeLine{00239\ }
+\DoxyCodeLine{00247\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_redshift___u_m_l7_a5cb2858c8ed0b98b58e6915a5111b7e1}{read\_register\_data}}(uint8\_t\ registerAddress,\ uint8\_t\ *data,\ \textcolor{keywordtype}{size\_t}\ length);}
+\DoxyCodeLine{00248\ }
+\DoxyCodeLine{00254\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_redshift___u_m_l7_adf3f3fc98cdb959768a9ffcebc4b6231}{sendBinaryCommand}}(uint8\_t\ command);}
+\DoxyCodeLine{00255\ }
+\DoxyCodeLine{00261\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_redshift___u_m_l7_a45807306c8b1b3a3c63634e2f8f98155}{read\_register\_as\_float}}(uint8\_t\ *data);}
+\DoxyCodeLine{00262\ }
+\DoxyCodeLine{00269\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_redshift___u_m_l7_a175c29d800706c78c3ff31280745608c}{readPacket}}(\mbox{\hyperlink{_redshift___u_m_l7_8h_ab61dddf71d3fb0bfa520aeae95099245}{UM7\_packet}}\ \&packet,\ u\_int8\_t\ address);}
+\DoxyCodeLine{00270\ }
+\DoxyCodeLine{00278\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_redshift___u_m_l7_a175c29d800706c78c3ff31280745608c}{readPacket}}(\mbox{\hyperlink{_redshift___u_m_l7_8h_ab61dddf71d3fb0bfa520aeae95099245}{UM7\_packet}}\ \&packet,\ \textcolor{keywordtype}{int}\ packet\_size,\ u\_int8\_t\ address);}
+\DoxyCodeLine{00279\ }
+\DoxyCodeLine{00284\ \ \ \ \ String\ \mbox{\hyperlink{class_redshift___u_m_l7_a51a32df641b7b5b632bec03277701f3d}{getFirmwareVersion}}();}
+\DoxyCodeLine{00285\ }
+\DoxyCodeLine{00300\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_redshift___u_m_l7_a4848d863423685560bf6e2417a54d58c}{getHealthData}}(uint16\_t\ \&time,\ uint8\_t\ \&sats\_used,\ uint8\_t\ \&sats\_in\_view,}
+\DoxyCodeLine{00301\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \&HDOP,\ uint8\_t\ \&mode,\ uint8\_t\ \&COM,\ uint8\_t\ \&accel,}
+\DoxyCodeLine{00302\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint8\_t\ \&gyro,\ uint8\_t\ \&mag,\ uint8\_t\ \&GPS);}
+\DoxyCodeLine{00303\ }
+\DoxyCodeLine{00311\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_redshift___u_m_l7_aacd97941f30f4227230f65ce66ad5b24}{readRegister}}(uint8\_t\ registerAddress,\ uint8\_t\ *data,\ \textcolor{keywordtype}{size\_t}\ length);}
+\DoxyCodeLine{00312\ }
+\DoxyCodeLine{00318\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_redshift___u_m_l7_adc8a43c42a8fbd849286260dfec0bcff}{getTemperature}}(\textcolor{keywordtype}{float}\ \&temp);}
+\DoxyCodeLine{00319\ }
+\DoxyCodeLine{00325\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_redshift___u_m_l7_a86c9c530e64cadc757859398dd45d538}{getGpsTime}}(\textcolor{keywordtype}{float}\ \&gpsTime);}
+\DoxyCodeLine{00326\ }
+\DoxyCodeLine{00341\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_redshift___u_m_l7_a97f93d0f9008a2cd311e799b0c0c8b35}{getHealthRegisterData}}(uint16\_t\ \&time,\ uint8\_t\ \&sats\_used,\ uint8\_t\ \&sats\_in\_view,\ \textcolor{keywordtype}{float}\ \&HDOP,\ uint8\_t\ \&mode,\ uint8\_t\ \&COM,\ uint8\_t\ \&accel,\ uint8\_t\ \&gyro,\ uint8\_t\ \&mag,\ uint8\_t\ \&GPS);}
+\DoxyCodeLine{00342\ }
+\DoxyCodeLine{00351\ \ \ \ \ uint8\_t\ \mbox{\hyperlink{class_redshift___u_m_l7_a3caf8fe1319aedf7cd298b271ea04edc}{parse\_serial\_data}}(uint8\_t\ *rx\_data,\ uint8\_t\ rx\_length,\ \mbox{\hyperlink{_redshift___u_m_l7_8h_ab61dddf71d3fb0bfa520aeae95099245}{UM7\_packet}}\ *packet,\ uint8\_t\ expectedAddress);}
+\DoxyCodeLine{00352\ }
+\DoxyCodeLine{00357\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_redshift___u_m_l7_aea2611cdc7c7d50b11043a23f694a5a6}{getRoll}}();}
+\DoxyCodeLine{00358\ }
+\DoxyCodeLine{00363\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_redshift___u_m_l7_a5aeefa473cc213298734c859905fa43c}{getPitch}}();}
+\DoxyCodeLine{00364\ }
+\DoxyCodeLine{00369\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_redshift___u_m_l7_a34ff58826f81b6fd257891743b0f4601}{getYaw}}();}
+\DoxyCodeLine{00370\ }
+\DoxyCodeLine{00378\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_redshift___u_m_l7_af1d8a5a843c0524b9acd2b7edfcaca1a}{getOrientation}}(\textcolor{keywordtype}{float}\ \&yaw,\ \textcolor{keywordtype}{float}\ \&pitch,\ \textcolor{keywordtype}{float}\ \&roll);}
+\DoxyCodeLine{00379\ }
+\DoxyCodeLine{00384\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_redshift___u_m_l7_a7f2369df1ad96711c54119f14a3b0129}{getMagX}}();}
+\DoxyCodeLine{00385\ }
+\DoxyCodeLine{00390\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_redshift___u_m_l7_a391c370eb34357a96868b78eba3b1592}{getMagY}}();}
+\DoxyCodeLine{00391\ }
+\DoxyCodeLine{00396\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_redshift___u_m_l7_ad9730512fa68b36d82d81cd330d2cf11}{getMagZ}}();}
+\DoxyCodeLine{00397\ }
+\DoxyCodeLine{00403\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_redshift___u_m_l7_a34d7e9f9fa094b4cc1924751d6da9b6c}{getGyroProcZ}}(\textcolor{keywordtype}{float}\ \&gyroZ);}
+\DoxyCodeLine{00404\ }
+\DoxyCodeLine{00409\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_redshift___u_m_l7_a13fd27638b5a6a00d8cf2f0727db00f8}{resetToFactoryDefaults}}();}
+\DoxyCodeLine{00410\ }
+\DoxyCodeLine{00415\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_redshift___u_m_l7_a13873300ea3da88397cfcf0ac9ebde4e}{zeroGyroscopes}}();}
+\DoxyCodeLine{00416\ }
+\DoxyCodeLine{00421\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_redshift___u_m_l7_a52263799b45bca3e815a28f0c7c8fe8c}{setHomePosition}}();}
+\DoxyCodeLine{00422\ }
+\DoxyCodeLine{00427\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_redshift___u_m_l7_a55a1027532cef713d5a70e57633a05de}{resetEKF}}();}
+\DoxyCodeLine{00428\ }
+\DoxyCodeLine{00433\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_redshift___u_m_l7_a96b3e4c39f0d579a3e80f5ae67a1ad8d}{flashCommit}}();}
+\DoxyCodeLine{00434\ }
+\DoxyCodeLine{00442\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_redshift___u_m_l7_a2c23fce0a4b6f1483d4ac118006a1330}{readDregData}}(uint8\_t\ dregAddress,\ uint8\_t\ *data,\ \textcolor{keywordtype}{size\_t}\ length);}
+\DoxyCodeLine{00443\ }
+\DoxyCodeLine{00451\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_redshift___u_m_l7_a2ebb72f4d1e6bf2eecad45ff805ce233}{getGyroRawMeasurements}}(int16\_t\ \&gyroX,\ int16\_t\ \&gyroY,\ int16\_t\ \&gyroZ);}
+\DoxyCodeLine{00452\ }
+\DoxyCodeLine{00459\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_redshift___u_m_l7_a629aba415fd0474447dda6a232535632}{getAccelRawXY}}(int16\_t\ \&accelX,\ int16\_t\ \&accelY);}
+\DoxyCodeLine{00460\ }
+\DoxyCodeLine{00466\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_redshift___u_m_l7_a49706965e19a9ac9e4ee93446b635db8}{getAccelRawZ}}(int16\_t\ \&accelZ);}
+\DoxyCodeLine{00467\ }
+\DoxyCodeLine{00473\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_redshift___u_m_l7_a3018e9653d11ee5de4ca50cf7cef0b82}{getGyroProcessedMeasurements}}(\mbox{\hyperlink{struct_gyro_measurement}{GyroMeasurement}}\ \&gyroData);}
+\DoxyCodeLine{00474\ }
+\DoxyCodeLine{00482\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_redshift___u_m_l7_a137001536d425d0495d7a7baed780192}{getAccelRawMeasurements}}(int16\_t\ \&accelX,\ int16\_t\ \&accelY,\ int16\_t\ \&accelZ);}
+\DoxyCodeLine{00483\ }
+\DoxyCodeLine{00489\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_redshift___u_m_l7_a115b4c1c521a1540eae09931867986af}{getAccelProcX}}(\textcolor{keywordtype}{float}\ \&accelX);}
+\DoxyCodeLine{00490\ }
+\DoxyCodeLine{00496\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_redshift___u_m_l7_a2fe91d39b1a14c906fc49696f39aedcb}{getAccelProcY}}(\textcolor{keywordtype}{float}\ \&accelY);}
+\DoxyCodeLine{00497\ }
+\DoxyCodeLine{00503\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_redshift___u_m_l7_ab816896dce19d17487e8edbafb9779dd}{getAccelProcZ}}(\textcolor{keywordtype}{float}\ \&accelZ);}
+\DoxyCodeLine{00504\ }
+\DoxyCodeLine{00510\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_redshift___u_m_l7_a488d6ad2ee01f48adefc07c0d6cf6174}{getGyroProcX}}(\textcolor{keywordtype}{float}\ \&gyroX);}
+\DoxyCodeLine{00511\ }
+\DoxyCodeLine{00517\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_redshift___u_m_l7_ad9df8a0c099b03e2f72411aef9e8f36a}{getGyroProcY}}(\textcolor{keywordtype}{float}\ \&gyroY);}
+\DoxyCodeLine{00518\ }
+\DoxyCodeLine{00527\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_redshift___u_m_l7_a57bc8c666408a94fa6446c4a5a5b2811}{getAccelProcessedMeasurements}}(\textcolor{keywordtype}{float}\ \&accelX,\ \textcolor{keywordtype}{float}\ \&accelY,\ \textcolor{keywordtype}{float}\ \&accelZ,\ \textcolor{keywordtype}{float}\ \&accelTime);}
+\DoxyCodeLine{00528\ }
+\DoxyCodeLine{00532\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_redshift___u_m_l7_a58593e4ed4de6764625b43da1ddf34d3}{printAllMeasurements}}();}
+\DoxyCodeLine{00533\ }
+\DoxyCodeLine{00540\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_redshift___u_m_l7_a602689d2745f2b2d5d56e70b6c1d32ae}{getMagRawXY}}(int16\_t\ \&magX,\ int16\_t\ \&magY);}
+\DoxyCodeLine{00541\ }
+\DoxyCodeLine{00546\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_redshift___u_m_l7_a8265f4384802d0b519fbffab84b647f0}{printPacket}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{_redshift___u_m_l7_8h_ab61dddf71d3fb0bfa520aeae95099245}{UM7\_packet}}\ \&packet);}
+\DoxyCodeLine{00547\ }
+\DoxyCodeLine{00554\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{class_redshift___u_m_l7_a8dc0c4be7140637c14c7886b9ca59738}{readSerialData}}(uint8\_t\ *buffer,\ \textcolor{keywordtype}{size\_t}\ bufferSize);}
+\DoxyCodeLine{00555\ }
+\DoxyCodeLine{00564\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_redshift___u_m_l7_af5855047d371f6499bb0b1a7d7b6caff}{parsePacket}}(\textcolor{keyword}{const}\ uint8\_t\ *rx\_data,\ \textcolor{keywordtype}{size\_t}\ rx\_length,\ \mbox{\hyperlink{_redshift___u_m_l7_8h_ab61dddf71d3fb0bfa520aeae95099245}{UM7\_packet}}\ \&packet,\ uint8\_t\ expectedAddress);}
+\DoxyCodeLine{00565\ }
+\DoxyCodeLine{00574\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_redshift___u_m_l7_a36cb8a1b0ac68768c9887901976d6d31}{getMagneticData}}(\textcolor{keywordtype}{float}\ \&magX,\ \textcolor{keywordtype}{float}\ \&magY,\ \textcolor{keywordtype}{float}\ \&magZ,\ \textcolor{keywordtype}{float}\ \&time);}
+\DoxyCodeLine{00575\ }
+\DoxyCodeLine{00581\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_redshift___u_m_l7_a0eff8f414e9834638fb4b24ca9ea130f}{getGyroTime}}(\textcolor{keywordtype}{float}\ \&time);}
+\DoxyCodeLine{00582\ }
+\DoxyCodeLine{00588\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_redshift___u_m_l7_ad680e52c4bf660ad7eea6c6c1182bf7f}{getAccelTime}}(\textcolor{keywordtype}{float}\ \&time);}
+\DoxyCodeLine{00589\ }
+\DoxyCodeLine{00595\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_redshift___u_m_l7_a137001536d425d0495d7a7baed780192}{getAccelRawMeasurements}}(\mbox{\hyperlink{struct_accel_measurement}{AccelMeasurement}}\ \&accelData);}
+\DoxyCodeLine{00596\ }
+\DoxyCodeLine{00602\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_redshift___u_m_l7_adfe050b2a56a708a605a62b68dd0123a}{getMagRawMeasurements}}(\mbox{\hyperlink{struct_mag_measurement}{MagMeasurement}}\ \&magData);}
+\DoxyCodeLine{00603\ }
+\DoxyCodeLine{00604\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00605\ \ \ \ \ Stream\ \&serial;\ }
+\DoxyCodeLine{00606\ }
+\DoxyCodeLine{00607\ \ \ \ \ \textcolor{keywordtype}{float}\ roll,\ pitch,\ yaw;\ }
+\DoxyCodeLine{00608\ \ \ \ \ String\ firmwareVersion;\ }
+\DoxyCodeLine{00609\ }
+\DoxyCodeLine{00610\ \ \ \ \ \textcolor{comment}{//\ Health\ data\ variables}}
+\DoxyCodeLine{00611\ \ \ \ \ uint16\_t\ health\_time;\ }
+\DoxyCodeLine{00612\ \ \ \ \ uint8\_t\ health\_sats\_used;\ }
+\DoxyCodeLine{00613\ \ \ \ \ uint8\_t\ health\_sats\_in\_view;\ }
+\DoxyCodeLine{00614\ \ \ \ \ \textcolor{keywordtype}{float}\ health\_HDOP;\ }
+\DoxyCodeLine{00615\ \ \ \ \ uint8\_t\ health\_mode;\ }
+\DoxyCodeLine{00616\ \ \ \ \ uint8\_t\ health\_COM;\ }
+\DoxyCodeLine{00617\ \ \ \ \ uint8\_t\ health\_accel;\ }
+\DoxyCodeLine{00618\ \ \ \ \ uint8\_t\ health\_gyro;\ }
+\DoxyCodeLine{00619\ \ \ \ \ uint8\_t\ health\_mag;\ }
+\DoxyCodeLine{00620\ \ \ \ \ uint8\_t\ health\_GPS;\ }
+\DoxyCodeLine{00621\ }
+\DoxyCodeLine{00622\ \ \ \ \ \textcolor{comment}{//\ Magnetometer\ data\ variables}}
+\DoxyCodeLine{00623\ \ \ \ \ \textcolor{keywordtype}{float}\ magX,\ magY,\ magZ;\ }
+\DoxyCodeLine{00624\ \};}
+\DoxyCodeLine{00625\ }
+\DoxyCodeLine{00626\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ REDSHIFT\_UML7\_H}}
+
+\end{DoxyCode}

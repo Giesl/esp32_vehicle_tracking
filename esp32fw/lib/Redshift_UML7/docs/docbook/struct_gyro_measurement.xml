@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_gyro_measurement" xml:lang="en-US">
+<title>GyroMeasurement Struct Reference</title>
+<indexterm><primary>GyroMeasurement</primary></indexterm>
+<para>
+
+<para>Structure to hold gyro measurement data. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;Redshift_UML7.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_struct_gyro_measurement_1a4abcb16d235472808b277643f49bc79a"/>float <emphasis role="strong">gyroX</emphasis></para>
+
+<para>Processed gyro X-axis data. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_gyro_measurement_1ab37508e55b3dc66e2a202d94137baf4d"/>float <emphasis role="strong">gyroY</emphasis></para>
+
+<para>Processed gyro Y-axis data. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_gyro_measurement_1a7f8cba5276a1ea72b1d5b28a9c132f27"/>float <emphasis role="strong">gyroZ</emphasis></para>
+
+<para>Processed gyro Z-axis data. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_gyro_measurement_1a3fb2032fccf9de830d5465f2baeceb65"/>float <emphasis role="strong">gyroTime</emphasis></para>
+
+<para>Timestamp of the gyro data. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Structure to hold gyro measurement data. </para>
+<para>
+The documentation for this struct was generated from the following file:</para>
+lib/Redshift_UML7/src/<link linkend="__redshift___u_m_l7_8h">Redshift_UML7.h</link></section>
+</section>

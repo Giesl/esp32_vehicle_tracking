@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_annotated" xml:lang="en-US">
+<title>Class List</title>
+Here are the classes, structs, unions and interfaces with brief descriptions:<link linkend="_struct_accel_measurement">AccelMeasurement</link>
+<para>Structure to hold accelerometer measurement data </para>
+<link linkend="_struct_gyro_measurement">GyroMeasurement</link>
+<para>Structure to hold gyro measurement data </para>
+<link linkend="_struct_mag_measurement">MagMeasurement</link>
+<para>Structure to hold magnetometer measurement data </para>
+<link linkend="_class_redshift___u_m_l7">Redshift_UML7</link>
+<para>Class to interface with the UM7 sensor </para>
+<link linkend="_struct_u_m7__packet__struct">UM7_packet_struct</link>
+<para>Structure for holding received packet information </para>
+</section>

@@ -1,0 +1,240 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___data_registers" xml:lang="en-US">
+<title>Data Registers</title>
+<indexterm><primary>Data Registers</primary></indexterm>
+<para>
+
+<para>Definitions for data register addresses. </para>
+ 
+</para>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_group___data_registers_1ga170c410737eaf6dd3d7e7e57673dbf0b"/>#define <emphasis role="strong">DREG_HEALTH</emphasis>&#160;&#160;&#160;0x55</para>
+
+<para>Health register. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___data_registers_1gaea9dff597fa552187fbcd4201e47f347"/>#define <emphasis role="strong">DREG_GYRO_RAW_XY</emphasis>&#160;&#160;&#160;0x56</para>
+
+<para>Raw gyroscope X and Y-axis data. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___data_registers_1ga2bd5c44daad3737288e6be256781adae"/>#define <emphasis role="strong">DREG_GYRO_RAW_Z</emphasis>&#160;&#160;&#160;0x57</para>
+
+<para>Raw gyroscope Z-axis data. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___data_registers_1gac85625f843af9d4cff05fa0761d72de1"/>#define <emphasis role="strong">DREG_GYRO_RAW_TIME</emphasis>&#160;&#160;&#160;0x58</para>
+
+<para>Timestamp for raw gyroscope data. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___data_registers_1ga41420f9a3f9bc54289333464e18e9e50"/>#define <emphasis role="strong">DREG_ACCEL_RAW_XY</emphasis>&#160;&#160;&#160;0x59</para>
+
+<para>Raw accelerometer X and Y-axis data. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___data_registers_1ga4b77e06da63057bc564ef195d1e269af"/>#define <emphasis role="strong">DREG_ACCEL_RAW_Z</emphasis>&#160;&#160;&#160;0x5A</para>
+
+<para>Raw accelerometer Z-axis data. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___data_registers_1ga62e264bd0ef1437267bca4cdcb42ecc6"/>#define <emphasis role="strong">DREG_ACCEL_RAW_TIME</emphasis>&#160;&#160;&#160;0x5B</para>
+
+<para>Timestamp for raw accelerometer data. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___data_registers_1gab7e0bc2bf77c614e25ba8eb8db5cf4e0"/>#define <emphasis role="strong">DREG_MAG_RAW_XY</emphasis>&#160;&#160;&#160;0x5C</para>
+
+<para>Raw magnetometer X and Y-axis data. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___data_registers_1ga6942a58e367ba70042c42ddbc9fad18b"/>#define <emphasis role="strong">DREG_MAG_RAW_Z</emphasis>&#160;&#160;&#160;0x5D</para>
+
+<para>Raw magnetometer Z-axis data. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___data_registers_1ga1361cc348d302ede78529d5153b4fc50"/>#define <emphasis role="strong">DREG_MAG_RAW_TIME</emphasis>&#160;&#160;&#160;0x5E</para>
+
+<para>Timestamp for raw magnetometer data. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___data_registers_1ga231df1fb3ce2286833d5203bbe95bcdf"/>#define <emphasis role="strong">DREG_TEMPERATURE</emphasis>&#160;&#160;&#160;0x5F</para>
+
+<para>Temperature data. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___data_registers_1ga1ebf97dfe41c6809a4b4ef609751e7f3"/>#define <emphasis role="strong">DREG_TEMPERATURE_TIME</emphasis>&#160;&#160;&#160;0x60</para>
+
+<para>Timestamp for temperature data. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___data_registers_1gae1fae765c68373083de327e079da7464"/>#define <emphasis role="strong">DREG_GYRO_PROC_X</emphasis>&#160;&#160;&#160;0x61</para>
+
+<para>Processed gyroscope X-axis data (deg/s) </para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___data_registers_1ga956411bcf69d03797bbbb95f8a0dbf64"/>#define <emphasis role="strong">DREG_GYRO_PROC_Y</emphasis>&#160;&#160;&#160;0x62</para>
+
+<para>Processed gyroscope Y-axis data (deg/s) </para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___data_registers_1ga2eac3ca032db1ee32d74de3b8f072d49"/>#define <emphasis role="strong">DREG_GYRO_PROC_Z</emphasis>&#160;&#160;&#160;0x63</para>
+
+<para>Processed gyroscope Z-axis data (deg/s) </para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___data_registers_1ga6a3c1db95743ac9c32e560c28586f4c8"/>#define <emphasis role="strong">DREG_GYRO_PROC_TIME</emphasis>&#160;&#160;&#160;0x64</para>
+
+<para>Timestamp for processed gyroscope data. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___data_registers_1ga3408e31d5fbbb7b6d6380b4a8a1e54c2"/>#define <emphasis role="strong">DREG_ACCEL_PROC_X</emphasis>&#160;&#160;&#160;0x65</para>
+
+<para>Processed accelerometer X-axis data (m/s^2) </para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___data_registers_1ga19de4c3cbd6bb525112fe1a0fc57dff6"/>#define <emphasis role="strong">DREG_ACCEL_PROC_Y</emphasis>&#160;&#160;&#160;0x66</para>
+
+<para>Processed accelerometer Y-axis data (m/s^2) </para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___data_registers_1gab516550725f973e8ec715ffe682222e5"/>#define <emphasis role="strong">DREG_ACCEL_PROC_Z</emphasis>&#160;&#160;&#160;0x67</para>
+
+<para>Processed accelerometer Z-axis data (m/s^2) </para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___data_registers_1ga22c3a3bf4529dacd32fa3949e31e8a4d"/>#define <emphasis role="strong">DREG_ACCEL_PROC_TIME</emphasis>&#160;&#160;&#160;0x68</para>
+
+<para>Timestamp for processed accelerometer data. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___data_registers_1gab4984c454d39273ef45ad5bcb931b38e"/>#define <emphasis role="strong">DREG_MAG_PROC_X</emphasis>&#160;&#160;&#160;0x69</para>
+
+<para>Processed magnetometer X-axis data (T) </para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___data_registers_1ga1a0927ba2aec54c8142000ff4760160b"/>#define <emphasis role="strong">DREG_MAG_PROC_Y</emphasis>&#160;&#160;&#160;0x6A</para>
+
+<para>Processed magnetometer Y-axis data (T) </para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___data_registers_1gac057ce59445b12b6e926259e0d85aa1c"/>#define <emphasis role="strong">DREG_MAG_PROC_Z</emphasis>&#160;&#160;&#160;0x6B</para>
+
+<para>Processed magnetometer Z-axis data (T) </para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___data_registers_1ga7e5717cb4bc4b895cef43a6d66cd69c8"/>#define <emphasis role="strong">DREG_MAG_PROC_TIME</emphasis>&#160;&#160;&#160;0x6C</para>
+
+<para>Timestamp for processed magnetometer data. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___data_registers_1ga5e169479a0f9e37988b315de6d0e7ffd"/>#define <emphasis role="strong">DREG_QUAT_AB</emphasis>&#160;&#160;&#160;0x6D</para>
+
+<para>Quaternion components A and B. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___data_registers_1ga7c452f63a3608985bab919482fa426bc"/>#define <emphasis role="strong">DREG_QUAT_CD</emphasis>&#160;&#160;&#160;0x6E</para>
+
+<para>Quaternion components C and D. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___data_registers_1ga12740648309d0af3c4e3189bbd4b7031"/>#define <emphasis role="strong">DREG_QUAT_TIME</emphasis>&#160;&#160;&#160;0x6F</para>
+
+<para>Timestamp for quaternion data. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___data_registers_1gaabc7e126f133d365dfcf94976897c5b1"/>#define <emphasis role="strong">DREG_EULER_PHI_THETA</emphasis>&#160;&#160;&#160;0x70</para>
+
+<para>Euler angles phi and theta (deg) </para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___data_registers_1ga982003d6002251c151a73e167177e928"/>#define <emphasis role="strong">DREG_EULER_PSI</emphasis>&#160;&#160;&#160;0x71</para>
+
+<para>Euler angle psi (deg) </para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___data_registers_1ga1465ab8b59b7002e713bf5db47eb00a9"/>#define <emphasis role="strong">DREG_EULER_PHI_THETA_DOT</emphasis>&#160;&#160;&#160;0x72</para>
+
+<para>Euler angle rates phi and theta (deg/s) </para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___data_registers_1gae90a544604b33be5eba61633f837d1d2"/>#define <emphasis role="strong">DREG_EULER_PSI_DOT</emphasis>&#160;&#160;&#160;0x73</para>
+
+<para>Euler angle rate psi (deg/s) </para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___data_registers_1gaeea33f51b6ad05b615f5ab2d2f266f7b"/>#define <emphasis role="strong">DREG_EULER_TIME</emphasis>&#160;&#160;&#160;0x74</para>
+
+<para>Timestamp for Euler angle data. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___data_registers_1ga2b219896877f1b9aed1ac91741845900"/>#define <emphasis role="strong">DREG_POSITION_N</emphasis>&#160;&#160;&#160;0x75</para>
+
+<para>Position north (m) </para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___data_registers_1gac57340ae76f4d0081bbbef0a6b7695ca"/>#define <emphasis role="strong">DREG_POSITION_E</emphasis>&#160;&#160;&#160;0x76</para>
+
+<para>Position east (m) </para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___data_registers_1ga5eb8fd56e428a5c8d7636de479dd3ae9"/>#define <emphasis role="strong">DREG_POSITION_UP</emphasis>&#160;&#160;&#160;0x77</para>
+
+<para>Position up (m) </para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___data_registers_1gaea7d4746779dfa2cdc56e7048d35eb39"/>#define <emphasis role="strong">DREG_POSITION_TIME</emphasis>&#160;&#160;&#160;0x78</para>
+
+<para>Timestamp for position data. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___data_registers_1gaf8da596b1453532f59fdc7ac36314cd8"/>#define <emphasis role="strong">DREG_VELOCITY_N</emphasis>&#160;&#160;&#160;0x79</para>
+
+<para>Velocity north (m/s) </para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___data_registers_1gadec712ad66cfb14706fe645ab0a6a5c0"/>#define <emphasis role="strong">DREG_VELOCITY_E</emphasis>&#160;&#160;&#160;0x7A</para>
+
+<para>Velocity east (m/s) </para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___data_registers_1gae1e9257daa4097574b087a5912e04cc2"/>#define <emphasis role="strong">DREG_VELOCITY_UP</emphasis>&#160;&#160;&#160;0x7B</para>
+
+<para>Velocity up (m/s) </para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___data_registers_1ga42a709cc0d5493334fb36000b819ff6d"/>#define <emphasis role="strong">DREG_VELOCITY_TIME</emphasis>&#160;&#160;&#160;0x7C</para>
+
+<para>Timestamp for velocity data. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___data_registers_1gaee5fe7f495d39c83b3076d49b1dcdd66"/>#define <emphasis role="strong">DREG_GPS_LATITUDE</emphasis>&#160;&#160;&#160;0x7D</para>
+
+<para>GPS latitude (deg) </para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___data_registers_1gaf43e71ab215e366ab45f70ccf7c34967"/>#define <emphasis role="strong">DREG_GPS_LONGITUDE</emphasis>&#160;&#160;&#160;0x7E</para>
+
+<para>GPS longitude (deg) </para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___data_registers_1ga62463ea209e0d988e375e71d5feeedf5"/>#define <emphasis role="strong">DREG_GPS_ALTITUDE</emphasis>&#160;&#160;&#160;0x7F</para>
+
+<para>GPS altitude (m) </para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___data_registers_1ga3f0237fd57a4e2be00f90dbbf6750249"/>#define <emphasis role="strong">DREG_GPS_COURSE</emphasis>&#160;&#160;&#160;0x80</para>
+
+<para>GPS course (deg) </para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___data_registers_1ga0ff79a5104924d5649594c4102a180dc"/>#define <emphasis role="strong">DREG_GPS_SPEED</emphasis>&#160;&#160;&#160;0x81</para>
+
+<para>GPS speed (m/s) </para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___data_registers_1ga38faea0ad9160d4b879431c97f059e61"/>#define <emphasis role="strong">DREG_GPS_TIME</emphasis>&#160;&#160;&#160;0x82</para>
+
+<para>GPS time. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___data_registers_1ga2ca8e1213b298fb2cdd522f1dc84f41a"/>#define <emphasis role="strong">DREG_GPS_SAT_1_2</emphasis>&#160;&#160;&#160;0x83</para>
+
+<para>GPS satellites 1 and 2. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___data_registers_1ga056dc0d6ce435500ce2937673c10a284"/>#define <emphasis role="strong">DREG_GPS_SAT_3_4</emphasis>&#160;&#160;&#160;0x84</para>
+
+<para>GPS satellites 3 and 4. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___data_registers_1ga1d53f0023fa84ee166e1e5ea7cf7ca88"/>#define <emphasis role="strong">DREG_GPS_SAT_5_6</emphasis>&#160;&#160;&#160;0x85</para>
+
+<para>GPS satellites 5 and 6. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___data_registers_1ga77ce5018f3dcc659f5a99420d8a32baf"/>#define <emphasis role="strong">DREG_GPS_SAT_7_8</emphasis>&#160;&#160;&#160;0x86</para>
+
+<para>GPS satellites 7 and 8. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___data_registers_1ga2650585603ee1719f66bb285c1f3f329"/>#define <emphasis role="strong">DREG_GPS_SAT_9_10</emphasis>&#160;&#160;&#160;0x87</para>
+
+<para>GPS satellites 9 and 10. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___data_registers_1ga8665150952fbace09f64bb6ea23c703b"/>#define <emphasis role="strong">DREG_GPS_SAT_11_12</emphasis>&#160;&#160;&#160;0x88</para>
+
+<para>GPS satellites 11 and 12. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___data_registers_1ga669a399242672a60a23a9f104c1d4b04"/>#define <emphasis role="strong">DREG_GYRO_BIAS_X</emphasis>&#160;&#160;&#160;0x89</para>
+
+<para>Gyroscope X-axis bias. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___data_registers_1gafe79245564e1aeb6561ef0aa27631c12"/>#define <emphasis role="strong">DREG_GYRO_BIAS_Y</emphasis>&#160;&#160;&#160;0x8A</para>
+
+<para>Gyroscope Y-axis bias. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___data_registers_1ga1d940c28baea566c83ba7d8587e427d8"/>#define <emphasis role="strong">DREG_GYRO_BIAS_Z</emphasis>&#160;&#160;&#160;0x8B</para>
+
+<para>Gyroscope Z-axis bias. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Definitions for data register addresses. </para>
+</section>
+</section>

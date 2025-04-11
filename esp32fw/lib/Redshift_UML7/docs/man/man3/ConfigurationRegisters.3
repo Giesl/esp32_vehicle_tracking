@@ -1,0 +1,179 @@
+.TH "ConfigurationRegisters" 3 "Version 1.0" "RedshiftLabls UM7 library" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ConfigurationRegisters \- Configuration Registers
+.PP
+ \- Definitions for configuration register addresses\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBCREG_COM_SETTINGS\fP   0x00"
+.br
+.RI "Baud rates for reading over the UM7, default 115200 baud\&. "
+.ti -1c
+.RI "#define \fBCREG_COM_RATES1\fP   0x01"
+.br
+.RI "Individual raw data rate\&. "
+.ti -1c
+.RI "#define \fBCREG_COM_RATES2\fP   0x02"
+.br
+.RI "All raw data rate\&. "
+.ti -1c
+.RI "#define \fBCREG_COM_RATES3\fP   0x03"
+.br
+.RI "Individual processed data rate\&. "
+.ti -1c
+.RI "#define \fBCREG_COM_RATES4\fP   0x04"
+.br
+.RI "All processed data rate\&. "
+.ti -1c
+.RI "#define \fBCREG_COM_RATES5\fP   0x05"
+.br
+.RI "Quaternion, Euler, position, and velocity data rate\&. "
+.ti -1c
+.RI "#define \fBCREG_COM_RATES6\fP   0x06"
+.br
+.RI "Pose (Euler & position), health, and gyro bias estimate rates\&. "
+.ti -1c
+.RI "#define \fBCREG_COM_RATES7\fP   0x07"
+.br
+.RI "Data rate for CHR NMEA-style packets\&. "
+.ti -1c
+.RI "#define \fBCREG_MISC_SETTINGS\fP   0x08"
+.br
+.RI "Filter and sensor control options\&. "
+.ti -1c
+.RI "#define \fBCREG_HOME_NORTH\fP   0x09"
+.br
+.RI "Sets north from current position\&. "
+.ti -1c
+.RI "#define \fBCREG_HOME_EAST\fP   0x0A"
+.br
+.RI "Sets east from current position\&. "
+.ti -1c
+.RI "#define \fBCREG_HOME_UP\fP   0x0B"
+.br
+.RI "Sets home altitude in meters\&. "
+.ti -1c
+.RI "#define \fBCREG_GYRO_TRIM_X\fP   0x0C"
+.br
+.RI "Gyroscope X-axis trim\&. "
+.ti -1c
+.RI "#define \fBCREG_GYRO_TRIM_Y\fP   0x0D"
+.br
+.RI "Gyroscope Y-axis trim\&. "
+.ti -1c
+.RI "#define \fBCREG_GYRO_TRIM_Z\fP   0x0E"
+.br
+.RI "Gyroscope Z-axis trim\&. "
+.ti -1c
+.RI "#define \fBCREG_MAG_CAL1_1\fP   0x0F"
+.br
+.RI "Magnetometer calibration matrix element 1,1\&. "
+.ti -1c
+.RI "#define \fBCREG_MAG_CAL1_2\fP   0x10"
+.br
+.RI "Magnetometer calibration matrix element 1,2\&. "
+.ti -1c
+.RI "#define \fBCREG_MAG_CAL1_3\fP   0x11"
+.br
+.RI "Magnetometer calibration matrix element 1,3\&. "
+.ti -1c
+.RI "#define \fBCREG_MAG_CAL2_1\fP   0x12"
+.br
+.RI "Magnetometer calibration matrix element 2,1\&. "
+.ti -1c
+.RI "#define \fBCREG_MAG_CAL2_2\fP   0x13"
+.br
+.RI "Magnetometer calibration matrix element 2,2\&. "
+.ti -1c
+.RI "#define \fBCREG_MAG_CAL2_3\fP   0x14"
+.br
+.RI "Magnetometer calibration matrix element 2,3\&. "
+.ti -1c
+.RI "#define \fBCREG_MAG_CAL3_1\fP   0x15"
+.br
+.RI "Magnetometer calibration matrix element 3,1\&. "
+.ti -1c
+.RI "#define \fBCREG_MAG_CAL3_2\fP   0x16"
+.br
+.RI "Magnetometer calibration matrix element 3,2\&. "
+.ti -1c
+.RI "#define \fBCREG_MAG_CAL3_3\fP   0x17"
+.br
+.RI "Magnetometer calibration matrix element 3,3\&. "
+.ti -1c
+.RI "#define \fBCREG_MAG_BIAS_X\fP   0x18"
+.br
+.RI "Magnetometer X-axis bias\&. "
+.ti -1c
+.RI "#define \fBCREG_MAG_BIAS_Y\fP   0x19"
+.br
+.RI "Magnetometer Y-axis bias\&. "
+.ti -1c
+.RI "#define \fBCREG_MAG_BIAS_Z\fP   0x1A"
+.br
+.RI "Magnetometer Z-axis bias\&. "
+.ti -1c
+.RI "#define \fBCREG_ACCEL_CAL1_1\fP   0x1B"
+.br
+.RI "Accelerometer calibration matrix element 1,1\&. "
+.ti -1c
+.RI "#define \fBCREG_ACCEL_CAL1_2\fP   0x1C"
+.br
+.RI "Accelerometer calibration matrix element 1,2\&. "
+.ti -1c
+.RI "#define \fBCREG_ACCEL_CAL1_3\fP   0x1D"
+.br
+.RI "Accelerometer calibration matrix element 1,3\&. "
+.ti -1c
+.RI "#define \fBCREG_ACCEL_CAL2_1\fP   0x1E"
+.br
+.RI "Accelerometer calibration matrix element 2,1\&. "
+.ti -1c
+.RI "#define \fBCREG_ACCEL_CAL2_2\fP   0x1F"
+.br
+.RI "Accelerometer calibration matrix element 2,2\&. "
+.ti -1c
+.RI "#define \fBCREG_ACCEL_CAL2_3\fP   0x20"
+.br
+.RI "Accelerometer calibration matrix element 2,3\&. "
+.ti -1c
+.RI "#define \fBCREG_ACCEL_CAL3_1\fP   0x21"
+.br
+.RI "Accelerometer calibration matrix element 3,1\&. "
+.ti -1c
+.RI "#define \fBCREG_ACCEL_CAL3_2\fP   0x22"
+.br
+.RI "Accelerometer calibration matrix element 3,2\&. "
+.ti -1c
+.RI "#define \fBCREG_ACCEL_CAL3_3\fP   0x23"
+.br
+.RI "Accelerometer calibration matrix element 3,3\&. "
+.ti -1c
+.RI "#define \fBCREG_ACCEL_BIAS_X\fP   0x24"
+.br
+.RI "Accelerometer X-axis bias\&. "
+.ti -1c
+.RI "#define \fBCREG_ACCEL_BIAS_Y\fP   0x25"
+.br
+.RI "Accelerometer Y-axis bias\&. "
+.ti -1c
+.RI "#define \fBCREG_ACCEL_BIAS_Z\fP   0x26"
+.br
+.RI "Accelerometer Z-axis bias\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definitions for configuration register addresses\&. 
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for RedshiftLabls UM7 library from the source code\&.

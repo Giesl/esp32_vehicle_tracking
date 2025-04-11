@@ -1,0 +1,541 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__redshift___u_m_l7_8h" xml:lang="en-US">
+<title>lib/Redshift_UML7/src/Redshift_UML7.h File Reference</title>
+<indexterm><primary>lib/Redshift_UML7/src/Redshift_UML7.h</primary></indexterm>
+<para>
+
+<para>Header file for the <link linkend="_class_redshift___u_m_l7">Redshift_UML7</link> class, which provides an interface to the UM7 sensor. </para>
+ 
+</para>
+<programlisting linenumbering="unnumbered">#include &lt;Arduino.h&gt;<?linebreak?>#include &lt;stdint.h&gt;<?linebreak?>#include &lt;stddef.h&gt;<?linebreak?></programlisting><simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_struct_u_m7__packet__struct">UM7_packet_struct</link></para>
+
+<para>Structure for holding received packet information. </para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_gyro_measurement">GyroMeasurement</link></para>
+
+<para>Structure to hold gyro measurement data. </para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_accel_measurement">AccelMeasurement</link></para>
+
+<para>Structure to hold accelerometer measurement data. </para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_mag_measurement">MagMeasurement</link></para>
+
+<para>Structure to hold magnetometer measurement data. </para>
+</listitem>
+            <listitem><para>class <link linkend="_class_redshift___u_m_l7">Redshift_UML7</link></para>
+
+<para>Class to interface with the UM7 sensor. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <emphasis role="strong">CREG_COM_SETTINGS</emphasis>&#160;&#160;&#160;0x00</para>
+
+<para>Baud rates for reading over the UM7, default 115200 baud. </para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">CREG_COM_RATES1</emphasis>&#160;&#160;&#160;0x01</para>
+
+<para>Individual raw data rate. </para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">CREG_COM_RATES2</emphasis>&#160;&#160;&#160;0x02</para>
+
+<para>All raw data rate. </para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">CREG_COM_RATES3</emphasis>&#160;&#160;&#160;0x03</para>
+
+<para>Individual processed data rate. </para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">CREG_COM_RATES4</emphasis>&#160;&#160;&#160;0x04</para>
+
+<para>All processed data rate. </para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">CREG_COM_RATES5</emphasis>&#160;&#160;&#160;0x05</para>
+
+<para>Quaternion, Euler, position, and velocity data rate. </para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">CREG_COM_RATES6</emphasis>&#160;&#160;&#160;0x06</para>
+
+<para>Pose (Euler &amp; position), health, and gyro bias estimate rates. </para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">CREG_COM_RATES7</emphasis>&#160;&#160;&#160;0x07</para>
+
+<para>Data rate for CHR NMEA-style packets. </para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">CREG_MISC_SETTINGS</emphasis>&#160;&#160;&#160;0x08</para>
+
+<para>Filter and sensor control options. </para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">CREG_HOME_NORTH</emphasis>&#160;&#160;&#160;0x09</para>
+
+<para>Sets north from current position. </para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">CREG_HOME_EAST</emphasis>&#160;&#160;&#160;0x0A</para>
+
+<para>Sets east from current position. </para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">CREG_HOME_UP</emphasis>&#160;&#160;&#160;0x0B</para>
+
+<para>Sets home altitude in meters. </para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">CREG_GYRO_TRIM_X</emphasis>&#160;&#160;&#160;0x0C</para>
+
+<para>Gyroscope X-axis trim. </para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">CREG_GYRO_TRIM_Y</emphasis>&#160;&#160;&#160;0x0D</para>
+
+<para>Gyroscope Y-axis trim. </para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">CREG_GYRO_TRIM_Z</emphasis>&#160;&#160;&#160;0x0E</para>
+
+<para>Gyroscope Z-axis trim. </para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">CREG_MAG_CAL1_1</emphasis>&#160;&#160;&#160;0x0F</para>
+
+<para>Magnetometer calibration matrix element 1,1. </para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">CREG_MAG_CAL1_2</emphasis>&#160;&#160;&#160;0x10</para>
+
+<para>Magnetometer calibration matrix element 1,2. </para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">CREG_MAG_CAL1_3</emphasis>&#160;&#160;&#160;0x11</para>
+
+<para>Magnetometer calibration matrix element 1,3. </para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">CREG_MAG_CAL2_1</emphasis>&#160;&#160;&#160;0x12</para>
+
+<para>Magnetometer calibration matrix element 2,1. </para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">CREG_MAG_CAL2_2</emphasis>&#160;&#160;&#160;0x13</para>
+
+<para>Magnetometer calibration matrix element 2,2. </para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">CREG_MAG_CAL2_3</emphasis>&#160;&#160;&#160;0x14</para>
+
+<para>Magnetometer calibration matrix element 2,3. </para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">CREG_MAG_CAL3_1</emphasis>&#160;&#160;&#160;0x15</para>
+
+<para>Magnetometer calibration matrix element 3,1. </para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">CREG_MAG_CAL3_2</emphasis>&#160;&#160;&#160;0x16</para>
+
+<para>Magnetometer calibration matrix element 3,2. </para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">CREG_MAG_CAL3_3</emphasis>&#160;&#160;&#160;0x17</para>
+
+<para>Magnetometer calibration matrix element 3,3. </para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">CREG_MAG_BIAS_X</emphasis>&#160;&#160;&#160;0x18</para>
+
+<para>Magnetometer X-axis bias. </para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">CREG_MAG_BIAS_Y</emphasis>&#160;&#160;&#160;0x19</para>
+
+<para>Magnetometer Y-axis bias. </para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">CREG_MAG_BIAS_Z</emphasis>&#160;&#160;&#160;0x1A</para>
+
+<para>Magnetometer Z-axis bias. </para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">CREG_ACCEL_CAL1_1</emphasis>&#160;&#160;&#160;0x1B</para>
+
+<para>Accelerometer calibration matrix element 1,1. </para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">CREG_ACCEL_CAL1_2</emphasis>&#160;&#160;&#160;0x1C</para>
+
+<para>Accelerometer calibration matrix element 1,2. </para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">CREG_ACCEL_CAL1_3</emphasis>&#160;&#160;&#160;0x1D</para>
+
+<para>Accelerometer calibration matrix element 1,3. </para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">CREG_ACCEL_CAL2_1</emphasis>&#160;&#160;&#160;0x1E</para>
+
+<para>Accelerometer calibration matrix element 2,1. </para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">CREG_ACCEL_CAL2_2</emphasis>&#160;&#160;&#160;0x1F</para>
+
+<para>Accelerometer calibration matrix element 2,2. </para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">CREG_ACCEL_CAL2_3</emphasis>&#160;&#160;&#160;0x20</para>
+
+<para>Accelerometer calibration matrix element 2,3. </para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">CREG_ACCEL_CAL3_1</emphasis>&#160;&#160;&#160;0x21</para>
+
+<para>Accelerometer calibration matrix element 3,1. </para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">CREG_ACCEL_CAL3_2</emphasis>&#160;&#160;&#160;0x22</para>
+
+<para>Accelerometer calibration matrix element 3,2. </para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">CREG_ACCEL_CAL3_3</emphasis>&#160;&#160;&#160;0x23</para>
+
+<para>Accelerometer calibration matrix element 3,3. </para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">CREG_ACCEL_BIAS_X</emphasis>&#160;&#160;&#160;0x24</para>
+
+<para>Accelerometer X-axis bias. </para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">CREG_ACCEL_BIAS_Y</emphasis>&#160;&#160;&#160;0x25</para>
+
+<para>Accelerometer Y-axis bias. </para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">CREG_ACCEL_BIAS_Z</emphasis>&#160;&#160;&#160;0x26</para>
+
+<para>Accelerometer Z-axis bias. </para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">DREG_HEALTH</emphasis>&#160;&#160;&#160;0x55</para>
+
+<para>Health register. </para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">DREG_GYRO_RAW_XY</emphasis>&#160;&#160;&#160;0x56</para>
+
+<para>Raw gyroscope X and Y-axis data. </para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">DREG_GYRO_RAW_Z</emphasis>&#160;&#160;&#160;0x57</para>
+
+<para>Raw gyroscope Z-axis data. </para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">DREG_GYRO_RAW_TIME</emphasis>&#160;&#160;&#160;0x58</para>
+
+<para>Timestamp for raw gyroscope data. </para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">DREG_ACCEL_RAW_XY</emphasis>&#160;&#160;&#160;0x59</para>
+
+<para>Raw accelerometer X and Y-axis data. </para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">DREG_ACCEL_RAW_Z</emphasis>&#160;&#160;&#160;0x5A</para>
+
+<para>Raw accelerometer Z-axis data. </para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">DREG_ACCEL_RAW_TIME</emphasis>&#160;&#160;&#160;0x5B</para>
+
+<para>Timestamp for raw accelerometer data. </para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">DREG_MAG_RAW_XY</emphasis>&#160;&#160;&#160;0x5C</para>
+
+<para>Raw magnetometer X and Y-axis data. </para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">DREG_MAG_RAW_Z</emphasis>&#160;&#160;&#160;0x5D</para>
+
+<para>Raw magnetometer Z-axis data. </para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">DREG_MAG_RAW_TIME</emphasis>&#160;&#160;&#160;0x5E</para>
+
+<para>Timestamp for raw magnetometer data. </para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">DREG_TEMPERATURE</emphasis>&#160;&#160;&#160;0x5F</para>
+
+<para>Temperature data. </para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">DREG_TEMPERATURE_TIME</emphasis>&#160;&#160;&#160;0x60</para>
+
+<para>Timestamp for temperature data. </para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">DREG_GYRO_PROC_X</emphasis>&#160;&#160;&#160;0x61</para>
+
+<para>Processed gyroscope X-axis data (deg/s) </para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">DREG_GYRO_PROC_Y</emphasis>&#160;&#160;&#160;0x62</para>
+
+<para>Processed gyroscope Y-axis data (deg/s) </para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">DREG_GYRO_PROC_Z</emphasis>&#160;&#160;&#160;0x63</para>
+
+<para>Processed gyroscope Z-axis data (deg/s) </para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">DREG_GYRO_PROC_TIME</emphasis>&#160;&#160;&#160;0x64</para>
+
+<para>Timestamp for processed gyroscope data. </para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">DREG_ACCEL_PROC_X</emphasis>&#160;&#160;&#160;0x65</para>
+
+<para>Processed accelerometer X-axis data (m/s^2) </para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">DREG_ACCEL_PROC_Y</emphasis>&#160;&#160;&#160;0x66</para>
+
+<para>Processed accelerometer Y-axis data (m/s^2) </para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">DREG_ACCEL_PROC_Z</emphasis>&#160;&#160;&#160;0x67</para>
+
+<para>Processed accelerometer Z-axis data (m/s^2) </para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">DREG_ACCEL_PROC_TIME</emphasis>&#160;&#160;&#160;0x68</para>
+
+<para>Timestamp for processed accelerometer data. </para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">DREG_MAG_PROC_X</emphasis>&#160;&#160;&#160;0x69</para>
+
+<para>Processed magnetometer X-axis data (T) </para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">DREG_MAG_PROC_Y</emphasis>&#160;&#160;&#160;0x6A</para>
+
+<para>Processed magnetometer Y-axis data (T) </para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">DREG_MAG_PROC_Z</emphasis>&#160;&#160;&#160;0x6B</para>
+
+<para>Processed magnetometer Z-axis data (T) </para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">DREG_MAG_PROC_TIME</emphasis>&#160;&#160;&#160;0x6C</para>
+
+<para>Timestamp for processed magnetometer data. </para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">DREG_QUAT_AB</emphasis>&#160;&#160;&#160;0x6D</para>
+
+<para>Quaternion components A and B. </para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">DREG_QUAT_CD</emphasis>&#160;&#160;&#160;0x6E</para>
+
+<para>Quaternion components C and D. </para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">DREG_QUAT_TIME</emphasis>&#160;&#160;&#160;0x6F</para>
+
+<para>Timestamp for quaternion data. </para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">DREG_EULER_PHI_THETA</emphasis>&#160;&#160;&#160;0x70</para>
+
+<para>Euler angles phi and theta (deg) </para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">DREG_EULER_PSI</emphasis>&#160;&#160;&#160;0x71</para>
+
+<para>Euler angle psi (deg) </para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">DREG_EULER_PHI_THETA_DOT</emphasis>&#160;&#160;&#160;0x72</para>
+
+<para>Euler angle rates phi and theta (deg/s) </para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">DREG_EULER_PSI_DOT</emphasis>&#160;&#160;&#160;0x73</para>
+
+<para>Euler angle rate psi (deg/s) </para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">DREG_EULER_TIME</emphasis>&#160;&#160;&#160;0x74</para>
+
+<para>Timestamp for Euler angle data. </para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">DREG_POSITION_N</emphasis>&#160;&#160;&#160;0x75</para>
+
+<para>Position north (m) </para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">DREG_POSITION_E</emphasis>&#160;&#160;&#160;0x76</para>
+
+<para>Position east (m) </para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">DREG_POSITION_UP</emphasis>&#160;&#160;&#160;0x77</para>
+
+<para>Position up (m) </para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">DREG_POSITION_TIME</emphasis>&#160;&#160;&#160;0x78</para>
+
+<para>Timestamp for position data. </para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">DREG_VELOCITY_N</emphasis>&#160;&#160;&#160;0x79</para>
+
+<para>Velocity north (m/s) </para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">DREG_VELOCITY_E</emphasis>&#160;&#160;&#160;0x7A</para>
+
+<para>Velocity east (m/s) </para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">DREG_VELOCITY_UP</emphasis>&#160;&#160;&#160;0x7B</para>
+
+<para>Velocity up (m/s) </para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">DREG_VELOCITY_TIME</emphasis>&#160;&#160;&#160;0x7C</para>
+
+<para>Timestamp for velocity data. </para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">DREG_GPS_LATITUDE</emphasis>&#160;&#160;&#160;0x7D</para>
+
+<para>GPS latitude (deg) </para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">DREG_GPS_LONGITUDE</emphasis>&#160;&#160;&#160;0x7E</para>
+
+<para>GPS longitude (deg) </para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">DREG_GPS_ALTITUDE</emphasis>&#160;&#160;&#160;0x7F</para>
+
+<para>GPS altitude (m) </para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">DREG_GPS_COURSE</emphasis>&#160;&#160;&#160;0x80</para>
+
+<para>GPS course (deg) </para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">DREG_GPS_SPEED</emphasis>&#160;&#160;&#160;0x81</para>
+
+<para>GPS speed (m/s) </para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">DREG_GPS_TIME</emphasis>&#160;&#160;&#160;0x82</para>
+
+<para>GPS time. </para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">DREG_GPS_SAT_1_2</emphasis>&#160;&#160;&#160;0x83</para>
+
+<para>GPS satellites 1 and 2. </para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">DREG_GPS_SAT_3_4</emphasis>&#160;&#160;&#160;0x84</para>
+
+<para>GPS satellites 3 and 4. </para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">DREG_GPS_SAT_5_6</emphasis>&#160;&#160;&#160;0x85</para>
+
+<para>GPS satellites 5 and 6. </para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">DREG_GPS_SAT_7_8</emphasis>&#160;&#160;&#160;0x86</para>
+
+<para>GPS satellites 7 and 8. </para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">DREG_GPS_SAT_9_10</emphasis>&#160;&#160;&#160;0x87</para>
+
+<para>GPS satellites 9 and 10. </para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">DREG_GPS_SAT_11_12</emphasis>&#160;&#160;&#160;0x88</para>
+
+<para>GPS satellites 11 and 12. </para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">DREG_GYRO_BIAS_X</emphasis>&#160;&#160;&#160;0x89</para>
+
+<para>Gyroscope X-axis bias. </para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">DREG_GYRO_BIAS_Y</emphasis>&#160;&#160;&#160;0x8A</para>
+
+<para>Gyroscope Y-axis bias. </para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">DREG_GYRO_BIAS_Z</emphasis>&#160;&#160;&#160;0x8B</para>
+
+<para>Gyroscope Z-axis bias. </para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">GET_FW_REVISION</emphasis>&#160;&#160;&#160;0xAA</para>
+
+<para>Get firmware revision. </para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">FLASH_COMMIT</emphasis>&#160;&#160;&#160;0xAB</para>
+
+<para>Write all configuration settings to FLASH. </para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">RESET_TO_FACTORY</emphasis>&#160;&#160;&#160;0xAC</para>
+
+<para>Reset to factory defaults. </para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">ZERO_GYROS</emphasis>&#160;&#160;&#160;0xAD</para>
+
+<para>Zero gyroscopes (keep flat) </para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">SET_HOME_POSITION</emphasis>&#160;&#160;&#160;0xAE</para>
+
+<para>Set home position. </para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">SET_MAG_REFERENCE</emphasis>&#160;&#160;&#160;0xB0</para>
+
+<para>Set magnetic reference. </para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">CALIBRATE_ACCELEROMETERS</emphasis>&#160;&#160;&#160;0xB1</para>
+
+<para>Calibrate accelerometers (keep flat) </para>
+</listitem>
+            <listitem><para>#define <emphasis role="strong">RESET_EKF</emphasis>&#160;&#160;&#160;0xB3</para>
+
+<para>Reset the Extended Kalman Filter. </para>
+</listitem>
+            <listitem><para><anchor xml:id="__redshift___u_m_l7_8h_1a9718811a51e9aca0b2cef22ca84435cc"/>#define <emphasis role="strong">READ_DELAY</emphasis>&#160;&#160;&#160;100</para>
+</listitem>
+            <listitem><para><anchor xml:id="__redshift___u_m_l7_8h_1af7b7dc9a200cb1404c280bd500fd1551"/>#define <emphasis role="strong">BUFFER_LENGTH</emphasis>&#160;&#160;&#160;128</para>
+</listitem>
+            <listitem><para><anchor xml:id="__redshift___u_m_l7_8h_1a5e291f70127ea60cdd69d9dcb857c29a"/>#define <emphasis role="strong">GET_PACKET_ATTEMPS</emphasis>&#160;&#160;&#160;5</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Typedefs    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="__redshift___u_m_l7_8h_1ab61dddf71d3fb0bfa520aeae95099245"/>typedef struct <link linkend="_struct_u_m7__packet__struct">UM7_packet_struct</link> <emphasis role="strong">UM7_packet</emphasis></para>
+
+<para>Structure for holding received packet information. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>uint8_t <link linkend="__redshift___u_m_l7_8h_1a8d9dba22e719fe66c1dfdafbe7e189ad">extract_bits</link> (uint8_t byte, uint8_t start_bit, uint8_t num_bits)</para>
+
+<para>Helper function to extract bits from a byte. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Header file for the <link linkend="_class_redshift___u_m_l7">Redshift_UML7</link> class, which provides an interface to the UM7 sensor. </para>
+
+<para>This file contains the definitions, constants, and declarations required to interact with the UM7 sensor. The UM7 sensor is a high-performance orientation sensor that provides data such as gyroscope, accelerometer, magnetometer, GPS, and orientation (yaw, pitch, roll). The <link linkend="_class_redshift___u_m_l7">Redshift_UML7</link> class facilitates communication with the sensor over a serial interface and provides methods to retrieve and process sensor data.</para>
+
+<para><formalpara><title>Author</title>
+
+<para>Vojtěch Giesl </para>
+</formalpara>
+<formalpara><title>Date</title>
+
+<para>03/2025 </para>
+</formalpara>
+<formalpara><title>Version</title>
+
+<para>1.0 </para>
+</formalpara>
+</para>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="__redshift___u_m_l7_8h_1a8d9dba22e719fe66c1dfdafbe7e189ad"/><section>
+    <title>extract_bits()</title>
+<indexterm><primary>extract_bits</primary><secondary>Redshift_UML7.h</secondary></indexterm>
+<indexterm><primary>Redshift_UML7.h</primary><secondary>extract_bits</secondary></indexterm>
+<para><computeroutput>uint8_t extract_bits (uint8_t byte, uint8_t start_bit, uint8_t num_bits)</computeroutput></para><para>
+
+<para>Helper function to extract bits from a byte. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>byte</entry><entry>
+<para>The byte to extract bits from. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>start_bit</entry><entry>
+<para>The starting bit position. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>num_bits</entry><entry>
+<para>The number of bits to extract. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Extracted bits as a uint8_t. </para>
+</formalpara>
+</para>
+</section>
+</section>
+</section>

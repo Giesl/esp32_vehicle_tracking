@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<book xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_index" xml:lang="en-US">
+    <info>
+    <title>RedshiftLabls UM7 library</title>
+    </info>
+<chapter>
+    <title>Topic Documentation</title>
+    <xi:include href="group___configuration_registers.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="group___data_registers.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="group___command_registers.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+</chapter>
+<chapter>
+    <title>Class Documentation</title>
+    <xi:include href="struct_accel_measurement.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="struct_gyro_measurement.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="struct_mag_measurement.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_redshift___u_m_l7.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="struct_u_m7__packet__struct.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+</chapter>
+<chapter>
+    <title>File Documentation</title>
+    <xi:include href="_redshift___u_m_l7_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_redshift___u_m_l7_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+</chapter>
+<index/>
+</book>

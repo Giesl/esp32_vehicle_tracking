@@ -1,0 +1,1065 @@
+.TH "Redshift_UML7" 3 "Version 1.0" "RedshiftLabls UM7 library" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Redshift_UML7 \- Class to interface with the UM7 sensor\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fR#include <Redshift_UML7\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBRedshift_UML7\fP (Stream &serial)"
+.br
+.RI "Constructor for the \fBRedshift_UML7\fP class\&. "
+.ti -1c
+.RI "void \fBbegin\fP ()"
+.br
+.RI "Initializes the UM7 sensor\&. "
+.ti -1c
+.RI "String \fBgetData\fP ()"
+.br
+.RI "Retrieves data from the UM7 sensor\&. "
+.ti -1c
+.RI "void \fBsendCommand\fP (const String &command)"
+.br
+.RI "Sends a command to the UM7 sensor\&. "
+.ti -1c
+.RI "void \fBsetBaudRate\fP (unsigned long baudRate)"
+.br
+.RI "Sets the baud rate for communication\&. "
+.ti -1c
+.RI "bool \fBparseNmeaPacket\fP (String nmeaString)"
+.br
+.RI "Parses an NMEA packet\&. "
+.ti -1c
+.RI "bool \fBread_register_data\fP (uint8_t registerAddress, uint8_t *data, size_t length)"
+.br
+.RI "Reads register data\&. "
+.ti -1c
+.RI "bool \fBsendBinaryCommand\fP (uint8_t command)"
+.br
+.RI "Sends a binary command to the UM7 sensor\&. "
+.ti -1c
+.RI "float \fBread_register_as_float\fP (uint8_t *data)"
+.br
+.RI "Reads a register as a float value\&. "
+.ti -1c
+.RI "bool \fBreadPacket\fP (\fBUM7_packet\fP &packet, u_int8_t address)"
+.br
+.RI "Reads a packet from the UM7 sensor\&. "
+.ti -1c
+.RI "bool \fBreadPacket\fP (\fBUM7_packet\fP &packet, int packet_size, u_int8_t address)"
+.br
+.RI "Reads a packet from the UM7 sensor\&. "
+.ti -1c
+.RI "String \fBgetFirmwareVersion\fP ()"
+.br
+.RI "Retrieves the firmware version of the UM7 sensor\&. "
+.ti -1c
+.RI "bool \fBgetHealthData\fP (uint16_t &time, uint8_t &sats_used, uint8_t &sats_in_view, float &HDOP, uint8_t &mode, uint8_t &COM, uint8_t &accel, uint8_t &gyro, uint8_t &mag, uint8_t &GPS)"
+.br
+.RI "Retrieves health data from the UM7 sensor\&. "
+.ti -1c
+.RI "bool \fBreadRegister\fP (uint8_t registerAddress, uint8_t *data, size_t length)"
+.br
+.RI "Reads the content of a register\&. "
+.ti -1c
+.RI "bool \fBgetTemperature\fP (float &temp)"
+.br
+.RI "Retrieves the temperature from the UM7 sensor\&. "
+.ti -1c
+.RI "bool \fBgetGpsTime\fP (float &gpsTime)"
+.br
+.RI "Retrieves the GPS time from the UM7 sensor\&. "
+.ti -1c
+.RI "bool \fBgetHealthRegisterData\fP (uint16_t &time, uint8_t &sats_used, uint8_t &sats_in_view, float &HDOP, uint8_t &mode, uint8_t &COM, uint8_t &accel, uint8_t &gyro, uint8_t &mag, uint8_t &GPS)"
+.br
+.RI "Retrieves health register data from the UM7 sensor\&. "
+.ti -1c
+.RI "uint8_t \fBparse_serial_data\fP (uint8_t *rx_data, uint8_t rx_length, \fBUM7_packet\fP *packet, uint8_t expectedAddress)"
+.br
+.RI "Parses serial data received from the UM7 sensor\&. "
+.ti -1c
+.RI "float \fBgetRoll\fP ()"
+.br
+.RI "Retrieves the roll angle from the UM7 sensor\&. "
+.ti -1c
+.RI "float \fBgetPitch\fP ()"
+.br
+.RI "Retrieves the pitch angle from the UM7 sensor\&. "
+.ti -1c
+.RI "float \fBgetYaw\fP ()"
+.br
+.RI "Retrieves the yaw angle from the UM7 sensor\&. "
+.ti -1c
+.RI "bool \fBgetOrientation\fP (float &yaw, float &pitch, float &roll)"
+.br
+.RI "Retrieves the orientation (yaw, pitch, roll) from the UM7 sensor\&. "
+.ti -1c
+.RI "float \fBgetMagX\fP ()"
+.br
+.RI "Retrieves the magnetometer X-axis data\&. "
+.ti -1c
+.RI "float \fBgetMagY\fP ()"
+.br
+.RI "Retrieves the magnetometer Y-axis data\&. "
+.ti -1c
+.RI "float \fBgetMagZ\fP ()"
+.br
+.RI "Retrieves the magnetometer Z-axis data\&. "
+.ti -1c
+.RI "bool \fBgetGyroProcZ\fP (float &gyroZ)"
+.br
+.RI "Retrieves the processed gyroscope Z-axis data\&. "
+.ti -1c
+.RI "bool \fBresetToFactoryDefaults\fP ()"
+.br
+.RI "Resets the UM7 sensor to factory defaults\&. "
+.ti -1c
+.RI "bool \fBzeroGyroscopes\fP ()"
+.br
+.RI "Zeros the gyroscopes of the UM7 sensor\&. "
+.ti -1c
+.RI "bool \fBsetHomePosition\fP ()"
+.br
+.RI "Sets the home position for the UM7 sensor\&. "
+.ti -1c
+.RI "bool \fBresetEKF\fP ()"
+.br
+.RI "Resets the Extended Kalman Filter (EKF) of the UM7 sensor\&. "
+.ti -1c
+.RI "bool \fBflashCommit\fP ()"
+.br
+.RI "Commits the current configuration settings to FLASH\&. "
+.ti -1c
+.RI "bool \fBreadDregData\fP (uint8_t dregAddress, uint8_t *data, size_t length)"
+.br
+.RI "Reads data from a data register\&. "
+.ti -1c
+.RI "bool \fBgetGyroRawMeasurements\fP (int16_t &gyroX, int16_t &gyroY, int16_t &gyroZ)"
+.br
+.RI "Retrieves raw gyroscope measurements\&. "
+.ti -1c
+.RI "bool \fBgetAccelRawXY\fP (int16_t &accelX, int16_t &accelY)"
+.br
+.RI "Retrieves raw accelerometer X and Y-axis measurements\&. "
+.ti -1c
+.RI "bool \fBgetAccelRawZ\fP (int16_t &accelZ)"
+.br
+.RI "Retrieves raw accelerometer Z-axis measurements\&. "
+.ti -1c
+.RI "bool \fBgetGyroProcessedMeasurements\fP (\fBGyroMeasurement\fP &gyroData)"
+.br
+.RI "Retrieves processed gyroscope measurements\&. "
+.ti -1c
+.RI "bool \fBgetAccelRawMeasurements\fP (int16_t &accelX, int16_t &accelY, int16_t &accelZ)"
+.br
+.RI "Retrieves raw accelerometer measurements\&. "
+.ti -1c
+.RI "bool \fBgetAccelProcX\fP (float &accelX)"
+.br
+.RI "Retrieves processed accelerometer X-axis data\&. "
+.ti -1c
+.RI "bool \fBgetAccelProcY\fP (float &accelY)"
+.br
+.RI "Retrieves processed accelerometer Y-axis data\&. "
+.ti -1c
+.RI "bool \fBgetAccelProcZ\fP (float &accelZ)"
+.br
+.RI "Retrieves processed accelerometer Z-axis data\&. "
+.ti -1c
+.RI "bool \fBgetGyroProcX\fP (float &gyroX)"
+.br
+.RI "Retrieves processed gyroscope X-axis data\&. "
+.ti -1c
+.RI "bool \fBgetGyroProcY\fP (float &gyroY)"
+.br
+.RI "Retrieves processed gyroscope Y-axis data\&. "
+.ti -1c
+.RI "bool \fBgetAccelProcessedMeasurements\fP (float &accelX, float &accelY, float &accelZ, float &accelTime)"
+.br
+.RI "Retrieves processed accelerometer measurements\&. "
+.ti -1c
+.RI "void \fBprintAllMeasurements\fP ()"
+.br
+.RI "Prints all measurements to the serial output\&. "
+.ti -1c
+.RI "bool \fBgetMagRawXY\fP (int16_t &magX, int16_t &magY)"
+.br
+.RI "Retrieves raw magnetometer X and Y-axis measurements\&. "
+.ti -1c
+.RI "void \fBprintPacket\fP (const \fBUM7_packet\fP &packet)"
+.br
+.RI "Prints the contents of a packet to the serial output\&. "
+.ti -1c
+.RI "size_t \fBreadSerialData\fP (uint8_t *buffer, size_t bufferSize)"
+.br
+.RI "Reads serial data from the UM7 sensor\&. "
+.ti -1c
+.RI "bool \fBparsePacket\fP (const uint8_t *rx_data, size_t rx_length, \fBUM7_packet\fP &packet, uint8_t expectedAddress)"
+.br
+.RI "Parses a packet received from the UM7 sensor\&. "
+.ti -1c
+.RI "bool \fBgetMagneticData\fP (float &magX, float &magY, float &magZ, float &time)"
+.br
+.RI "Retrieves magnetic data from the UM7 sensor\&. "
+.ti -1c
+.RI "bool \fBgetGyroTime\fP (float &time)"
+.br
+.RI "Retrieves the gyroscope timestamp from the UM7 sensor\&. "
+.ti -1c
+.RI "bool \fBgetAccelTime\fP (float &time)"
+.br
+.RI "Retrieves the accelerometer timestamp from the UM7 sensor\&. "
+.ti -1c
+.RI "bool \fBgetAccelRawMeasurements\fP (\fBAccelMeasurement\fP &accelData)"
+.br
+.RI "Retrieves raw accelerometer measurements\&. "
+.ti -1c
+.RI "bool \fBgetMagRawMeasurements\fP (\fBMagMeasurement\fP &magData)"
+.br
+.RI "Retrieves raw magnetometer measurements\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Class to interface with the UM7 sensor\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Redshift_UML7::Redshift_UML7 (Stream & serial)"
+
+.PP
+Constructor for the \fBRedshift_UML7\fP class\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIserial\fP Reference to the serial stream used for communication\&. 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "bool Redshift_UML7::flashCommit ()"
+
+.PP
+Commits the current configuration settings to FLASH\&. 
+.PP
+\fBReturns\fP
+.RS 4
+True if the settings were successfully committed, false otherwise\&. 
+.RE
+.PP
+
+.SS "bool Redshift_UML7::getAccelProcessedMeasurements (float & accelX, float & accelY, float & accelZ, float & accelTime)"
+
+.PP
+Retrieves processed accelerometer measurements\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIaccelX\fP Reference to store the processed accelerometer X-axis data\&. 
+.br
+\fIaccelY\fP Reference to store the processed accelerometer Y-axis data\&. 
+.br
+\fIaccelZ\fP Reference to store the processed accelerometer Z-axis data\&. 
+.br
+\fIaccelTime\fP Reference to store the timestamp of the accelerometer data\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True if the data was successfully retrieved, false otherwise\&. 
+.RE
+.PP
+
+.SS "bool Redshift_UML7::getAccelProcX (float & accelX)"
+
+.PP
+Retrieves processed accelerometer X-axis data\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIaccelX\fP Reference to store the processed accelerometer X-axis data\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True if the data was successfully retrieved, false otherwise\&. 
+.RE
+.PP
+
+.SS "bool Redshift_UML7::getAccelProcY (float & accelY)"
+
+.PP
+Retrieves processed accelerometer Y-axis data\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIaccelY\fP Reference to store the processed accelerometer Y-axis data\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True if the data was successfully retrieved, false otherwise\&. 
+.RE
+.PP
+
+.SS "bool Redshift_UML7::getAccelProcZ (float & accelZ)"
+
+.PP
+Retrieves processed accelerometer Z-axis data\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIaccelZ\fP Reference to store the processed accelerometer Z-axis data\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True if the data was successfully retrieved, false otherwise\&. 
+.RE
+.PP
+
+.SS "bool Redshift_UML7::getAccelRawMeasurements (\fBAccelMeasurement\fP & accelData)"
+
+.PP
+Retrieves raw accelerometer measurements\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIaccelData\fP Reference to an \fBAccelMeasurement\fP structure to store the data\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True if the data was successfully retrieved, false otherwise\&. 
+.RE
+.PP
+
+.SS "bool Redshift_UML7::getAccelRawMeasurements (int16_t & accelX, int16_t & accelY, int16_t & accelZ)"
+
+.PP
+Retrieves raw accelerometer measurements\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIaccelX\fP Reference to store the raw accelerometer X-axis data\&. 
+.br
+\fIaccelY\fP Reference to store the raw accelerometer Y-axis data\&. 
+.br
+\fIaccelZ\fP Reference to store the raw accelerometer Z-axis data\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True if the data was successfully retrieved, false otherwise\&. 
+.RE
+.PP
+
+.SS "bool Redshift_UML7::getAccelRawXY (int16_t & accelX, int16_t & accelY)"
+
+.PP
+Retrieves raw accelerometer X and Y-axis measurements\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIaccelX\fP Reference to store the raw accelerometer X-axis data\&. 
+.br
+\fIaccelY\fP Reference to store the raw accelerometer Y-axis data\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True if the data was successfully retrieved, false otherwise\&. 
+.RE
+.PP
+
+.SS "bool Redshift_UML7::getAccelRawZ (int16_t & accelZ)"
+
+.PP
+Retrieves raw accelerometer Z-axis measurements\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIaccelZ\fP Reference to store the raw accelerometer Z-axis data\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True if the data was successfully retrieved, false otherwise\&. 
+.RE
+.PP
+
+.SS "bool Redshift_UML7::getAccelTime (float & time)"
+
+.PP
+Retrieves the accelerometer timestamp from the UM7 sensor\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItime\fP Reference to store the accelerometer timestamp\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True if the timestamp was successfully retrieved, false otherwise\&. 
+.RE
+.PP
+
+.SS "String Redshift_UML7::getData ()"
+
+.PP
+Retrieves data from the UM7 sensor\&. 
+.PP
+\fBReturns\fP
+.RS 4
+A string containing the data\&. 
+.RE
+.PP
+
+.SS "String Redshift_UML7::getFirmwareVersion ()"
+
+.PP
+Retrieves the firmware version of the UM7 sensor\&. 
+.PP
+\fBReturns\fP
+.RS 4
+A string containing the firmware version\&. 
+.RE
+.PP
+
+.SS "bool Redshift_UML7::getGpsTime (float & gpsTime)"
+
+.PP
+Retrieves the GPS time from the UM7 sensor\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIgpsTime\fP Reference to store the GPS time\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True if the GPS time was successfully retrieved, false otherwise\&. 
+.RE
+.PP
+
+.SS "bool Redshift_UML7::getGyroProcessedMeasurements (\fBGyroMeasurement\fP & gyroData)"
+
+.PP
+Retrieves processed gyroscope measurements\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIgyroData\fP Reference to a \fBGyroMeasurement\fP structure to store the data\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True if the data was successfully retrieved, false otherwise\&. 
+.RE
+.PP
+
+.SS "bool Redshift_UML7::getGyroProcX (float & gyroX)"
+
+.PP
+Retrieves processed gyroscope X-axis data\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIgyroX\fP Reference to store the processed gyroscope X-axis data\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True if the data was successfully retrieved, false otherwise\&. 
+.RE
+.PP
+
+.SS "bool Redshift_UML7::getGyroProcY (float & gyroY)"
+
+.PP
+Retrieves processed gyroscope Y-axis data\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIgyroY\fP Reference to store the processed gyroscope Y-axis data\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True if the data was successfully retrieved, false otherwise\&. 
+.RE
+.PP
+
+.SS "bool Redshift_UML7::getGyroProcZ (float & gyroZ)"
+
+.PP
+Retrieves the processed gyroscope Z-axis data\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIgyroZ\fP Reference to store the gyroscope Z-axis data\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True if the data was successfully retrieved, false otherwise\&. 
+.RE
+.PP
+
+.SS "bool Redshift_UML7::getGyroRawMeasurements (int16_t & gyroX, int16_t & gyroY, int16_t & gyroZ)"
+
+.PP
+Retrieves raw gyroscope measurements\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIgyroX\fP Reference to store the raw gyroscope X-axis data\&. 
+.br
+\fIgyroY\fP Reference to store the raw gyroscope Y-axis data\&. 
+.br
+\fIgyroZ\fP Reference to store the raw gyroscope Z-axis data\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True if the data was successfully retrieved, false otherwise\&. 
+.RE
+.PP
+
+.SS "bool Redshift_UML7::getGyroTime (float & time)"
+
+.PP
+Retrieves the gyroscope timestamp from the UM7 sensor\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItime\fP Reference to store the gyroscope timestamp\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True if the timestamp was successfully retrieved, false otherwise\&. 
+.RE
+.PP
+
+.SS "bool Redshift_UML7::getHealthData (uint16_t & time, uint8_t & sats_used, uint8_t & sats_in_view, float & HDOP, uint8_t & mode, uint8_t & COM, uint8_t & accel, uint8_t & gyro, uint8_t & mag, uint8_t & GPS)"
+
+.PP
+Retrieves health data from the UM7 sensor\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItime\fP Reference to store the time\&. 
+.br
+\fIsats_used\fP Reference to store the number of satellites used\&. 
+.br
+\fIsats_in_view\fP Reference to store the number of satellites in view\&. 
+.br
+\fIHDOP\fP Reference to store the HDOP value\&. 
+.br
+\fImode\fP Reference to store the mode\&. 
+.br
+\fICOM\fP Reference to store the COM value\&. 
+.br
+\fIaccel\fP Reference to store the accelerometer status\&. 
+.br
+\fIgyro\fP Reference to store the gyroscope status\&. 
+.br
+\fImag\fP Reference to store the magnetometer status\&. 
+.br
+\fIGPS\fP Reference to store the GPS status\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True if the health data was successfully retrieved, false otherwise\&. 
+.RE
+.PP
+
+.SS "bool Redshift_UML7::getHealthRegisterData (uint16_t & time, uint8_t & sats_used, uint8_t & sats_in_view, float & HDOP, uint8_t & mode, uint8_t & COM, uint8_t & accel, uint8_t & gyro, uint8_t & mag, uint8_t & GPS)"
+
+.PP
+Retrieves health register data from the UM7 sensor\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItime\fP Reference to store the time\&. 
+.br
+\fIsats_used\fP Reference to store the number of satellites used\&. 
+.br
+\fIsats_in_view\fP Reference to store the number of satellites in view\&. 
+.br
+\fIHDOP\fP Reference to store the HDOP value\&. 
+.br
+\fImode\fP Reference to store the mode\&. 
+.br
+\fICOM\fP Reference to store the COM value\&. 
+.br
+\fIaccel\fP Reference to store the accelerometer status\&. 
+.br
+\fIgyro\fP Reference to store the gyroscope status\&. 
+.br
+\fImag\fP Reference to store the magnetometer status\&. 
+.br
+\fIGPS\fP Reference to store the GPS status\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True if the health register data was successfully retrieved, false otherwise\&. 
+.RE
+.PP
+
+.SS "bool Redshift_UML7::getMagneticData (float & magX, float & magY, float & magZ, float & time)"
+
+.PP
+Retrieves magnetic data from the UM7 sensor\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fImagX\fP Reference to store the magnetometer X-axis data\&. 
+.br
+\fImagY\fP Reference to store the magnetometer Y-axis data\&. 
+.br
+\fImagZ\fP Reference to store the magnetometer Z-axis data\&. 
+.br
+\fItime\fP Reference to store the timestamp of the magnetometer data\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True if the data was successfully retrieved, false otherwise\&. 
+.RE
+.PP
+
+.SS "bool Redshift_UML7::getMagRawMeasurements (\fBMagMeasurement\fP & magData)"
+
+.PP
+Retrieves raw magnetometer measurements\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fImagData\fP Reference to a \fBMagMeasurement\fP structure to store the data\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True if the data was successfully retrieved, false otherwise\&. 
+.RE
+.PP
+
+.SS "bool Redshift_UML7::getMagRawXY (int16_t & magX, int16_t & magY)"
+
+.PP
+Retrieves raw magnetometer X and Y-axis measurements\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fImagX\fP Reference to store the raw magnetometer X-axis data\&. 
+.br
+\fImagY\fP Reference to store the raw magnetometer Y-axis data\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True if the data was successfully retrieved, false otherwise\&. 
+.RE
+.PP
+
+.SS "float Redshift_UML7::getMagX ()"
+
+.PP
+Retrieves the magnetometer X-axis data\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The magnetometer X-axis data\&. 
+.RE
+.PP
+
+.SS "float Redshift_UML7::getMagY ()"
+
+.PP
+Retrieves the magnetometer Y-axis data\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The magnetometer Y-axis data\&. 
+.RE
+.PP
+
+.SS "float Redshift_UML7::getMagZ ()"
+
+.PP
+Retrieves the magnetometer Z-axis data\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The magnetometer Z-axis data\&. 
+.RE
+.PP
+
+.SS "bool Redshift_UML7::getOrientation (float & yaw, float & pitch, float & roll)"
+
+.PP
+Retrieves the orientation (yaw, pitch, roll) from the UM7 sensor\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIyaw\fP Reference to store the yaw angle\&. 
+.br
+\fIpitch\fP Reference to store the pitch angle\&. 
+.br
+\fIroll\fP Reference to store the roll angle\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True if the orientation was successfully retrieved, false otherwise\&. 
+.RE
+.PP
+
+.SS "float Redshift_UML7::getPitch ()"
+
+.PP
+Retrieves the pitch angle from the UM7 sensor\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The pitch angle in degrees\&. 
+.RE
+.PP
+
+.SS "float Redshift_UML7::getRoll ()"
+
+.PP
+Retrieves the roll angle from the UM7 sensor\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The roll angle in degrees\&. 
+.RE
+.PP
+
+.SS "bool Redshift_UML7::getTemperature (float & temp)"
+
+.PP
+Retrieves the temperature from the UM7 sensor\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItemp\fP Reference to store the temperature value\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True if the temperature was successfully retrieved, false otherwise\&. 
+.RE
+.PP
+
+.SS "float Redshift_UML7::getYaw ()"
+
+.PP
+Retrieves the yaw angle from the UM7 sensor\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The yaw angle in degrees\&. 
+.RE
+.PP
+
+.SS "uint8_t Redshift_UML7::parse_serial_data (uint8_t * rx_data, uint8_t rx_length, \fBUM7_packet\fP * packet, uint8_t expectedAddress)"
+
+.PP
+Parses serial data received from the UM7 sensor\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIrx_data\fP Pointer to the buffer containing the received data\&. 
+.br
+\fIrx_length\fP The length of the received data\&. 
+.br
+\fIpacket\fP Pointer to the packet structure to store the parsed data\&. 
+.br
+\fIexpectedAddress\fP The expected address of the packet\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+The number of bytes parsed\&. 
+.RE
+.PP
+
+.SS "bool Redshift_UML7::parseNmeaPacket (String nmeaString)"
+
+.PP
+Parses an NMEA packet\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fInmeaString\fP The NMEA string to parse\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True if parsing was successful, false otherwise\&. 
+.RE
+.PP
+
+.SS "bool Redshift_UML7::parsePacket (const uint8_t * rx_data, size_t rx_length, \fBUM7_packet\fP & packet, uint8_t expectedAddress)"
+
+.PP
+Parses a packet received from the UM7 sensor\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIrx_data\fP Pointer to the buffer containing the received data\&. 
+.br
+\fIrx_length\fP The length of the received data\&. 
+.br
+\fIpacket\fP Reference to the packet structure to store the parsed data\&. 
+.br
+\fIexpectedAddress\fP The expected address of the packet\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True if the packet was successfully parsed, false otherwise\&. 
+.RE
+.PP
+
+.SS "void Redshift_UML7::printPacket (const \fBUM7_packet\fP & packet)"
+
+.PP
+Prints the contents of a packet to the serial output\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpacket\fP The packet to print\&. 
+.RE
+.PP
+
+.SS "float Redshift_UML7::read_register_as_float (uint8_t * data)"
+
+.PP
+Reads a register as a float value\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdata\fP Pointer to the buffer containing the register data\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+The float value read from the register\&. 
+.RE
+.PP
+
+.SS "bool Redshift_UML7::read_register_data (uint8_t registerAddress, uint8_t * data, size_t length)"
+
+.PP
+Reads register data\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIregisterAddress\fP The address of the register to read\&. 
+.br
+\fIdata\fP Pointer to the buffer to store the read data\&. 
+.br
+\fIlength\fP The length of the data to read\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True if the data was successfully read, false otherwise\&. 
+.RE
+.PP
+
+.SS "bool Redshift_UML7::readDregData (uint8_t dregAddress, uint8_t * data, size_t length)"
+
+.PP
+Reads data from a data register\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdregAddress\fP The address of the data register to read\&. 
+.br
+\fIdata\fP Pointer to the buffer to store the read data\&. 
+.br
+\fIlength\fP The length of the data to read\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True if the data was successfully read, false otherwise\&. 
+.RE
+.PP
+
+.SS "bool Redshift_UML7::readPacket (\fBUM7_packet\fP & packet, int packet_size, u_int8_t address)"
+
+.PP
+Reads a packet from the UM7 sensor\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpacket\fP Reference to the packet structure to store the read data\&. 
+.br
+\fIpacket_size\fP The size of the packet to read\&. 
+.br
+\fIaddress\fP The address of the packet to read\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True if the packet was successfully read, false otherwise\&. 
+.RE
+.PP
+
+.SS "bool Redshift_UML7::readPacket (\fBUM7_packet\fP & packet, u_int8_t address)"
+
+.PP
+Reads a packet from the UM7 sensor\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpacket\fP Reference to the packet structure to store the read data\&. 
+.br
+\fIaddress\fP The address of the packet to read\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True if the packet was successfully read, false otherwise\&. 
+.RE
+.PP
+
+.SS "bool Redshift_UML7::readRegister (uint8_t registerAddress, uint8_t * data, size_t length)"
+
+.PP
+Reads the content of a register\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIregisterAddress\fP The address of the register to read\&. 
+.br
+\fIdata\fP Pointer to the buffer to store the read data\&. 
+.br
+\fIlength\fP The length of the data to read\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True if the data was successfully read, false otherwise\&. 
+.RE
+.PP
+
+.SS "size_t Redshift_UML7::readSerialData (uint8_t * buffer, size_t bufferSize)"
+
+.PP
+Reads serial data from the UM7 sensor\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIbuffer\fP Pointer to the buffer to store the read data\&. 
+.br
+\fIbufferSize\fP The size of the buffer\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+The number of bytes read\&. 
+.RE
+.PP
+
+.SS "bool Redshift_UML7::resetEKF ()"
+
+.PP
+Resets the Extended Kalman Filter (EKF) of the UM7 sensor\&. 
+.PP
+\fBReturns\fP
+.RS 4
+True if the EKF was successfully reset, false otherwise\&. 
+.RE
+.PP
+
+.SS "bool Redshift_UML7::resetToFactoryDefaults ()"
+
+.PP
+Resets the UM7 sensor to factory defaults\&. 
+.PP
+\fBReturns\fP
+.RS 4
+True if the reset was successful, false otherwise\&. 
+.RE
+.PP
+
+.SS "bool Redshift_UML7::sendBinaryCommand (uint8_t command)"
+
+.PP
+Sends a binary command to the UM7 sensor\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcommand\fP The command to send\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True if the command was successfully sent, false otherwise\&. 
+.RE
+.PP
+
+.SS "void Redshift_UML7::sendCommand (const String & command)"
+
+.PP
+Sends a command to the UM7 sensor\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcommand\fP The command string to send\&. 
+.RE
+.PP
+
+.SS "void Redshift_UML7::setBaudRate (unsigned long baudRate)"
+
+.PP
+Sets the baud rate for communication\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIbaudRate\fP The desired baud rate\&. 
+.RE
+.PP
+
+.SS "bool Redshift_UML7::setHomePosition ()"
+
+.PP
+Sets the home position for the UM7 sensor\&. 
+.PP
+\fBReturns\fP
+.RS 4
+True if the home position was successfully set, false otherwise\&. 
+.RE
+.PP
+
+.SS "bool Redshift_UML7::zeroGyroscopes ()"
+
+.PP
+Zeros the gyroscopes of the UM7 sensor\&. 
+.PP
+\fBReturns\fP
+.RS 4
+True if the gyroscopes were successfully zeroed, false otherwise\&. 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for RedshiftLabls UM7 library from the source code\&.

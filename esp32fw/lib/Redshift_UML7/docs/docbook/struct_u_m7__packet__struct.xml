@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_u_m7__packet__struct" xml:lang="en-US">
+<title>UM7_packet_struct Struct Reference</title>
+<indexterm><primary>UM7_packet_struct</primary></indexterm>
+<para>
+
+<para>Structure for holding received packet information. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;Redshift_UML7.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_struct_u_m7__packet__struct_1a36ea4f01adb74ab46893f8dced8a7897"/>uint8_t <emphasis role="strong">Address</emphasis></para>
+
+<para>Packet address. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_u_m7__packet__struct_1a7a28de9c510ef4912f5fca928cb992df"/>uint8_t <emphasis role="strong">PT</emphasis></para>
+
+<para>Packet type. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_u_m7__packet__struct_1a0c75ae8d3689f9111a122a545de2bde3"/>uint16_t <emphasis role="strong">Checksum</emphasis></para>
+
+<para>Packet checksum. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_u_m7__packet__struct_1a6fb8ff6d4e3aa959f6e64bfe4ef429cd"/>uint8_t <emphasis role="strong">data_length</emphasis></para>
+
+<para>Length of the data section. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_u_m7__packet__struct_1aa5e4ce7efbceecdb2eecd40293fa2ed7"/>uint8_t <emphasis role="strong">data</emphasis> [30]</para>
+
+<para>Data section (up to 30 bytes) </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Structure for holding received packet information. </para>
+<para>
+The documentation for this struct was generated from the following files:</para>
+lib/Redshift_UML7/examples/example_code.cpplib/Redshift_UML7/src/<link linkend="__redshift___u_m_l7_8h">Redshift_UML7.h</link></section>
+</section>

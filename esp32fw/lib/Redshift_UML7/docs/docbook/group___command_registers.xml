@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___command_registers" xml:lang="en-US">
+<title>Command Registers</title>
+<indexterm><primary>Command Registers</primary></indexterm>
+<para>
+
+<para>Definitions for command register addresses. </para>
+ 
+</para>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_group___command_registers_1ga31ebc79bca0dd78bd2f1631082922cf8"/>#define <emphasis role="strong">GET_FW_REVISION</emphasis>&#160;&#160;&#160;0xAA</para>
+
+<para>Get firmware revision. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___command_registers_1gaf794bc44e37447503b3027d9a7659e19"/>#define <emphasis role="strong">FLASH_COMMIT</emphasis>&#160;&#160;&#160;0xAB</para>
+
+<para>Write all configuration settings to FLASH. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___command_registers_1ga10dae096adaebaede7ab997e5dbd8cb5"/>#define <emphasis role="strong">RESET_TO_FACTORY</emphasis>&#160;&#160;&#160;0xAC</para>
+
+<para>Reset to factory defaults. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___command_registers_1ga97226f3ab6fd963f082d7ae22b7e3653"/>#define <emphasis role="strong">ZERO_GYROS</emphasis>&#160;&#160;&#160;0xAD</para>
+
+<para>Zero gyroscopes (keep flat) </para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___command_registers_1ga48c3325bf194b0d945c1c7e7dded0a27"/>#define <emphasis role="strong">SET_HOME_POSITION</emphasis>&#160;&#160;&#160;0xAE</para>
+
+<para>Set home position. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___command_registers_1ga543d911fc28fea81ec29d2e84ef72bf5"/>#define <emphasis role="strong">SET_MAG_REFERENCE</emphasis>&#160;&#160;&#160;0xB0</para>
+
+<para>Set magnetic reference. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___command_registers_1gaee729ae06a1b39aec19017ca44f1dae7"/>#define <emphasis role="strong">CALIBRATE_ACCELEROMETERS</emphasis>&#160;&#160;&#160;0xB1</para>
+
+<para>Calibrate accelerometers (keep flat) </para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___command_registers_1gad8434c83ed9d4675ab9facaf2d64c4e7"/>#define <emphasis role="strong">RESET_EKF</emphasis>&#160;&#160;&#160;0xB3</para>
+
+<para>Reset the Extended Kalman Filter. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Definitions for command register addresses. </para>
+</section>
+</section>

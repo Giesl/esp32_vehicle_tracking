@@ -1,0 +1,55 @@
+.TH "CommandRegisters" 3 "Version 1.0" "RedshiftLabls UM7 library" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+CommandRegisters \- Command Registers
+.PP
+ \- Definitions for command register addresses\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBGET_FW_REVISION\fP   0xAA"
+.br
+.RI "Get firmware revision\&. "
+.ti -1c
+.RI "#define \fBFLASH_COMMIT\fP   0xAB"
+.br
+.RI "Write all configuration settings to FLASH\&. "
+.ti -1c
+.RI "#define \fBRESET_TO_FACTORY\fP   0xAC"
+.br
+.RI "Reset to factory defaults\&. "
+.ti -1c
+.RI "#define \fBZERO_GYROS\fP   0xAD"
+.br
+.RI "Zero gyroscopes (keep flat) "
+.ti -1c
+.RI "#define \fBSET_HOME_POSITION\fP   0xAE"
+.br
+.RI "Set home position\&. "
+.ti -1c
+.RI "#define \fBSET_MAG_REFERENCE\fP   0xB0"
+.br
+.RI "Set magnetic reference\&. "
+.ti -1c
+.RI "#define \fBCALIBRATE_ACCELEROMETERS\fP   0xB1"
+.br
+.RI "Calibrate accelerometers (keep flat) "
+.ti -1c
+.RI "#define \fBRESET_EKF\fP   0xB3"
+.br
+.RI "Reset the Extended Kalman Filter\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definitions for command register addresses\&. 
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for RedshiftLabls UM7 library from the source code\&.

@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_accel_measurement" xml:lang="en-US">
+<title>AccelMeasurement Struct Reference</title>
+<indexterm><primary>AccelMeasurement</primary></indexterm>
+<para>
+
+<para>Structure to hold accelerometer measurement data. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;Redshift_UML7.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_struct_accel_measurement_1a2ab6572704089fb11a9adde0b97e091b"/>int16_t <emphasis role="strong">accelX</emphasis></para>
+
+<para>Raw accelerometer X-axis data. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_accel_measurement_1a65572f9ed3e3c1a1b04ff4985dad3247"/>int16_t <emphasis role="strong">accelY</emphasis></para>
+
+<para>Raw accelerometer Y-axis data. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_accel_measurement_1af65c7275f8cd6586928521cf7ace2583"/>int16_t <emphasis role="strong">accelZ</emphasis></para>
+
+<para>Raw accelerometer Z-axis data. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Structure to hold accelerometer measurement data. </para>
+<para>
+The documentation for this struct was generated from the following file:</para>
+lib/Redshift_UML7/src/<link linkend="__redshift___u_m_l7_8h">Redshift_UML7.h</link></section>
+</section>

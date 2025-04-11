@@ -1,0 +1,29 @@
+# Example configuration file for the project
+
+# WiFi settings
+WIFISSID=VG
+WIFIPASSWORD=1111122222
+
+# HTTP server settings
+HTTPSERVER=http://iot.giesl.cz/canbus_data
+
+# SD card settings
+SDCARDENABLED=0
+
+# Scrape intervals (in milliseconds)
+UML7SCRAPEINTERVAL=30000
+CANSCRAPEINTERVAL=30000
+HTTPSENDINTERVAL=10000
+
+# UM7 sensor settings
+UM7ENABLED=0
+
+# CAN bus settings
+CANENABLED=0
+CANFILTERENABLED=0
+FILTEREDCANIDS=123,456,789
+
+# Log file settings
+LOGFILE=/can_log.txt
+
+

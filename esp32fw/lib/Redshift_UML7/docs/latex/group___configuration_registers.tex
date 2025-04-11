@@ -1,0 +1,132 @@
+\doxysection{Configuration Registers}
+\hypertarget{group___configuration_registers}{}\label{group___configuration_registers}\index{Configuration Registers@{Configuration Registers}}
+
+
+Definitions for configuration register addresses.  
+
+
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{group___configuration_registers_gadc3a31b0134193d53e99e9e089d198df}\label{group___configuration_registers_gadc3a31b0134193d53e99e9e089d198df} 
+\#define {\bfseries CREG\+\_\+\+COM\+\_\+\+SETTINGS}~0x00
+\begin{DoxyCompactList}\small\item\em Baud rates for reading over the UM7, default 115200 baud. \end{DoxyCompactList}\item 
+\Hypertarget{group___configuration_registers_ga3ede1113dd93e030cf6f0fe0e9ba2b6f}\label{group___configuration_registers_ga3ede1113dd93e030cf6f0fe0e9ba2b6f} 
+\#define {\bfseries CREG\+\_\+\+COM\+\_\+\+RATES1}~0x01
+\begin{DoxyCompactList}\small\item\em Individual raw data rate. \end{DoxyCompactList}\item 
+\Hypertarget{group___configuration_registers_ga75c6f08d30b5b9aac3152311811d29fb}\label{group___configuration_registers_ga75c6f08d30b5b9aac3152311811d29fb} 
+\#define {\bfseries CREG\+\_\+\+COM\+\_\+\+RATES2}~0x02
+\begin{DoxyCompactList}\small\item\em All raw data rate. \end{DoxyCompactList}\item 
+\Hypertarget{group___configuration_registers_ga2d4055fb7ae5b90b771728df21d8d630}\label{group___configuration_registers_ga2d4055fb7ae5b90b771728df21d8d630} 
+\#define {\bfseries CREG\+\_\+\+COM\+\_\+\+RATES3}~0x03
+\begin{DoxyCompactList}\small\item\em Individual processed data rate. \end{DoxyCompactList}\item 
+\Hypertarget{group___configuration_registers_ga5afd87e6b62b1d09003e68211b923cff}\label{group___configuration_registers_ga5afd87e6b62b1d09003e68211b923cff} 
+\#define {\bfseries CREG\+\_\+\+COM\+\_\+\+RATES4}~0x04
+\begin{DoxyCompactList}\small\item\em All processed data rate. \end{DoxyCompactList}\item 
+\Hypertarget{group___configuration_registers_gadf6181b559d5aed96df9d7d31da49c45}\label{group___configuration_registers_gadf6181b559d5aed96df9d7d31da49c45} 
+\#define {\bfseries CREG\+\_\+\+COM\+\_\+\+RATES5}~0x05
+\begin{DoxyCompactList}\small\item\em Quaternion, Euler, position, and velocity data rate. \end{DoxyCompactList}\item 
+\Hypertarget{group___configuration_registers_ga1ddd3b1467ce88556377e73b69405e89}\label{group___configuration_registers_ga1ddd3b1467ce88556377e73b69405e89} 
+\#define {\bfseries CREG\+\_\+\+COM\+\_\+\+RATES6}~0x06
+\begin{DoxyCompactList}\small\item\em Pose (Euler \& position), health, and gyro bias estimate rates. \end{DoxyCompactList}\item 
+\Hypertarget{group___configuration_registers_gaf2bd88f9c955dc32a359518950411990}\label{group___configuration_registers_gaf2bd88f9c955dc32a359518950411990} 
+\#define {\bfseries CREG\+\_\+\+COM\+\_\+\+RATES7}~0x07
+\begin{DoxyCompactList}\small\item\em Data rate for CHR NMEA-\/style packets. \end{DoxyCompactList}\item 
+\Hypertarget{group___configuration_registers_ga87a5d0ae9f36507d9abab95a6af4a6a4}\label{group___configuration_registers_ga87a5d0ae9f36507d9abab95a6af4a6a4} 
+\#define {\bfseries CREG\+\_\+\+MISC\+\_\+\+SETTINGS}~0x08
+\begin{DoxyCompactList}\small\item\em Filter and sensor control options. \end{DoxyCompactList}\item 
+\Hypertarget{group___configuration_registers_ga716d2dbb4a9c1398029e03963805b329}\label{group___configuration_registers_ga716d2dbb4a9c1398029e03963805b329} 
+\#define {\bfseries CREG\+\_\+\+HOME\+\_\+\+NORTH}~0x09
+\begin{DoxyCompactList}\small\item\em Sets north from current position. \end{DoxyCompactList}\item 
+\Hypertarget{group___configuration_registers_ga0d3cedb1b3d51a92cd1ac0ea614192e0}\label{group___configuration_registers_ga0d3cedb1b3d51a92cd1ac0ea614192e0} 
+\#define {\bfseries CREG\+\_\+\+HOME\+\_\+\+EAST}~0x0A
+\begin{DoxyCompactList}\small\item\em Sets east from current position. \end{DoxyCompactList}\item 
+\Hypertarget{group___configuration_registers_gae14b52e1b59e879e36f0eadba4c34825}\label{group___configuration_registers_gae14b52e1b59e879e36f0eadba4c34825} 
+\#define {\bfseries CREG\+\_\+\+HOME\+\_\+\+UP}~0x0B
+\begin{DoxyCompactList}\small\item\em Sets home altitude in meters. \end{DoxyCompactList}\item 
+\Hypertarget{group___configuration_registers_ga5ce09d8a4b89dc84c7ccbb2d8ecfd988}\label{group___configuration_registers_ga5ce09d8a4b89dc84c7ccbb2d8ecfd988} 
+\#define {\bfseries CREG\+\_\+\+GYRO\+\_\+\+TRIM\+\_\+X}~0x0C
+\begin{DoxyCompactList}\small\item\em Gyroscope X-\/axis trim. \end{DoxyCompactList}\item 
+\Hypertarget{group___configuration_registers_ga9cded6a1ff44eb12736afad7cfc2324f}\label{group___configuration_registers_ga9cded6a1ff44eb12736afad7cfc2324f} 
+\#define {\bfseries CREG\+\_\+\+GYRO\+\_\+\+TRIM\+\_\+Y}~0x0D
+\begin{DoxyCompactList}\small\item\em Gyroscope Y-\/axis trim. \end{DoxyCompactList}\item 
+\Hypertarget{group___configuration_registers_gabb39f3c426996c1dba679f8ebca3b8fa}\label{group___configuration_registers_gabb39f3c426996c1dba679f8ebca3b8fa} 
+\#define {\bfseries CREG\+\_\+\+GYRO\+\_\+\+TRIM\+\_\+Z}~0x0E
+\begin{DoxyCompactList}\small\item\em Gyroscope Z-\/axis trim. \end{DoxyCompactList}\item 
+\Hypertarget{group___configuration_registers_ga4e745fdac9fb7d42e8a510104d535c60}\label{group___configuration_registers_ga4e745fdac9fb7d42e8a510104d535c60} 
+\#define {\bfseries CREG\+\_\+\+MAG\+\_\+\+CAL1\+\_\+1}~0x0F
+\begin{DoxyCompactList}\small\item\em Magnetometer calibration matrix element 1,1. \end{DoxyCompactList}\item 
+\Hypertarget{group___configuration_registers_ga5a84008bf88e292a2abee5ed3a10b92f}\label{group___configuration_registers_ga5a84008bf88e292a2abee5ed3a10b92f} 
+\#define {\bfseries CREG\+\_\+\+MAG\+\_\+\+CAL1\+\_\+2}~0x10
+\begin{DoxyCompactList}\small\item\em Magnetometer calibration matrix element 1,2. \end{DoxyCompactList}\item 
+\Hypertarget{group___configuration_registers_ga7938f975bb9d807f93cf2bbcb3c9d0c6}\label{group___configuration_registers_ga7938f975bb9d807f93cf2bbcb3c9d0c6} 
+\#define {\bfseries CREG\+\_\+\+MAG\+\_\+\+CAL1\+\_\+3}~0x11
+\begin{DoxyCompactList}\small\item\em Magnetometer calibration matrix element 1,3. \end{DoxyCompactList}\item 
+\Hypertarget{group___configuration_registers_gae76289f8b30862ee6eb0e9b51c3e76ad}\label{group___configuration_registers_gae76289f8b30862ee6eb0e9b51c3e76ad} 
+\#define {\bfseries CREG\+\_\+\+MAG\+\_\+\+CAL2\+\_\+1}~0x12
+\begin{DoxyCompactList}\small\item\em Magnetometer calibration matrix element 2,1. \end{DoxyCompactList}\item 
+\Hypertarget{group___configuration_registers_gaf6e751f2ce0b4252428a9a1be2d13b5d}\label{group___configuration_registers_gaf6e751f2ce0b4252428a9a1be2d13b5d} 
+\#define {\bfseries CREG\+\_\+\+MAG\+\_\+\+CAL2\+\_\+2}~0x13
+\begin{DoxyCompactList}\small\item\em Magnetometer calibration matrix element 2,2. \end{DoxyCompactList}\item 
+\Hypertarget{group___configuration_registers_ga869fda4c5e16dd70994b6ae74e8481cf}\label{group___configuration_registers_ga869fda4c5e16dd70994b6ae74e8481cf} 
+\#define {\bfseries CREG\+\_\+\+MAG\+\_\+\+CAL2\+\_\+3}~0x14
+\begin{DoxyCompactList}\small\item\em Magnetometer calibration matrix element 2,3. \end{DoxyCompactList}\item 
+\Hypertarget{group___configuration_registers_gaa78b7a6085d3166fa157729caa882ccb}\label{group___configuration_registers_gaa78b7a6085d3166fa157729caa882ccb} 
+\#define {\bfseries CREG\+\_\+\+MAG\+\_\+\+CAL3\+\_\+1}~0x15
+\begin{DoxyCompactList}\small\item\em Magnetometer calibration matrix element 3,1. \end{DoxyCompactList}\item 
+\Hypertarget{group___configuration_registers_ga87487288b0b61368227283f109d9c582}\label{group___configuration_registers_ga87487288b0b61368227283f109d9c582} 
+\#define {\bfseries CREG\+\_\+\+MAG\+\_\+\+CAL3\+\_\+2}~0x16
+\begin{DoxyCompactList}\small\item\em Magnetometer calibration matrix element 3,2. \end{DoxyCompactList}\item 
+\Hypertarget{group___configuration_registers_ga7986de55e3f5da525b909f3c05e4ae8d}\label{group___configuration_registers_ga7986de55e3f5da525b909f3c05e4ae8d} 
+\#define {\bfseries CREG\+\_\+\+MAG\+\_\+\+CAL3\+\_\+3}~0x17
+\begin{DoxyCompactList}\small\item\em Magnetometer calibration matrix element 3,3. \end{DoxyCompactList}\item 
+\Hypertarget{group___configuration_registers_ga2f3305d1526401d1de6728967aadf47a}\label{group___configuration_registers_ga2f3305d1526401d1de6728967aadf47a} 
+\#define {\bfseries CREG\+\_\+\+MAG\+\_\+\+BIAS\+\_\+X}~0x18
+\begin{DoxyCompactList}\small\item\em Magnetometer X-\/axis bias. \end{DoxyCompactList}\item 
+\Hypertarget{group___configuration_registers_ga291693c83ebd10c06a2cde83af50f598}\label{group___configuration_registers_ga291693c83ebd10c06a2cde83af50f598} 
+\#define {\bfseries CREG\+\_\+\+MAG\+\_\+\+BIAS\+\_\+Y}~0x19
+\begin{DoxyCompactList}\small\item\em Magnetometer Y-\/axis bias. \end{DoxyCompactList}\item 
+\Hypertarget{group___configuration_registers_ga3666d4d0ac49c0cf0fd8c1fe4bcc1c49}\label{group___configuration_registers_ga3666d4d0ac49c0cf0fd8c1fe4bcc1c49} 
+\#define {\bfseries CREG\+\_\+\+MAG\+\_\+\+BIAS\+\_\+Z}~0x1A
+\begin{DoxyCompactList}\small\item\em Magnetometer Z-\/axis bias. \end{DoxyCompactList}\item 
+\Hypertarget{group___configuration_registers_ga647892b260adb55ac724d46966e347d9}\label{group___configuration_registers_ga647892b260adb55ac724d46966e347d9} 
+\#define {\bfseries CREG\+\_\+\+ACCEL\+\_\+\+CAL1\+\_\+1}~0x1B
+\begin{DoxyCompactList}\small\item\em Accelerometer calibration matrix element 1,1. \end{DoxyCompactList}\item 
+\Hypertarget{group___configuration_registers_ga0b468d71b85ef5ff8f4e18746df8bd9a}\label{group___configuration_registers_ga0b468d71b85ef5ff8f4e18746df8bd9a} 
+\#define {\bfseries CREG\+\_\+\+ACCEL\+\_\+\+CAL1\+\_\+2}~0x1C
+\begin{DoxyCompactList}\small\item\em Accelerometer calibration matrix element 1,2. \end{DoxyCompactList}\item 
+\Hypertarget{group___configuration_registers_ga62fd4811d5e8cd68e8036c318f8f91a3}\label{group___configuration_registers_ga62fd4811d5e8cd68e8036c318f8f91a3} 
+\#define {\bfseries CREG\+\_\+\+ACCEL\+\_\+\+CAL1\+\_\+3}~0x1D
+\begin{DoxyCompactList}\small\item\em Accelerometer calibration matrix element 1,3. \end{DoxyCompactList}\item 
+\Hypertarget{group___configuration_registers_ga5e9aa9018faad7e51f0cdb1b00f3984e}\label{group___configuration_registers_ga5e9aa9018faad7e51f0cdb1b00f3984e} 
+\#define {\bfseries CREG\+\_\+\+ACCEL\+\_\+\+CAL2\+\_\+1}~0x1E
+\begin{DoxyCompactList}\small\item\em Accelerometer calibration matrix element 2,1. \end{DoxyCompactList}\item 
+\Hypertarget{group___configuration_registers_gac3ba946f0a2cf8d7c6f1772332283136}\label{group___configuration_registers_gac3ba946f0a2cf8d7c6f1772332283136} 
+\#define {\bfseries CREG\+\_\+\+ACCEL\+\_\+\+CAL2\+\_\+2}~0x1F
+\begin{DoxyCompactList}\small\item\em Accelerometer calibration matrix element 2,2. \end{DoxyCompactList}\item 
+\Hypertarget{group___configuration_registers_ga2fae036cb14e3bb6e9f7c767837fbeea}\label{group___configuration_registers_ga2fae036cb14e3bb6e9f7c767837fbeea} 
+\#define {\bfseries CREG\+\_\+\+ACCEL\+\_\+\+CAL2\+\_\+3}~0x20
+\begin{DoxyCompactList}\small\item\em Accelerometer calibration matrix element 2,3. \end{DoxyCompactList}\item 
+\Hypertarget{group___configuration_registers_ga7dccbc25841074ca85ee3a1bebbc4a10}\label{group___configuration_registers_ga7dccbc25841074ca85ee3a1bebbc4a10} 
+\#define {\bfseries CREG\+\_\+\+ACCEL\+\_\+\+CAL3\+\_\+1}~0x21
+\begin{DoxyCompactList}\small\item\em Accelerometer calibration matrix element 3,1. \end{DoxyCompactList}\item 
+\Hypertarget{group___configuration_registers_ga1d16eaf3dbd6da9a0b52ffbf2a5bc6db}\label{group___configuration_registers_ga1d16eaf3dbd6da9a0b52ffbf2a5bc6db} 
+\#define {\bfseries CREG\+\_\+\+ACCEL\+\_\+\+CAL3\+\_\+2}~0x22
+\begin{DoxyCompactList}\small\item\em Accelerometer calibration matrix element 3,2. \end{DoxyCompactList}\item 
+\Hypertarget{group___configuration_registers_ga7c0f63d9c71e839c5818590a7a33a45f}\label{group___configuration_registers_ga7c0f63d9c71e839c5818590a7a33a45f} 
+\#define {\bfseries CREG\+\_\+\+ACCEL\+\_\+\+CAL3\+\_\+3}~0x23
+\begin{DoxyCompactList}\small\item\em Accelerometer calibration matrix element 3,3. \end{DoxyCompactList}\item 
+\Hypertarget{group___configuration_registers_ga5be9625392b3c93778ac58b2399d1ca8}\label{group___configuration_registers_ga5be9625392b3c93778ac58b2399d1ca8} 
+\#define {\bfseries CREG\+\_\+\+ACCEL\+\_\+\+BIAS\+\_\+X}~0x24
+\begin{DoxyCompactList}\small\item\em Accelerometer X-\/axis bias. \end{DoxyCompactList}\item 
+\Hypertarget{group___configuration_registers_ga1d74a972a7a85f9e4d66124b6b29d24d}\label{group___configuration_registers_ga1d74a972a7a85f9e4d66124b6b29d24d} 
+\#define {\bfseries CREG\+\_\+\+ACCEL\+\_\+\+BIAS\+\_\+Y}~0x25
+\begin{DoxyCompactList}\small\item\em Accelerometer Y-\/axis bias. \end{DoxyCompactList}\item 
+\Hypertarget{group___configuration_registers_ga92bb494ecd856de20a51c5f7c576ce79}\label{group___configuration_registers_ga92bb494ecd856de20a51c5f7c576ce79} 
+\#define {\bfseries CREG\+\_\+\+ACCEL\+\_\+\+BIAS\+\_\+Z}~0x26
+\begin{DoxyCompactList}\small\item\em Accelerometer Z-\/axis bias. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Definitions for configuration register addresses. 
+

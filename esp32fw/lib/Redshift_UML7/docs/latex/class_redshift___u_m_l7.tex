@@ -1,0 +1,1074 @@
+\doxysection{Redshift\+\_\+\+UML7 Class Reference}
+\hypertarget{class_redshift___u_m_l7}{}\label{class_redshift___u_m_l7}\index{Redshift\_UML7@{Redshift\_UML7}}
+
+
+Class to interface with the UM7 sensor.  
+
+
+
+
+{\ttfamily \#include $<$Redshift\+\_\+\+UML7.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_redshift___u_m_l7_ae347879fc59c484a4a896d1bcb2d5e5a}{Redshift\+\_\+\+UML7}} (Stream \&serial)
+\begin{DoxyCompactList}\small\item\em Constructor for the \doxylink{class_redshift___u_m_l7}{Redshift\+\_\+\+UML7} class. \end{DoxyCompactList}\item 
+\Hypertarget{class_redshift___u_m_l7_a382fd7bf140d8a22c515c36b18e33f44}\label{class_redshift___u_m_l7_a382fd7bf140d8a22c515c36b18e33f44} 
+void {\bfseries begin} ()
+\begin{DoxyCompactList}\small\item\em Initializes the UM7 sensor. \end{DoxyCompactList}\item 
+String \mbox{\hyperlink{class_redshift___u_m_l7_a384c44d7960485756d1ae4f49d3d0a51}{get\+Data}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves data from the UM7 sensor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_redshift___u_m_l7_abe5f0512e1e1884276de7141d7b4d6b0}{send\+Command}} (const String \&command)
+\begin{DoxyCompactList}\small\item\em Sends a command to the UM7 sensor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_redshift___u_m_l7_adb719463f0d5f83a685aa6e9692796be}{set\+Baud\+Rate}} (unsigned long baud\+Rate)
+\begin{DoxyCompactList}\small\item\em Sets the baud rate for communication. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_redshift___u_m_l7_a6b748b23609691e123cb6fe65f9b6c3e}{parse\+Nmea\+Packet}} (String nmea\+String)
+\begin{DoxyCompactList}\small\item\em Parses an NMEA packet. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_redshift___u_m_l7_a5cb2858c8ed0b98b58e6915a5111b7e1}{read\+\_\+register\+\_\+data}} (uint8\+\_\+t register\+Address, uint8\+\_\+t \texorpdfstring{$\ast$}{*}data, size\+\_\+t length)
+\begin{DoxyCompactList}\small\item\em Reads register data. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_redshift___u_m_l7_adf3f3fc98cdb959768a9ffcebc4b6231}{send\+Binary\+Command}} (uint8\+\_\+t command)
+\begin{DoxyCompactList}\small\item\em Sends a binary command to the UM7 sensor. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_redshift___u_m_l7_a45807306c8b1b3a3c63634e2f8f98155}{read\+\_\+register\+\_\+as\+\_\+float}} (uint8\+\_\+t \texorpdfstring{$\ast$}{*}data)
+\begin{DoxyCompactList}\small\item\em Reads a register as a float value. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_redshift___u_m_l7_a175c29d800706c78c3ff31280745608c}{read\+Packet}} (\mbox{\hyperlink{_redshift___u_m_l7_8h_ab61dddf71d3fb0bfa520aeae95099245}{UM7\+\_\+packet}} \&packet, u\+\_\+int8\+\_\+t address)
+\begin{DoxyCompactList}\small\item\em Reads a packet from the UM7 sensor. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_redshift___u_m_l7_a94885049fd4d2559ae934c10d0673afe}{read\+Packet}} (\mbox{\hyperlink{_redshift___u_m_l7_8h_ab61dddf71d3fb0bfa520aeae95099245}{UM7\+\_\+packet}} \&packet, int packet\+\_\+size, u\+\_\+int8\+\_\+t address)
+\begin{DoxyCompactList}\small\item\em Reads a packet from the UM7 sensor. \end{DoxyCompactList}\item 
+String \mbox{\hyperlink{class_redshift___u_m_l7_a51a32df641b7b5b632bec03277701f3d}{get\+Firmware\+Version}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the firmware version of the UM7 sensor. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_redshift___u_m_l7_a4848d863423685560bf6e2417a54d58c}{get\+Health\+Data}} (uint16\+\_\+t \&time, uint8\+\_\+t \&sats\+\_\+used, uint8\+\_\+t \&sats\+\_\+in\+\_\+view, float \&HDOP, uint8\+\_\+t \&mode, uint8\+\_\+t \&COM, uint8\+\_\+t \&accel, uint8\+\_\+t \&gyro, uint8\+\_\+t \&mag, uint8\+\_\+t \&GPS)
+\begin{DoxyCompactList}\small\item\em Retrieves health data from the UM7 sensor. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_redshift___u_m_l7_aacd97941f30f4227230f65ce66ad5b24}{read\+Register}} (uint8\+\_\+t register\+Address, uint8\+\_\+t \texorpdfstring{$\ast$}{*}data, size\+\_\+t length)
+\begin{DoxyCompactList}\small\item\em Reads the content of a register. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_redshift___u_m_l7_adc8a43c42a8fbd849286260dfec0bcff}{get\+Temperature}} (float \&temp)
+\begin{DoxyCompactList}\small\item\em Retrieves the temperature from the UM7 sensor. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_redshift___u_m_l7_a86c9c530e64cadc757859398dd45d538}{get\+Gps\+Time}} (float \&gps\+Time)
+\begin{DoxyCompactList}\small\item\em Retrieves the GPS time from the UM7 sensor. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_redshift___u_m_l7_a97f93d0f9008a2cd311e799b0c0c8b35}{get\+Health\+Register\+Data}} (uint16\+\_\+t \&time, uint8\+\_\+t \&sats\+\_\+used, uint8\+\_\+t \&sats\+\_\+in\+\_\+view, float \&HDOP, uint8\+\_\+t \&mode, uint8\+\_\+t \&COM, uint8\+\_\+t \&accel, uint8\+\_\+t \&gyro, uint8\+\_\+t \&mag, uint8\+\_\+t \&GPS)
+\begin{DoxyCompactList}\small\item\em Retrieves health register data from the UM7 sensor. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{class_redshift___u_m_l7_a3caf8fe1319aedf7cd298b271ea04edc}{parse\+\_\+serial\+\_\+data}} (uint8\+\_\+t \texorpdfstring{$\ast$}{*}rx\+\_\+data, uint8\+\_\+t rx\+\_\+length, \mbox{\hyperlink{_redshift___u_m_l7_8h_ab61dddf71d3fb0bfa520aeae95099245}{UM7\+\_\+packet}} \texorpdfstring{$\ast$}{*}packet, uint8\+\_\+t expected\+Address)
+\begin{DoxyCompactList}\small\item\em Parses serial data received from the UM7 sensor. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_redshift___u_m_l7_aea2611cdc7c7d50b11043a23f694a5a6}{get\+Roll}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the roll angle from the UM7 sensor. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_redshift___u_m_l7_a5aeefa473cc213298734c859905fa43c}{get\+Pitch}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the pitch angle from the UM7 sensor. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_redshift___u_m_l7_a34ff58826f81b6fd257891743b0f4601}{get\+Yaw}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the yaw angle from the UM7 sensor. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_redshift___u_m_l7_af1d8a5a843c0524b9acd2b7edfcaca1a}{get\+Orientation}} (float \&yaw, float \&pitch, float \&roll)
+\begin{DoxyCompactList}\small\item\em Retrieves the orientation (yaw, pitch, roll) from the UM7 sensor. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_redshift___u_m_l7_a7f2369df1ad96711c54119f14a3b0129}{get\+MagX}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the magnetometer X-\/axis data. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_redshift___u_m_l7_a391c370eb34357a96868b78eba3b1592}{get\+MagY}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the magnetometer Y-\/axis data. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_redshift___u_m_l7_ad9730512fa68b36d82d81cd330d2cf11}{get\+MagZ}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the magnetometer Z-\/axis data. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_redshift___u_m_l7_a34d7e9f9fa094b4cc1924751d6da9b6c}{get\+Gyro\+ProcZ}} (float \&gyroZ)
+\begin{DoxyCompactList}\small\item\em Retrieves the processed gyroscope Z-\/axis data. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_redshift___u_m_l7_a13fd27638b5a6a00d8cf2f0727db00f8}{reset\+To\+Factory\+Defaults}} ()
+\begin{DoxyCompactList}\small\item\em Resets the UM7 sensor to factory defaults. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_redshift___u_m_l7_a13873300ea3da88397cfcf0ac9ebde4e}{zero\+Gyroscopes}} ()
+\begin{DoxyCompactList}\small\item\em Zeros the gyroscopes of the UM7 sensor. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_redshift___u_m_l7_a52263799b45bca3e815a28f0c7c8fe8c}{set\+Home\+Position}} ()
+\begin{DoxyCompactList}\small\item\em Sets the home position for the UM7 sensor. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_redshift___u_m_l7_a55a1027532cef713d5a70e57633a05de}{reset\+EKF}} ()
+\begin{DoxyCompactList}\small\item\em Resets the Extended Kalman Filter (EKF) of the UM7 sensor. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_redshift___u_m_l7_a96b3e4c39f0d579a3e80f5ae67a1ad8d}{flash\+Commit}} ()
+\begin{DoxyCompactList}\small\item\em Commits the current configuration settings to FLASH. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_redshift___u_m_l7_a2c23fce0a4b6f1483d4ac118006a1330}{read\+Dreg\+Data}} (uint8\+\_\+t dreg\+Address, uint8\+\_\+t \texorpdfstring{$\ast$}{*}data, size\+\_\+t length)
+\begin{DoxyCompactList}\small\item\em Reads data from a data register. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_redshift___u_m_l7_a2ebb72f4d1e6bf2eecad45ff805ce233}{get\+Gyro\+Raw\+Measurements}} (int16\+\_\+t \&gyroX, int16\+\_\+t \&gyroY, int16\+\_\+t \&gyroZ)
+\begin{DoxyCompactList}\small\item\em Retrieves raw gyroscope measurements. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_redshift___u_m_l7_a629aba415fd0474447dda6a232535632}{get\+Accel\+Raw\+XY}} (int16\+\_\+t \&accelX, int16\+\_\+t \&accelY)
+\begin{DoxyCompactList}\small\item\em Retrieves raw accelerometer X and Y-\/axis measurements. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_redshift___u_m_l7_a49706965e19a9ac9e4ee93446b635db8}{get\+Accel\+RawZ}} (int16\+\_\+t \&accelZ)
+\begin{DoxyCompactList}\small\item\em Retrieves raw accelerometer Z-\/axis measurements. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_redshift___u_m_l7_a3018e9653d11ee5de4ca50cf7cef0b82}{get\+Gyro\+Processed\+Measurements}} (\mbox{\hyperlink{struct_gyro_measurement}{Gyro\+Measurement}} \&gyro\+Data)
+\begin{DoxyCompactList}\small\item\em Retrieves processed gyroscope measurements. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_redshift___u_m_l7_a137001536d425d0495d7a7baed780192}{get\+Accel\+Raw\+Measurements}} (int16\+\_\+t \&accelX, int16\+\_\+t \&accelY, int16\+\_\+t \&accelZ)
+\begin{DoxyCompactList}\small\item\em Retrieves raw accelerometer measurements. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_redshift___u_m_l7_a115b4c1c521a1540eae09931867986af}{get\+Accel\+ProcX}} (float \&accelX)
+\begin{DoxyCompactList}\small\item\em Retrieves processed accelerometer X-\/axis data. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_redshift___u_m_l7_a2fe91d39b1a14c906fc49696f39aedcb}{get\+Accel\+ProcY}} (float \&accelY)
+\begin{DoxyCompactList}\small\item\em Retrieves processed accelerometer Y-\/axis data. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_redshift___u_m_l7_ab816896dce19d17487e8edbafb9779dd}{get\+Accel\+ProcZ}} (float \&accelZ)
+\begin{DoxyCompactList}\small\item\em Retrieves processed accelerometer Z-\/axis data. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_redshift___u_m_l7_a488d6ad2ee01f48adefc07c0d6cf6174}{get\+Gyro\+ProcX}} (float \&gyroX)
+\begin{DoxyCompactList}\small\item\em Retrieves processed gyroscope X-\/axis data. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_redshift___u_m_l7_ad9df8a0c099b03e2f72411aef9e8f36a}{get\+Gyro\+ProcY}} (float \&gyroY)
+\begin{DoxyCompactList}\small\item\em Retrieves processed gyroscope Y-\/axis data. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_redshift___u_m_l7_a57bc8c666408a94fa6446c4a5a5b2811}{get\+Accel\+Processed\+Measurements}} (float \&accelX, float \&accelY, float \&accelZ, float \&accel\+Time)
+\begin{DoxyCompactList}\small\item\em Retrieves processed accelerometer measurements. \end{DoxyCompactList}\item 
+\Hypertarget{class_redshift___u_m_l7_a58593e4ed4de6764625b43da1ddf34d3}\label{class_redshift___u_m_l7_a58593e4ed4de6764625b43da1ddf34d3} 
+void {\bfseries print\+All\+Measurements} ()
+\begin{DoxyCompactList}\small\item\em Prints all measurements to the serial output. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_redshift___u_m_l7_a602689d2745f2b2d5d56e70b6c1d32ae}{get\+Mag\+Raw\+XY}} (int16\+\_\+t \&magX, int16\+\_\+t \&magY)
+\begin{DoxyCompactList}\small\item\em Retrieves raw magnetometer X and Y-\/axis measurements. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_redshift___u_m_l7_a8265f4384802d0b519fbffab84b647f0}{print\+Packet}} (const \mbox{\hyperlink{_redshift___u_m_l7_8h_ab61dddf71d3fb0bfa520aeae95099245}{UM7\+\_\+packet}} \&packet)
+\begin{DoxyCompactList}\small\item\em Prints the contents of a packet to the serial output. \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{class_redshift___u_m_l7_a8dc0c4be7140637c14c7886b9ca59738}{read\+Serial\+Data}} (uint8\+\_\+t \texorpdfstring{$\ast$}{*}buffer, size\+\_\+t buffer\+Size)
+\begin{DoxyCompactList}\small\item\em Reads serial data from the UM7 sensor. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_redshift___u_m_l7_af5855047d371f6499bb0b1a7d7b6caff}{parse\+Packet}} (const uint8\+\_\+t \texorpdfstring{$\ast$}{*}rx\+\_\+data, size\+\_\+t rx\+\_\+length, \mbox{\hyperlink{_redshift___u_m_l7_8h_ab61dddf71d3fb0bfa520aeae95099245}{UM7\+\_\+packet}} \&packet, uint8\+\_\+t expected\+Address)
+\begin{DoxyCompactList}\small\item\em Parses a packet received from the UM7 sensor. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_redshift___u_m_l7_a36cb8a1b0ac68768c9887901976d6d31}{get\+Magnetic\+Data}} (float \&magX, float \&magY, float \&magZ, float \&time)
+\begin{DoxyCompactList}\small\item\em Retrieves magnetic data from the UM7 sensor. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_redshift___u_m_l7_a0eff8f414e9834638fb4b24ca9ea130f}{get\+Gyro\+Time}} (float \&time)
+\begin{DoxyCompactList}\small\item\em Retrieves the gyroscope timestamp from the UM7 sensor. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_redshift___u_m_l7_ad680e52c4bf660ad7eea6c6c1182bf7f}{get\+Accel\+Time}} (float \&time)
+\begin{DoxyCompactList}\small\item\em Retrieves the accelerometer timestamp from the UM7 sensor. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_redshift___u_m_l7_a1bc97183d7d857a10af6a69007b0fcde}{get\+Accel\+Raw\+Measurements}} (\mbox{\hyperlink{struct_accel_measurement}{Accel\+Measurement}} \&accel\+Data)
+\begin{DoxyCompactList}\small\item\em Retrieves raw accelerometer measurements. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_redshift___u_m_l7_adfe050b2a56a708a605a62b68dd0123a}{get\+Mag\+Raw\+Measurements}} (\mbox{\hyperlink{struct_mag_measurement}{Mag\+Measurement}} \&mag\+Data)
+\begin{DoxyCompactList}\small\item\em Retrieves raw magnetometer measurements. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class to interface with the UM7 sensor. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_redshift___u_m_l7_ae347879fc59c484a4a896d1bcb2d5e5a}\index{Redshift\_UML7@{Redshift\_UML7}!Redshift\_UML7@{Redshift\_UML7}}
+\index{Redshift\_UML7@{Redshift\_UML7}!Redshift\_UML7@{Redshift\_UML7}}
+\doxysubsubsection{\texorpdfstring{Redshift\_UML7()}{Redshift\_UML7()}}
+{\footnotesize\ttfamily \label{class_redshift___u_m_l7_ae347879fc59c484a4a896d1bcb2d5e5a} 
+Redshift\+\_\+\+UML7\+::\+Redshift\+\_\+\+UML7 (\begin{DoxyParamCaption}\item[{Stream \&}]{serial}{}\end{DoxyParamCaption})}
+
+
+
+Constructor for the \doxylink{class_redshift___u_m_l7}{Redshift\+\_\+\+UML7} class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em serial} & Reference to the serial stream used for communication. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_redshift___u_m_l7_a96b3e4c39f0d579a3e80f5ae67a1ad8d}\index{Redshift\_UML7@{Redshift\_UML7}!flashCommit@{flashCommit}}
+\index{flashCommit@{flashCommit}!Redshift\_UML7@{Redshift\_UML7}}
+\doxysubsubsection{\texorpdfstring{flashCommit()}{flashCommit()}}
+{\footnotesize\ttfamily \label{class_redshift___u_m_l7_a96b3e4c39f0d579a3e80f5ae67a1ad8d} 
+bool Redshift\+\_\+\+UML7\+::flash\+Commit (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Commits the current configuration settings to FLASH. 
+
+\begin{DoxyReturn}{Returns}
+True if the settings were successfully committed, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{class_redshift___u_m_l7_a57bc8c666408a94fa6446c4a5a5b2811}\index{Redshift\_UML7@{Redshift\_UML7}!getAccelProcessedMeasurements@{getAccelProcessedMeasurements}}
+\index{getAccelProcessedMeasurements@{getAccelProcessedMeasurements}!Redshift\_UML7@{Redshift\_UML7}}
+\doxysubsubsection{\texorpdfstring{getAccelProcessedMeasurements()}{getAccelProcessedMeasurements()}}
+{\footnotesize\ttfamily \label{class_redshift___u_m_l7_a57bc8c666408a94fa6446c4a5a5b2811} 
+bool Redshift\+\_\+\+UML7\+::get\+Accel\+Processed\+Measurements (\begin{DoxyParamCaption}\item[{float \&}]{accelX}{, }\item[{float \&}]{accelY}{, }\item[{float \&}]{accelZ}{, }\item[{float \&}]{accel\+Time}{}\end{DoxyParamCaption})}
+
+
+
+Retrieves processed accelerometer measurements. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em accelX} & Reference to store the processed accelerometer X-\/axis data. \\
+\hline
+{\em accelY} & Reference to store the processed accelerometer Y-\/axis data. \\
+\hline
+{\em accelZ} & Reference to store the processed accelerometer Z-\/axis data. \\
+\hline
+{\em accel\+Time} & Reference to store the timestamp of the accelerometer data. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the data was successfully retrieved, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{class_redshift___u_m_l7_a115b4c1c521a1540eae09931867986af}\index{Redshift\_UML7@{Redshift\_UML7}!getAccelProcX@{getAccelProcX}}
+\index{getAccelProcX@{getAccelProcX}!Redshift\_UML7@{Redshift\_UML7}}
+\doxysubsubsection{\texorpdfstring{getAccelProcX()}{getAccelProcX()}}
+{\footnotesize\ttfamily \label{class_redshift___u_m_l7_a115b4c1c521a1540eae09931867986af} 
+bool Redshift\+\_\+\+UML7\+::get\+Accel\+ProcX (\begin{DoxyParamCaption}\item[{float \&}]{accelX}{}\end{DoxyParamCaption})}
+
+
+
+Retrieves processed accelerometer X-\/axis data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em accelX} & Reference to store the processed accelerometer X-\/axis data. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the data was successfully retrieved, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{class_redshift___u_m_l7_a2fe91d39b1a14c906fc49696f39aedcb}\index{Redshift\_UML7@{Redshift\_UML7}!getAccelProcY@{getAccelProcY}}
+\index{getAccelProcY@{getAccelProcY}!Redshift\_UML7@{Redshift\_UML7}}
+\doxysubsubsection{\texorpdfstring{getAccelProcY()}{getAccelProcY()}}
+{\footnotesize\ttfamily \label{class_redshift___u_m_l7_a2fe91d39b1a14c906fc49696f39aedcb} 
+bool Redshift\+\_\+\+UML7\+::get\+Accel\+ProcY (\begin{DoxyParamCaption}\item[{float \&}]{accelY}{}\end{DoxyParamCaption})}
+
+
+
+Retrieves processed accelerometer Y-\/axis data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em accelY} & Reference to store the processed accelerometer Y-\/axis data. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the data was successfully retrieved, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{class_redshift___u_m_l7_ab816896dce19d17487e8edbafb9779dd}\index{Redshift\_UML7@{Redshift\_UML7}!getAccelProcZ@{getAccelProcZ}}
+\index{getAccelProcZ@{getAccelProcZ}!Redshift\_UML7@{Redshift\_UML7}}
+\doxysubsubsection{\texorpdfstring{getAccelProcZ()}{getAccelProcZ()}}
+{\footnotesize\ttfamily \label{class_redshift___u_m_l7_ab816896dce19d17487e8edbafb9779dd} 
+bool Redshift\+\_\+\+UML7\+::get\+Accel\+ProcZ (\begin{DoxyParamCaption}\item[{float \&}]{accelZ}{}\end{DoxyParamCaption})}
+
+
+
+Retrieves processed accelerometer Z-\/axis data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em accelZ} & Reference to store the processed accelerometer Z-\/axis data. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the data was successfully retrieved, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{class_redshift___u_m_l7_a1bc97183d7d857a10af6a69007b0fcde}\index{Redshift\_UML7@{Redshift\_UML7}!getAccelRawMeasurements@{getAccelRawMeasurements}}
+\index{getAccelRawMeasurements@{getAccelRawMeasurements}!Redshift\_UML7@{Redshift\_UML7}}
+\doxysubsubsection{\texorpdfstring{getAccelRawMeasurements()}{getAccelRawMeasurements()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_redshift___u_m_l7_a1bc97183d7d857a10af6a69007b0fcde} 
+bool Redshift\+\_\+\+UML7\+::get\+Accel\+Raw\+Measurements (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_accel_measurement}{Accel\+Measurement}} \&}]{accel\+Data}{}\end{DoxyParamCaption})}
+
+
+
+Retrieves raw accelerometer measurements. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em accel\+Data} & Reference to an \doxylink{struct_accel_measurement}{Accel\+Measurement} structure to store the data. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the data was successfully retrieved, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{class_redshift___u_m_l7_a137001536d425d0495d7a7baed780192}\index{Redshift\_UML7@{Redshift\_UML7}!getAccelRawMeasurements@{getAccelRawMeasurements}}
+\index{getAccelRawMeasurements@{getAccelRawMeasurements}!Redshift\_UML7@{Redshift\_UML7}}
+\doxysubsubsection{\texorpdfstring{getAccelRawMeasurements()}{getAccelRawMeasurements()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_redshift___u_m_l7_a137001536d425d0495d7a7baed780192} 
+bool Redshift\+\_\+\+UML7\+::get\+Accel\+Raw\+Measurements (\begin{DoxyParamCaption}\item[{int16\+\_\+t \&}]{accelX}{, }\item[{int16\+\_\+t \&}]{accelY}{, }\item[{int16\+\_\+t \&}]{accelZ}{}\end{DoxyParamCaption})}
+
+
+
+Retrieves raw accelerometer measurements. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em accelX} & Reference to store the raw accelerometer X-\/axis data. \\
+\hline
+{\em accelY} & Reference to store the raw accelerometer Y-\/axis data. \\
+\hline
+{\em accelZ} & Reference to store the raw accelerometer Z-\/axis data. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the data was successfully retrieved, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{class_redshift___u_m_l7_a629aba415fd0474447dda6a232535632}\index{Redshift\_UML7@{Redshift\_UML7}!getAccelRawXY@{getAccelRawXY}}
+\index{getAccelRawXY@{getAccelRawXY}!Redshift\_UML7@{Redshift\_UML7}}
+\doxysubsubsection{\texorpdfstring{getAccelRawXY()}{getAccelRawXY()}}
+{\footnotesize\ttfamily \label{class_redshift___u_m_l7_a629aba415fd0474447dda6a232535632} 
+bool Redshift\+\_\+\+UML7\+::get\+Accel\+Raw\+XY (\begin{DoxyParamCaption}\item[{int16\+\_\+t \&}]{accelX}{, }\item[{int16\+\_\+t \&}]{accelY}{}\end{DoxyParamCaption})}
+
+
+
+Retrieves raw accelerometer X and Y-\/axis measurements. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em accelX} & Reference to store the raw accelerometer X-\/axis data. \\
+\hline
+{\em accelY} & Reference to store the raw accelerometer Y-\/axis data. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the data was successfully retrieved, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{class_redshift___u_m_l7_a49706965e19a9ac9e4ee93446b635db8}\index{Redshift\_UML7@{Redshift\_UML7}!getAccelRawZ@{getAccelRawZ}}
+\index{getAccelRawZ@{getAccelRawZ}!Redshift\_UML7@{Redshift\_UML7}}
+\doxysubsubsection{\texorpdfstring{getAccelRawZ()}{getAccelRawZ()}}
+{\footnotesize\ttfamily \label{class_redshift___u_m_l7_a49706965e19a9ac9e4ee93446b635db8} 
+bool Redshift\+\_\+\+UML7\+::get\+Accel\+RawZ (\begin{DoxyParamCaption}\item[{int16\+\_\+t \&}]{accelZ}{}\end{DoxyParamCaption})}
+
+
+
+Retrieves raw accelerometer Z-\/axis measurements. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em accelZ} & Reference to store the raw accelerometer Z-\/axis data. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the data was successfully retrieved, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{class_redshift___u_m_l7_ad680e52c4bf660ad7eea6c6c1182bf7f}\index{Redshift\_UML7@{Redshift\_UML7}!getAccelTime@{getAccelTime}}
+\index{getAccelTime@{getAccelTime}!Redshift\_UML7@{Redshift\_UML7}}
+\doxysubsubsection{\texorpdfstring{getAccelTime()}{getAccelTime()}}
+{\footnotesize\ttfamily \label{class_redshift___u_m_l7_ad680e52c4bf660ad7eea6c6c1182bf7f} 
+bool Redshift\+\_\+\+UML7\+::get\+Accel\+Time (\begin{DoxyParamCaption}\item[{float \&}]{time}{}\end{DoxyParamCaption})}
+
+
+
+Retrieves the accelerometer timestamp from the UM7 sensor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em time} & Reference to store the accelerometer timestamp. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the timestamp was successfully retrieved, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{class_redshift___u_m_l7_a384c44d7960485756d1ae4f49d3d0a51}\index{Redshift\_UML7@{Redshift\_UML7}!getData@{getData}}
+\index{getData@{getData}!Redshift\_UML7@{Redshift\_UML7}}
+\doxysubsubsection{\texorpdfstring{getData()}{getData()}}
+{\footnotesize\ttfamily \label{class_redshift___u_m_l7_a384c44d7960485756d1ae4f49d3d0a51} 
+String Redshift\+\_\+\+UML7\+::get\+Data (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Retrieves data from the UM7 sensor. 
+
+\begin{DoxyReturn}{Returns}
+A string containing the data. 
+\end{DoxyReturn}
+\Hypertarget{class_redshift___u_m_l7_a51a32df641b7b5b632bec03277701f3d}\index{Redshift\_UML7@{Redshift\_UML7}!getFirmwareVersion@{getFirmwareVersion}}
+\index{getFirmwareVersion@{getFirmwareVersion}!Redshift\_UML7@{Redshift\_UML7}}
+\doxysubsubsection{\texorpdfstring{getFirmwareVersion()}{getFirmwareVersion()}}
+{\footnotesize\ttfamily \label{class_redshift___u_m_l7_a51a32df641b7b5b632bec03277701f3d} 
+String Redshift\+\_\+\+UML7\+::get\+Firmware\+Version (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Retrieves the firmware version of the UM7 sensor. 
+
+\begin{DoxyReturn}{Returns}
+A string containing the firmware version. 
+\end{DoxyReturn}
+\Hypertarget{class_redshift___u_m_l7_a86c9c530e64cadc757859398dd45d538}\index{Redshift\_UML7@{Redshift\_UML7}!getGpsTime@{getGpsTime}}
+\index{getGpsTime@{getGpsTime}!Redshift\_UML7@{Redshift\_UML7}}
+\doxysubsubsection{\texorpdfstring{getGpsTime()}{getGpsTime()}}
+{\footnotesize\ttfamily \label{class_redshift___u_m_l7_a86c9c530e64cadc757859398dd45d538} 
+bool Redshift\+\_\+\+UML7\+::get\+Gps\+Time (\begin{DoxyParamCaption}\item[{float \&}]{gps\+Time}{}\end{DoxyParamCaption})}
+
+
+
+Retrieves the GPS time from the UM7 sensor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em gps\+Time} & Reference to store the GPS time. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the GPS time was successfully retrieved, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{class_redshift___u_m_l7_a3018e9653d11ee5de4ca50cf7cef0b82}\index{Redshift\_UML7@{Redshift\_UML7}!getGyroProcessedMeasurements@{getGyroProcessedMeasurements}}
+\index{getGyroProcessedMeasurements@{getGyroProcessedMeasurements}!Redshift\_UML7@{Redshift\_UML7}}
+\doxysubsubsection{\texorpdfstring{getGyroProcessedMeasurements()}{getGyroProcessedMeasurements()}}
+{\footnotesize\ttfamily \label{class_redshift___u_m_l7_a3018e9653d11ee5de4ca50cf7cef0b82} 
+bool Redshift\+\_\+\+UML7\+::get\+Gyro\+Processed\+Measurements (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_gyro_measurement}{Gyro\+Measurement}} \&}]{gyro\+Data}{}\end{DoxyParamCaption})}
+
+
+
+Retrieves processed gyroscope measurements. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em gyro\+Data} & Reference to a \doxylink{struct_gyro_measurement}{Gyro\+Measurement} structure to store the data. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the data was successfully retrieved, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{class_redshift___u_m_l7_a488d6ad2ee01f48adefc07c0d6cf6174}\index{Redshift\_UML7@{Redshift\_UML7}!getGyroProcX@{getGyroProcX}}
+\index{getGyroProcX@{getGyroProcX}!Redshift\_UML7@{Redshift\_UML7}}
+\doxysubsubsection{\texorpdfstring{getGyroProcX()}{getGyroProcX()}}
+{\footnotesize\ttfamily \label{class_redshift___u_m_l7_a488d6ad2ee01f48adefc07c0d6cf6174} 
+bool Redshift\+\_\+\+UML7\+::get\+Gyro\+ProcX (\begin{DoxyParamCaption}\item[{float \&}]{gyroX}{}\end{DoxyParamCaption})}
+
+
+
+Retrieves processed gyroscope X-\/axis data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em gyroX} & Reference to store the processed gyroscope X-\/axis data. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the data was successfully retrieved, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{class_redshift___u_m_l7_ad9df8a0c099b03e2f72411aef9e8f36a}\index{Redshift\_UML7@{Redshift\_UML7}!getGyroProcY@{getGyroProcY}}
+\index{getGyroProcY@{getGyroProcY}!Redshift\_UML7@{Redshift\_UML7}}
+\doxysubsubsection{\texorpdfstring{getGyroProcY()}{getGyroProcY()}}
+{\footnotesize\ttfamily \label{class_redshift___u_m_l7_ad9df8a0c099b03e2f72411aef9e8f36a} 
+bool Redshift\+\_\+\+UML7\+::get\+Gyro\+ProcY (\begin{DoxyParamCaption}\item[{float \&}]{gyroY}{}\end{DoxyParamCaption})}
+
+
+
+Retrieves processed gyroscope Y-\/axis data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em gyroY} & Reference to store the processed gyroscope Y-\/axis data. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the data was successfully retrieved, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{class_redshift___u_m_l7_a34d7e9f9fa094b4cc1924751d6da9b6c}\index{Redshift\_UML7@{Redshift\_UML7}!getGyroProcZ@{getGyroProcZ}}
+\index{getGyroProcZ@{getGyroProcZ}!Redshift\_UML7@{Redshift\_UML7}}
+\doxysubsubsection{\texorpdfstring{getGyroProcZ()}{getGyroProcZ()}}
+{\footnotesize\ttfamily \label{class_redshift___u_m_l7_a34d7e9f9fa094b4cc1924751d6da9b6c} 
+bool Redshift\+\_\+\+UML7\+::get\+Gyro\+ProcZ (\begin{DoxyParamCaption}\item[{float \&}]{gyroZ}{}\end{DoxyParamCaption})}
+
+
+
+Retrieves the processed gyroscope Z-\/axis data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em gyroZ} & Reference to store the gyroscope Z-\/axis data. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the data was successfully retrieved, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{class_redshift___u_m_l7_a2ebb72f4d1e6bf2eecad45ff805ce233}\index{Redshift\_UML7@{Redshift\_UML7}!getGyroRawMeasurements@{getGyroRawMeasurements}}
+\index{getGyroRawMeasurements@{getGyroRawMeasurements}!Redshift\_UML7@{Redshift\_UML7}}
+\doxysubsubsection{\texorpdfstring{getGyroRawMeasurements()}{getGyroRawMeasurements()}}
+{\footnotesize\ttfamily \label{class_redshift___u_m_l7_a2ebb72f4d1e6bf2eecad45ff805ce233} 
+bool Redshift\+\_\+\+UML7\+::get\+Gyro\+Raw\+Measurements (\begin{DoxyParamCaption}\item[{int16\+\_\+t \&}]{gyroX}{, }\item[{int16\+\_\+t \&}]{gyroY}{, }\item[{int16\+\_\+t \&}]{gyroZ}{}\end{DoxyParamCaption})}
+
+
+
+Retrieves raw gyroscope measurements. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em gyroX} & Reference to store the raw gyroscope X-\/axis data. \\
+\hline
+{\em gyroY} & Reference to store the raw gyroscope Y-\/axis data. \\
+\hline
+{\em gyroZ} & Reference to store the raw gyroscope Z-\/axis data. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the data was successfully retrieved, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{class_redshift___u_m_l7_a0eff8f414e9834638fb4b24ca9ea130f}\index{Redshift\_UML7@{Redshift\_UML7}!getGyroTime@{getGyroTime}}
+\index{getGyroTime@{getGyroTime}!Redshift\_UML7@{Redshift\_UML7}}
+\doxysubsubsection{\texorpdfstring{getGyroTime()}{getGyroTime()}}
+{\footnotesize\ttfamily \label{class_redshift___u_m_l7_a0eff8f414e9834638fb4b24ca9ea130f} 
+bool Redshift\+\_\+\+UML7\+::get\+Gyro\+Time (\begin{DoxyParamCaption}\item[{float \&}]{time}{}\end{DoxyParamCaption})}
+
+
+
+Retrieves the gyroscope timestamp from the UM7 sensor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em time} & Reference to store the gyroscope timestamp. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the timestamp was successfully retrieved, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{class_redshift___u_m_l7_a4848d863423685560bf6e2417a54d58c}\index{Redshift\_UML7@{Redshift\_UML7}!getHealthData@{getHealthData}}
+\index{getHealthData@{getHealthData}!Redshift\_UML7@{Redshift\_UML7}}
+\doxysubsubsection{\texorpdfstring{getHealthData()}{getHealthData()}}
+{\footnotesize\ttfamily \label{class_redshift___u_m_l7_a4848d863423685560bf6e2417a54d58c} 
+bool Redshift\+\_\+\+UML7\+::get\+Health\+Data (\begin{DoxyParamCaption}\item[{uint16\+\_\+t \&}]{time}{, }\item[{uint8\+\_\+t \&}]{sats\+\_\+used}{, }\item[{uint8\+\_\+t \&}]{sats\+\_\+in\+\_\+view}{, }\item[{float \&}]{HDOP}{, }\item[{uint8\+\_\+t \&}]{mode}{, }\item[{uint8\+\_\+t \&}]{COM}{, }\item[{uint8\+\_\+t \&}]{accel}{, }\item[{uint8\+\_\+t \&}]{gyro}{, }\item[{uint8\+\_\+t \&}]{mag}{, }\item[{uint8\+\_\+t \&}]{GPS}{}\end{DoxyParamCaption})}
+
+
+
+Retrieves health data from the UM7 sensor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em time} & Reference to store the time. \\
+\hline
+{\em sats\+\_\+used} & Reference to store the number of satellites used. \\
+\hline
+{\em sats\+\_\+in\+\_\+view} & Reference to store the number of satellites in view. \\
+\hline
+{\em HDOP} & Reference to store the HDOP value. \\
+\hline
+{\em mode} & Reference to store the mode. \\
+\hline
+{\em COM} & Reference to store the COM value. \\
+\hline
+{\em accel} & Reference to store the accelerometer status. \\
+\hline
+{\em gyro} & Reference to store the gyroscope status. \\
+\hline
+{\em mag} & Reference to store the magnetometer status. \\
+\hline
+{\em GPS} & Reference to store the GPS status. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the health data was successfully retrieved, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{class_redshift___u_m_l7_a97f93d0f9008a2cd311e799b0c0c8b35}\index{Redshift\_UML7@{Redshift\_UML7}!getHealthRegisterData@{getHealthRegisterData}}
+\index{getHealthRegisterData@{getHealthRegisterData}!Redshift\_UML7@{Redshift\_UML7}}
+\doxysubsubsection{\texorpdfstring{getHealthRegisterData()}{getHealthRegisterData()}}
+{\footnotesize\ttfamily \label{class_redshift___u_m_l7_a97f93d0f9008a2cd311e799b0c0c8b35} 
+bool Redshift\+\_\+\+UML7\+::get\+Health\+Register\+Data (\begin{DoxyParamCaption}\item[{uint16\+\_\+t \&}]{time}{, }\item[{uint8\+\_\+t \&}]{sats\+\_\+used}{, }\item[{uint8\+\_\+t \&}]{sats\+\_\+in\+\_\+view}{, }\item[{float \&}]{HDOP}{, }\item[{uint8\+\_\+t \&}]{mode}{, }\item[{uint8\+\_\+t \&}]{COM}{, }\item[{uint8\+\_\+t \&}]{accel}{, }\item[{uint8\+\_\+t \&}]{gyro}{, }\item[{uint8\+\_\+t \&}]{mag}{, }\item[{uint8\+\_\+t \&}]{GPS}{}\end{DoxyParamCaption})}
+
+
+
+Retrieves health register data from the UM7 sensor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em time} & Reference to store the time. \\
+\hline
+{\em sats\+\_\+used} & Reference to store the number of satellites used. \\
+\hline
+{\em sats\+\_\+in\+\_\+view} & Reference to store the number of satellites in view. \\
+\hline
+{\em HDOP} & Reference to store the HDOP value. \\
+\hline
+{\em mode} & Reference to store the mode. \\
+\hline
+{\em COM} & Reference to store the COM value. \\
+\hline
+{\em accel} & Reference to store the accelerometer status. \\
+\hline
+{\em gyro} & Reference to store the gyroscope status. \\
+\hline
+{\em mag} & Reference to store the magnetometer status. \\
+\hline
+{\em GPS} & Reference to store the GPS status. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the health register data was successfully retrieved, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{class_redshift___u_m_l7_a36cb8a1b0ac68768c9887901976d6d31}\index{Redshift\_UML7@{Redshift\_UML7}!getMagneticData@{getMagneticData}}
+\index{getMagneticData@{getMagneticData}!Redshift\_UML7@{Redshift\_UML7}}
+\doxysubsubsection{\texorpdfstring{getMagneticData()}{getMagneticData()}}
+{\footnotesize\ttfamily \label{class_redshift___u_m_l7_a36cb8a1b0ac68768c9887901976d6d31} 
+bool Redshift\+\_\+\+UML7\+::get\+Magnetic\+Data (\begin{DoxyParamCaption}\item[{float \&}]{magX}{, }\item[{float \&}]{magY}{, }\item[{float \&}]{magZ}{, }\item[{float \&}]{time}{}\end{DoxyParamCaption})}
+
+
+
+Retrieves magnetic data from the UM7 sensor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em magX} & Reference to store the magnetometer X-\/axis data. \\
+\hline
+{\em magY} & Reference to store the magnetometer Y-\/axis data. \\
+\hline
+{\em magZ} & Reference to store the magnetometer Z-\/axis data. \\
+\hline
+{\em time} & Reference to store the timestamp of the magnetometer data. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the data was successfully retrieved, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{class_redshift___u_m_l7_adfe050b2a56a708a605a62b68dd0123a}\index{Redshift\_UML7@{Redshift\_UML7}!getMagRawMeasurements@{getMagRawMeasurements}}
+\index{getMagRawMeasurements@{getMagRawMeasurements}!Redshift\_UML7@{Redshift\_UML7}}
+\doxysubsubsection{\texorpdfstring{getMagRawMeasurements()}{getMagRawMeasurements()}}
+{\footnotesize\ttfamily \label{class_redshift___u_m_l7_adfe050b2a56a708a605a62b68dd0123a} 
+bool Redshift\+\_\+\+UML7\+::get\+Mag\+Raw\+Measurements (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_mag_measurement}{Mag\+Measurement}} \&}]{mag\+Data}{}\end{DoxyParamCaption})}
+
+
+
+Retrieves raw magnetometer measurements. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mag\+Data} & Reference to a \doxylink{struct_mag_measurement}{Mag\+Measurement} structure to store the data. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the data was successfully retrieved, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{class_redshift___u_m_l7_a602689d2745f2b2d5d56e70b6c1d32ae}\index{Redshift\_UML7@{Redshift\_UML7}!getMagRawXY@{getMagRawXY}}
+\index{getMagRawXY@{getMagRawXY}!Redshift\_UML7@{Redshift\_UML7}}
+\doxysubsubsection{\texorpdfstring{getMagRawXY()}{getMagRawXY()}}
+{\footnotesize\ttfamily \label{class_redshift___u_m_l7_a602689d2745f2b2d5d56e70b6c1d32ae} 
+bool Redshift\+\_\+\+UML7\+::get\+Mag\+Raw\+XY (\begin{DoxyParamCaption}\item[{int16\+\_\+t \&}]{magX}{, }\item[{int16\+\_\+t \&}]{magY}{}\end{DoxyParamCaption})}
+
+
+
+Retrieves raw magnetometer X and Y-\/axis measurements. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em magX} & Reference to store the raw magnetometer X-\/axis data. \\
+\hline
+{\em magY} & Reference to store the raw magnetometer Y-\/axis data. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the data was successfully retrieved, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{class_redshift___u_m_l7_a7f2369df1ad96711c54119f14a3b0129}\index{Redshift\_UML7@{Redshift\_UML7}!getMagX@{getMagX}}
+\index{getMagX@{getMagX}!Redshift\_UML7@{Redshift\_UML7}}
+\doxysubsubsection{\texorpdfstring{getMagX()}{getMagX()}}
+{\footnotesize\ttfamily \label{class_redshift___u_m_l7_a7f2369df1ad96711c54119f14a3b0129} 
+float Redshift\+\_\+\+UML7\+::get\+MagX (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Retrieves the magnetometer X-\/axis data. 
+
+\begin{DoxyReturn}{Returns}
+The magnetometer X-\/axis data. 
+\end{DoxyReturn}
+\Hypertarget{class_redshift___u_m_l7_a391c370eb34357a96868b78eba3b1592}\index{Redshift\_UML7@{Redshift\_UML7}!getMagY@{getMagY}}
+\index{getMagY@{getMagY}!Redshift\_UML7@{Redshift\_UML7}}
+\doxysubsubsection{\texorpdfstring{getMagY()}{getMagY()}}
+{\footnotesize\ttfamily \label{class_redshift___u_m_l7_a391c370eb34357a96868b78eba3b1592} 
+float Redshift\+\_\+\+UML7\+::get\+MagY (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Retrieves the magnetometer Y-\/axis data. 
+
+\begin{DoxyReturn}{Returns}
+The magnetometer Y-\/axis data. 
+\end{DoxyReturn}
+\Hypertarget{class_redshift___u_m_l7_ad9730512fa68b36d82d81cd330d2cf11}\index{Redshift\_UML7@{Redshift\_UML7}!getMagZ@{getMagZ}}
+\index{getMagZ@{getMagZ}!Redshift\_UML7@{Redshift\_UML7}}
+\doxysubsubsection{\texorpdfstring{getMagZ()}{getMagZ()}}
+{\footnotesize\ttfamily \label{class_redshift___u_m_l7_ad9730512fa68b36d82d81cd330d2cf11} 
+float Redshift\+\_\+\+UML7\+::get\+MagZ (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Retrieves the magnetometer Z-\/axis data. 
+
+\begin{DoxyReturn}{Returns}
+The magnetometer Z-\/axis data. 
+\end{DoxyReturn}
+\Hypertarget{class_redshift___u_m_l7_af1d8a5a843c0524b9acd2b7edfcaca1a}\index{Redshift\_UML7@{Redshift\_UML7}!getOrientation@{getOrientation}}
+\index{getOrientation@{getOrientation}!Redshift\_UML7@{Redshift\_UML7}}
+\doxysubsubsection{\texorpdfstring{getOrientation()}{getOrientation()}}
+{\footnotesize\ttfamily \label{class_redshift___u_m_l7_af1d8a5a843c0524b9acd2b7edfcaca1a} 
+bool Redshift\+\_\+\+UML7\+::get\+Orientation (\begin{DoxyParamCaption}\item[{float \&}]{yaw}{, }\item[{float \&}]{pitch}{, }\item[{float \&}]{roll}{}\end{DoxyParamCaption})}
+
+
+
+Retrieves the orientation (yaw, pitch, roll) from the UM7 sensor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em yaw} & Reference to store the yaw angle. \\
+\hline
+{\em pitch} & Reference to store the pitch angle. \\
+\hline
+{\em roll} & Reference to store the roll angle. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the orientation was successfully retrieved, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{class_redshift___u_m_l7_a5aeefa473cc213298734c859905fa43c}\index{Redshift\_UML7@{Redshift\_UML7}!getPitch@{getPitch}}
+\index{getPitch@{getPitch}!Redshift\_UML7@{Redshift\_UML7}}
+\doxysubsubsection{\texorpdfstring{getPitch()}{getPitch()}}
+{\footnotesize\ttfamily \label{class_redshift___u_m_l7_a5aeefa473cc213298734c859905fa43c} 
+float Redshift\+\_\+\+UML7\+::get\+Pitch (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Retrieves the pitch angle from the UM7 sensor. 
+
+\begin{DoxyReturn}{Returns}
+The pitch angle in degrees. 
+\end{DoxyReturn}
+\Hypertarget{class_redshift___u_m_l7_aea2611cdc7c7d50b11043a23f694a5a6}\index{Redshift\_UML7@{Redshift\_UML7}!getRoll@{getRoll}}
+\index{getRoll@{getRoll}!Redshift\_UML7@{Redshift\_UML7}}
+\doxysubsubsection{\texorpdfstring{getRoll()}{getRoll()}}
+{\footnotesize\ttfamily \label{class_redshift___u_m_l7_aea2611cdc7c7d50b11043a23f694a5a6} 
+float Redshift\+\_\+\+UML7\+::get\+Roll (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Retrieves the roll angle from the UM7 sensor. 
+
+\begin{DoxyReturn}{Returns}
+The roll angle in degrees. 
+\end{DoxyReturn}
+\Hypertarget{class_redshift___u_m_l7_adc8a43c42a8fbd849286260dfec0bcff}\index{Redshift\_UML7@{Redshift\_UML7}!getTemperature@{getTemperature}}
+\index{getTemperature@{getTemperature}!Redshift\_UML7@{Redshift\_UML7}}
+\doxysubsubsection{\texorpdfstring{getTemperature()}{getTemperature()}}
+{\footnotesize\ttfamily \label{class_redshift___u_m_l7_adc8a43c42a8fbd849286260dfec0bcff} 
+bool Redshift\+\_\+\+UML7\+::get\+Temperature (\begin{DoxyParamCaption}\item[{float \&}]{temp}{}\end{DoxyParamCaption})}
+
+
+
+Retrieves the temperature from the UM7 sensor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em temp} & Reference to store the temperature value. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the temperature was successfully retrieved, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{class_redshift___u_m_l7_a34ff58826f81b6fd257891743b0f4601}\index{Redshift\_UML7@{Redshift\_UML7}!getYaw@{getYaw}}
+\index{getYaw@{getYaw}!Redshift\_UML7@{Redshift\_UML7}}
+\doxysubsubsection{\texorpdfstring{getYaw()}{getYaw()}}
+{\footnotesize\ttfamily \label{class_redshift___u_m_l7_a34ff58826f81b6fd257891743b0f4601} 
+float Redshift\+\_\+\+UML7\+::get\+Yaw (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Retrieves the yaw angle from the UM7 sensor. 
+
+\begin{DoxyReturn}{Returns}
+The yaw angle in degrees. 
+\end{DoxyReturn}
+\Hypertarget{class_redshift___u_m_l7_a3caf8fe1319aedf7cd298b271ea04edc}\index{Redshift\_UML7@{Redshift\_UML7}!parse\_serial\_data@{parse\_serial\_data}}
+\index{parse\_serial\_data@{parse\_serial\_data}!Redshift\_UML7@{Redshift\_UML7}}
+\doxysubsubsection{\texorpdfstring{parse\_serial\_data()}{parse\_serial\_data()}}
+{\footnotesize\ttfamily \label{class_redshift___u_m_l7_a3caf8fe1319aedf7cd298b271ea04edc} 
+uint8\+\_\+t Redshift\+\_\+\+UML7\+::parse\+\_\+serial\+\_\+data (\begin{DoxyParamCaption}\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{rx\+\_\+data}{, }\item[{uint8\+\_\+t}]{rx\+\_\+length}{, }\item[{\mbox{\hyperlink{_redshift___u_m_l7_8h_ab61dddf71d3fb0bfa520aeae95099245}{UM7\+\_\+packet}} \texorpdfstring{$\ast$}{*}}]{packet}{, }\item[{uint8\+\_\+t}]{expected\+Address}{}\end{DoxyParamCaption})}
+
+
+
+Parses serial data received from the UM7 sensor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rx\+\_\+data} & Pointer to the buffer containing the received data. \\
+\hline
+{\em rx\+\_\+length} & The length of the received data. \\
+\hline
+{\em packet} & Pointer to the packet structure to store the parsed data. \\
+\hline
+{\em expected\+Address} & The expected address of the packet. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The number of bytes parsed. 
+\end{DoxyReturn}
+\Hypertarget{class_redshift___u_m_l7_a6b748b23609691e123cb6fe65f9b6c3e}\index{Redshift\_UML7@{Redshift\_UML7}!parseNmeaPacket@{parseNmeaPacket}}
+\index{parseNmeaPacket@{parseNmeaPacket}!Redshift\_UML7@{Redshift\_UML7}}
+\doxysubsubsection{\texorpdfstring{parseNmeaPacket()}{parseNmeaPacket()}}
+{\footnotesize\ttfamily \label{class_redshift___u_m_l7_a6b748b23609691e123cb6fe65f9b6c3e} 
+bool Redshift\+\_\+\+UML7\+::parse\+Nmea\+Packet (\begin{DoxyParamCaption}\item[{String}]{nmea\+String}{}\end{DoxyParamCaption})}
+
+
+
+Parses an NMEA packet. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nmea\+String} & The NMEA string to parse. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if parsing was successful, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{class_redshift___u_m_l7_af5855047d371f6499bb0b1a7d7b6caff}\index{Redshift\_UML7@{Redshift\_UML7}!parsePacket@{parsePacket}}
+\index{parsePacket@{parsePacket}!Redshift\_UML7@{Redshift\_UML7}}
+\doxysubsubsection{\texorpdfstring{parsePacket()}{parsePacket()}}
+{\footnotesize\ttfamily \label{class_redshift___u_m_l7_af5855047d371f6499bb0b1a7d7b6caff} 
+bool Redshift\+\_\+\+UML7\+::parse\+Packet (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{rx\+\_\+data}{, }\item[{size\+\_\+t}]{rx\+\_\+length}{, }\item[{\mbox{\hyperlink{_redshift___u_m_l7_8h_ab61dddf71d3fb0bfa520aeae95099245}{UM7\+\_\+packet}} \&}]{packet}{, }\item[{uint8\+\_\+t}]{expected\+Address}{}\end{DoxyParamCaption})}
+
+
+
+Parses a packet received from the UM7 sensor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rx\+\_\+data} & Pointer to the buffer containing the received data. \\
+\hline
+{\em rx\+\_\+length} & The length of the received data. \\
+\hline
+{\em packet} & Reference to the packet structure to store the parsed data. \\
+\hline
+{\em expected\+Address} & The expected address of the packet. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the packet was successfully parsed, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{class_redshift___u_m_l7_a8265f4384802d0b519fbffab84b647f0}\index{Redshift\_UML7@{Redshift\_UML7}!printPacket@{printPacket}}
+\index{printPacket@{printPacket}!Redshift\_UML7@{Redshift\_UML7}}
+\doxysubsubsection{\texorpdfstring{printPacket()}{printPacket()}}
+{\footnotesize\ttfamily \label{class_redshift___u_m_l7_a8265f4384802d0b519fbffab84b647f0} 
+void Redshift\+\_\+\+UML7\+::print\+Packet (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{_redshift___u_m_l7_8h_ab61dddf71d3fb0bfa520aeae95099245}{UM7\+\_\+packet}} \&}]{packet}{}\end{DoxyParamCaption})}
+
+
+
+Prints the contents of a packet to the serial output. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em packet} & The packet to print. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_redshift___u_m_l7_a45807306c8b1b3a3c63634e2f8f98155}\index{Redshift\_UML7@{Redshift\_UML7}!read\_register\_as\_float@{read\_register\_as\_float}}
+\index{read\_register\_as\_float@{read\_register\_as\_float}!Redshift\_UML7@{Redshift\_UML7}}
+\doxysubsubsection{\texorpdfstring{read\_register\_as\_float()}{read\_register\_as\_float()}}
+{\footnotesize\ttfamily \label{class_redshift___u_m_l7_a45807306c8b1b3a3c63634e2f8f98155} 
+float Redshift\+\_\+\+UML7\+::read\+\_\+register\+\_\+as\+\_\+float (\begin{DoxyParamCaption}\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{data}{}\end{DoxyParamCaption})}
+
+
+
+Reads a register as a float value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & Pointer to the buffer containing the register data. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The float value read from the register. 
+\end{DoxyReturn}
+\Hypertarget{class_redshift___u_m_l7_a5cb2858c8ed0b98b58e6915a5111b7e1}\index{Redshift\_UML7@{Redshift\_UML7}!read\_register\_data@{read\_register\_data}}
+\index{read\_register\_data@{read\_register\_data}!Redshift\_UML7@{Redshift\_UML7}}
+\doxysubsubsection{\texorpdfstring{read\_register\_data()}{read\_register\_data()}}
+{\footnotesize\ttfamily \label{class_redshift___u_m_l7_a5cb2858c8ed0b98b58e6915a5111b7e1} 
+bool Redshift\+\_\+\+UML7\+::read\+\_\+register\+\_\+data (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{register\+Address}{, }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{data}{, }\item[{size\+\_\+t}]{length}{}\end{DoxyParamCaption})}
+
+
+
+Reads register data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em register\+Address} & The address of the register to read. \\
+\hline
+{\em data} & Pointer to the buffer to store the read data. \\
+\hline
+{\em length} & The length of the data to read. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the data was successfully read, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{class_redshift___u_m_l7_a2c23fce0a4b6f1483d4ac118006a1330}\index{Redshift\_UML7@{Redshift\_UML7}!readDregData@{readDregData}}
+\index{readDregData@{readDregData}!Redshift\_UML7@{Redshift\_UML7}}
+\doxysubsubsection{\texorpdfstring{readDregData()}{readDregData()}}
+{\footnotesize\ttfamily \label{class_redshift___u_m_l7_a2c23fce0a4b6f1483d4ac118006a1330} 
+bool Redshift\+\_\+\+UML7\+::read\+Dreg\+Data (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{dreg\+Address}{, }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{data}{, }\item[{size\+\_\+t}]{length}{}\end{DoxyParamCaption})}
+
+
+
+Reads data from a data register. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dreg\+Address} & The address of the data register to read. \\
+\hline
+{\em data} & Pointer to the buffer to store the read data. \\
+\hline
+{\em length} & The length of the data to read. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the data was successfully read, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{class_redshift___u_m_l7_a94885049fd4d2559ae934c10d0673afe}\index{Redshift\_UML7@{Redshift\_UML7}!readPacket@{readPacket}}
+\index{readPacket@{readPacket}!Redshift\_UML7@{Redshift\_UML7}}
+\doxysubsubsection{\texorpdfstring{readPacket()}{readPacket()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_redshift___u_m_l7_a94885049fd4d2559ae934c10d0673afe} 
+bool Redshift\+\_\+\+UML7\+::read\+Packet (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_redshift___u_m_l7_8h_ab61dddf71d3fb0bfa520aeae95099245}{UM7\+\_\+packet}} \&}]{packet}{, }\item[{int}]{packet\+\_\+size}{, }\item[{u\+\_\+int8\+\_\+t}]{address}{}\end{DoxyParamCaption})}
+
+
+
+Reads a packet from the UM7 sensor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em packet} & Reference to the packet structure to store the read data. \\
+\hline
+{\em packet\+\_\+size} & The size of the packet to read. \\
+\hline
+{\em address} & The address of the packet to read. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the packet was successfully read, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{class_redshift___u_m_l7_a175c29d800706c78c3ff31280745608c}\index{Redshift\_UML7@{Redshift\_UML7}!readPacket@{readPacket}}
+\index{readPacket@{readPacket}!Redshift\_UML7@{Redshift\_UML7}}
+\doxysubsubsection{\texorpdfstring{readPacket()}{readPacket()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_redshift___u_m_l7_a175c29d800706c78c3ff31280745608c} 
+bool Redshift\+\_\+\+UML7\+::read\+Packet (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_redshift___u_m_l7_8h_ab61dddf71d3fb0bfa520aeae95099245}{UM7\+\_\+packet}} \&}]{packet}{, }\item[{u\+\_\+int8\+\_\+t}]{address}{}\end{DoxyParamCaption})}
+
+
+
+Reads a packet from the UM7 sensor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em packet} & Reference to the packet structure to store the read data. \\
+\hline
+{\em address} & The address of the packet to read. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the packet was successfully read, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{class_redshift___u_m_l7_aacd97941f30f4227230f65ce66ad5b24}\index{Redshift\_UML7@{Redshift\_UML7}!readRegister@{readRegister}}
+\index{readRegister@{readRegister}!Redshift\_UML7@{Redshift\_UML7}}
+\doxysubsubsection{\texorpdfstring{readRegister()}{readRegister()}}
+{\footnotesize\ttfamily \label{class_redshift___u_m_l7_aacd97941f30f4227230f65ce66ad5b24} 
+bool Redshift\+\_\+\+UML7\+::read\+Register (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{register\+Address}{, }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{data}{, }\item[{size\+\_\+t}]{length}{}\end{DoxyParamCaption})}
+
+
+
+Reads the content of a register. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em register\+Address} & The address of the register to read. \\
+\hline
+{\em data} & Pointer to the buffer to store the read data. \\
+\hline
+{\em length} & The length of the data to read. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the data was successfully read, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{class_redshift___u_m_l7_a8dc0c4be7140637c14c7886b9ca59738}\index{Redshift\_UML7@{Redshift\_UML7}!readSerialData@{readSerialData}}
+\index{readSerialData@{readSerialData}!Redshift\_UML7@{Redshift\_UML7}}
+\doxysubsubsection{\texorpdfstring{readSerialData()}{readSerialData()}}
+{\footnotesize\ttfamily \label{class_redshift___u_m_l7_a8dc0c4be7140637c14c7886b9ca59738} 
+size\+\_\+t Redshift\+\_\+\+UML7\+::read\+Serial\+Data (\begin{DoxyParamCaption}\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{buffer}{, }\item[{size\+\_\+t}]{buffer\+Size}{}\end{DoxyParamCaption})}
+
+
+
+Reads serial data from the UM7 sensor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em buffer} & Pointer to the buffer to store the read data. \\
+\hline
+{\em buffer\+Size} & The size of the buffer. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The number of bytes read. 
+\end{DoxyReturn}
+\Hypertarget{class_redshift___u_m_l7_a55a1027532cef713d5a70e57633a05de}\index{Redshift\_UML7@{Redshift\_UML7}!resetEKF@{resetEKF}}
+\index{resetEKF@{resetEKF}!Redshift\_UML7@{Redshift\_UML7}}
+\doxysubsubsection{\texorpdfstring{resetEKF()}{resetEKF()}}
+{\footnotesize\ttfamily \label{class_redshift___u_m_l7_a55a1027532cef713d5a70e57633a05de} 
+bool Redshift\+\_\+\+UML7\+::reset\+EKF (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Resets the Extended Kalman Filter (EKF) of the UM7 sensor. 
+
+\begin{DoxyReturn}{Returns}
+True if the EKF was successfully reset, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{class_redshift___u_m_l7_a13fd27638b5a6a00d8cf2f0727db00f8}\index{Redshift\_UML7@{Redshift\_UML7}!resetToFactoryDefaults@{resetToFactoryDefaults}}
+\index{resetToFactoryDefaults@{resetToFactoryDefaults}!Redshift\_UML7@{Redshift\_UML7}}
+\doxysubsubsection{\texorpdfstring{resetToFactoryDefaults()}{resetToFactoryDefaults()}}
+{\footnotesize\ttfamily \label{class_redshift___u_m_l7_a13fd27638b5a6a00d8cf2f0727db00f8} 
+bool Redshift\+\_\+\+UML7\+::reset\+To\+Factory\+Defaults (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Resets the UM7 sensor to factory defaults. 
+
+\begin{DoxyReturn}{Returns}
+True if the reset was successful, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{class_redshift___u_m_l7_adf3f3fc98cdb959768a9ffcebc4b6231}\index{Redshift\_UML7@{Redshift\_UML7}!sendBinaryCommand@{sendBinaryCommand}}
+\index{sendBinaryCommand@{sendBinaryCommand}!Redshift\_UML7@{Redshift\_UML7}}
+\doxysubsubsection{\texorpdfstring{sendBinaryCommand()}{sendBinaryCommand()}}
+{\footnotesize\ttfamily \label{class_redshift___u_m_l7_adf3f3fc98cdb959768a9ffcebc4b6231} 
+bool Redshift\+\_\+\+UML7\+::send\+Binary\+Command (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{command}{}\end{DoxyParamCaption})}
+
+
+
+Sends a binary command to the UM7 sensor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em command} & The command to send. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the command was successfully sent, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{class_redshift___u_m_l7_abe5f0512e1e1884276de7141d7b4d6b0}\index{Redshift\_UML7@{Redshift\_UML7}!sendCommand@{sendCommand}}
+\index{sendCommand@{sendCommand}!Redshift\_UML7@{Redshift\_UML7}}
+\doxysubsubsection{\texorpdfstring{sendCommand()}{sendCommand()}}
+{\footnotesize\ttfamily \label{class_redshift___u_m_l7_abe5f0512e1e1884276de7141d7b4d6b0} 
+void Redshift\+\_\+\+UML7\+::send\+Command (\begin{DoxyParamCaption}\item[{const String \&}]{command}{}\end{DoxyParamCaption})}
+
+
+
+Sends a command to the UM7 sensor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em command} & The command string to send. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_redshift___u_m_l7_adb719463f0d5f83a685aa6e9692796be}\index{Redshift\_UML7@{Redshift\_UML7}!setBaudRate@{setBaudRate}}
+\index{setBaudRate@{setBaudRate}!Redshift\_UML7@{Redshift\_UML7}}
+\doxysubsubsection{\texorpdfstring{setBaudRate()}{setBaudRate()}}
+{\footnotesize\ttfamily \label{class_redshift___u_m_l7_adb719463f0d5f83a685aa6e9692796be} 
+void Redshift\+\_\+\+UML7\+::set\+Baud\+Rate (\begin{DoxyParamCaption}\item[{unsigned long}]{baud\+Rate}{}\end{DoxyParamCaption})}
+
+
+
+Sets the baud rate for communication. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em baud\+Rate} & The desired baud rate. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_redshift___u_m_l7_a52263799b45bca3e815a28f0c7c8fe8c}\index{Redshift\_UML7@{Redshift\_UML7}!setHomePosition@{setHomePosition}}
+\index{setHomePosition@{setHomePosition}!Redshift\_UML7@{Redshift\_UML7}}
+\doxysubsubsection{\texorpdfstring{setHomePosition()}{setHomePosition()}}
+{\footnotesize\ttfamily \label{class_redshift___u_m_l7_a52263799b45bca3e815a28f0c7c8fe8c} 
+bool Redshift\+\_\+\+UML7\+::set\+Home\+Position (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Sets the home position for the UM7 sensor. 
+
+\begin{DoxyReturn}{Returns}
+True if the home position was successfully set, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{class_redshift___u_m_l7_a13873300ea3da88397cfcf0ac9ebde4e}\index{Redshift\_UML7@{Redshift\_UML7}!zeroGyroscopes@{zeroGyroscopes}}
+\index{zeroGyroscopes@{zeroGyroscopes}!Redshift\_UML7@{Redshift\_UML7}}
+\doxysubsubsection{\texorpdfstring{zeroGyroscopes()}{zeroGyroscopes()}}
+{\footnotesize\ttfamily \label{class_redshift___u_m_l7_a13873300ea3da88397cfcf0ac9ebde4e} 
+bool Redshift\+\_\+\+UML7\+::zero\+Gyroscopes (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Zeros the gyroscopes of the UM7 sensor. 
+
+\begin{DoxyReturn}{Returns}
+True if the gyroscopes were successfully zeroed, false otherwise. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+lib/\+Redshift\+\_\+\+UML7/src/\mbox{\hyperlink{_redshift___u_m_l7_8h}{Redshift\+\_\+\+UML7.\+h}}\item 
+lib/\+Redshift\+\_\+\+UML7/src/Redshift\+\_\+\+UML7.\+cpp\end{DoxyCompactItemize}

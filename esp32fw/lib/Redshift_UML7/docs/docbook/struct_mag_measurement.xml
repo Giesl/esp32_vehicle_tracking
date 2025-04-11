@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_mag_measurement" xml:lang="en-US">
+<title>MagMeasurement Struct Reference</title>
+<indexterm><primary>MagMeasurement</primary></indexterm>
+<para>
+
+<para>Structure to hold magnetometer measurement data. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;Redshift_UML7.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_struct_mag_measurement_1a0a46902665e9a8f056786a862a22c429"/>int16_t <emphasis role="strong">magX</emphasis></para>
+
+<para>Raw magnetometer X-axis data. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_mag_measurement_1a5bd977fb282c4c30011625f3d8ef715c"/>int16_t <emphasis role="strong">magY</emphasis></para>
+
+<para>Raw magnetometer Y-axis data. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_mag_measurement_1a453ce4445702aeaf37382779181d28d8"/>int16_t <emphasis role="strong">magZ</emphasis></para>
+
+<para>Raw magnetometer Z-axis data. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Structure to hold magnetometer measurement data. </para>
+<para>
+The documentation for this struct was generated from the following file:</para>
+lib/Redshift_UML7/src/<link linkend="__redshift___u_m_l7_8h">Redshift_UML7.h</link></section>
+</section>

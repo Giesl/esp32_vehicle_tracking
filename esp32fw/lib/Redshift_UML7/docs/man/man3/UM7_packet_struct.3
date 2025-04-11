@@ -1,0 +1,42 @@
+.TH "UM7_packet_struct" 3 "Version 1.0" "RedshiftLabls UM7 library" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+UM7_packet_struct \- Structure for holding received packet information\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fR#include <Redshift_UML7\&.h>\fP
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "uint8_t \fBAddress\fP"
+.br
+.RI "Packet address\&. "
+.ti -1c
+.RI "uint8_t \fBPT\fP"
+.br
+.RI "Packet type\&. "
+.ti -1c
+.RI "uint16_t \fBChecksum\fP"
+.br
+.RI "Packet checksum\&. "
+.ti -1c
+.RI "uint8_t \fBdata_length\fP"
+.br
+.RI "Length of the data section\&. "
+.ti -1c
+.RI "uint8_t \fBdata\fP [30]"
+.br
+.RI "Data section (up to 30 bytes) "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Structure for holding received packet information\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for RedshiftLabls UM7 library from the source code\&.

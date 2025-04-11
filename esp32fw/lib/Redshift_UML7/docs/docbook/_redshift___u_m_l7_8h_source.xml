@@ -1,0 +1,286 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__redshift___u_m_l7_8h_source" xml:lang="en-US">
+<title>Redshift_UML7.h</title>
+<indexterm><primary>lib/Redshift_UML7/src/Redshift_UML7.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered">1 
+14 
+15 <emphasis role="preprocessor">#ifndef&#32;REDSHIFT_UML7_H</emphasis>
+16 <emphasis role="preprocessor">#define&#32;REDSHIFT_UML7_H</emphasis>
+17 
+18 <emphasis role="preprocessor">#include&#32;&lt;Arduino.h&gt;</emphasis>
+19 <emphasis role="preprocessor">#include&#32;&lt;stdint.h&gt;</emphasis>
+20 <emphasis role="preprocessor">#include&#32;&lt;stddef.h&gt;</emphasis>
+21 
+27 <emphasis role="preprocessor">#define&#32;CREG_COM_SETTINGS&#32;0x00&#32;</emphasis>
+28 <emphasis role="preprocessor">#define&#32;CREG_COM_RATES1&#32;0x01&#32;</emphasis>
+29 <emphasis role="preprocessor">#define&#32;CREG_COM_RATES2&#32;0x02&#32;</emphasis>
+30 <emphasis role="preprocessor">#define&#32;CREG_COM_RATES3&#32;0x03&#32;</emphasis>
+31 <emphasis role="preprocessor">#define&#32;CREG_COM_RATES4&#32;0x04&#32;</emphasis>
+32 <emphasis role="preprocessor">#define&#32;CREG_COM_RATES5&#32;0x05&#32;</emphasis>
+33 <emphasis role="preprocessor">#define&#32;CREG_COM_RATES6&#32;0x06&#32;</emphasis>
+34 <emphasis role="preprocessor">#define&#32;CREG_COM_RATES7&#32;0x07&#32;</emphasis>
+35 <emphasis role="preprocessor">#define&#32;CREG_MISC_SETTINGS&#32;0x08&#32;</emphasis>
+36 <emphasis role="preprocessor">#define&#32;CREG_HOME_NORTH&#32;0x09&#32;</emphasis>
+37 <emphasis role="preprocessor">#define&#32;CREG_HOME_EAST&#32;0x0A&#32;</emphasis>
+38 <emphasis role="preprocessor">#define&#32;CREG_HOME_UP&#32;0x0B&#32;</emphasis>
+39 <emphasis role="preprocessor">#define&#32;CREG_GYRO_TRIM_X&#32;0x0C&#32;</emphasis>
+40 <emphasis role="preprocessor">#define&#32;CREG_GYRO_TRIM_Y&#32;0x0D&#32;</emphasis>
+41 <emphasis role="preprocessor">#define&#32;CREG_GYRO_TRIM_Z&#32;0x0E&#32;</emphasis>
+42 <emphasis role="preprocessor">#define&#32;CREG_MAG_CAL1_1&#32;0x0F&#32;</emphasis>
+43 <emphasis role="preprocessor">#define&#32;CREG_MAG_CAL1_2&#32;0x10&#32;</emphasis>
+44 <emphasis role="preprocessor">#define&#32;CREG_MAG_CAL1_3&#32;0x11&#32;</emphasis>
+45 <emphasis role="preprocessor">#define&#32;CREG_MAG_CAL2_1&#32;0x12&#32;</emphasis>
+46 <emphasis role="preprocessor">#define&#32;CREG_MAG_CAL2_2&#32;0x13&#32;</emphasis>
+47 <emphasis role="preprocessor">#define&#32;CREG_MAG_CAL2_3&#32;0x14&#32;</emphasis>
+48 <emphasis role="preprocessor">#define&#32;CREG_MAG_CAL3_1&#32;0x15&#32;</emphasis>
+49 <emphasis role="preprocessor">#define&#32;CREG_MAG_CAL3_2&#32;0x16&#32;</emphasis>
+50 <emphasis role="preprocessor">#define&#32;CREG_MAG_CAL3_3&#32;0x17&#32;</emphasis>
+51 <emphasis role="preprocessor">#define&#32;CREG_MAG_BIAS_X&#32;0x18&#32;</emphasis>
+52 <emphasis role="preprocessor">#define&#32;CREG_MAG_BIAS_Y&#32;0x19&#32;</emphasis>
+53 <emphasis role="preprocessor">#define&#32;CREG_MAG_BIAS_Z&#32;0x1A&#32;</emphasis>
+54 <emphasis role="preprocessor">#define&#32;CREG_ACCEL_CAL1_1&#32;0x1B&#32;</emphasis>
+55 <emphasis role="preprocessor">#define&#32;CREG_ACCEL_CAL1_2&#32;0x1C&#32;</emphasis>
+56 <emphasis role="preprocessor">#define&#32;CREG_ACCEL_CAL1_3&#32;0x1D&#32;</emphasis>
+57 <emphasis role="preprocessor">#define&#32;CREG_ACCEL_CAL2_1&#32;0x1E&#32;</emphasis>
+58 <emphasis role="preprocessor">#define&#32;CREG_ACCEL_CAL2_2&#32;0x1F&#32;</emphasis>
+59 <emphasis role="preprocessor">#define&#32;CREG_ACCEL_CAL2_3&#32;0x20&#32;</emphasis>
+60 <emphasis role="preprocessor">#define&#32;CREG_ACCEL_CAL3_1&#32;0x21&#32;</emphasis>
+61 <emphasis role="preprocessor">#define&#32;CREG_ACCEL_CAL3_2&#32;0x22&#32;</emphasis>
+62 <emphasis role="preprocessor">#define&#32;CREG_ACCEL_CAL3_3&#32;0x23&#32;</emphasis>
+63 <emphasis role="preprocessor">#define&#32;CREG_ACCEL_BIAS_X&#32;0x24&#32;</emphasis>
+64 <emphasis role="preprocessor">#define&#32;CREG_ACCEL_BIAS_Y&#32;0x25&#32;</emphasis>
+65 <emphasis role="preprocessor">#define&#32;CREG_ACCEL_BIAS_Z&#32;0x26&#32;</emphasis><emphasis role="preprocessor"></emphasis>
+67 
+73 <emphasis role="preprocessor">#define&#32;DREG_HEALTH&#32;0x55&#32;</emphasis>
+74 <emphasis role="preprocessor">#define&#32;DREG_GYRO_RAW_XY&#32;0x56&#32;</emphasis>
+75 <emphasis role="preprocessor">#define&#32;DREG_GYRO_RAW_Z&#32;0x57&#32;</emphasis>
+76 <emphasis role="preprocessor">#define&#32;DREG_GYRO_RAW_TIME&#32;0x58&#32;</emphasis>
+77 <emphasis role="preprocessor">#define&#32;DREG_ACCEL_RAW_XY&#32;0x59&#32;</emphasis>
+78 <emphasis role="preprocessor">#define&#32;DREG_ACCEL_RAW_Z&#32;0x5A&#32;</emphasis>
+79 <emphasis role="preprocessor">#define&#32;DREG_ACCEL_RAW_TIME&#32;0x5B&#32;</emphasis>
+80 <emphasis role="preprocessor">#define&#32;DREG_MAG_RAW_XY&#32;0x5C&#32;</emphasis>
+81 <emphasis role="preprocessor">#define&#32;DREG_MAG_RAW_Z&#32;0x5D&#32;</emphasis>
+82 <emphasis role="preprocessor">#define&#32;DREG_MAG_RAW_TIME&#32;0x5E&#32;</emphasis>
+83 <emphasis role="preprocessor">#define&#32;DREG_TEMPERATURE&#32;0x5F&#32;</emphasis>
+84 <emphasis role="preprocessor">#define&#32;DREG_TEMPERATURE_TIME&#32;0x60&#32;</emphasis>
+85 <emphasis role="preprocessor">#define&#32;DREG_GYRO_PROC_X&#32;0x61&#32;</emphasis>
+86 <emphasis role="preprocessor">#define&#32;DREG_GYRO_PROC_Y&#32;0x62&#32;</emphasis>
+87 <emphasis role="preprocessor">#define&#32;DREG_GYRO_PROC_Z&#32;0x63&#32;</emphasis>
+88 <emphasis role="preprocessor">#define&#32;DREG_GYRO_PROC_TIME&#32;0x64&#32;</emphasis>
+89 <emphasis role="preprocessor">#define&#32;DREG_ACCEL_PROC_X&#32;0x65&#32;</emphasis>
+90 <emphasis role="preprocessor">#define&#32;DREG_ACCEL_PROC_Y&#32;0x66&#32;</emphasis>
+91 <emphasis role="preprocessor">#define&#32;DREG_ACCEL_PROC_Z&#32;0x67&#32;</emphasis>
+92 <emphasis role="preprocessor">#define&#32;DREG_ACCEL_PROC_TIME&#32;0x68&#32;</emphasis>
+93 <emphasis role="preprocessor">#define&#32;DREG_MAG_PROC_X&#32;0x69&#32;</emphasis>
+94 <emphasis role="preprocessor">#define&#32;DREG_MAG_PROC_Y&#32;0x6A&#32;</emphasis>
+95 <emphasis role="preprocessor">#define&#32;DREG_MAG_PROC_Z&#32;0x6B&#32;</emphasis>
+96 <emphasis role="preprocessor">#define&#32;DREG_MAG_PROC_TIME&#32;0x6C&#32;</emphasis>
+97 <emphasis role="preprocessor">#define&#32;DREG_QUAT_AB&#32;0x6D&#32;</emphasis>
+98 <emphasis role="preprocessor">#define&#32;DREG_QUAT_CD&#32;0x6E&#32;</emphasis>
+99 <emphasis role="preprocessor">#define&#32;DREG_QUAT_TIME&#32;0x6F&#32;</emphasis>
+100 <emphasis role="preprocessor">#define&#32;DREG_EULER_PHI_THETA&#32;0x70&#32;</emphasis>
+101 <emphasis role="preprocessor">#define&#32;DREG_EULER_PSI&#32;0x71&#32;</emphasis>
+102 <emphasis role="preprocessor">#define&#32;DREG_EULER_PHI_THETA_DOT&#32;0x72&#32;</emphasis>
+103 <emphasis role="preprocessor">#define&#32;DREG_EULER_PSI_DOT&#32;0x73&#32;</emphasis>
+104 <emphasis role="preprocessor">#define&#32;DREG_EULER_TIME&#32;0x74&#32;</emphasis>
+105 <emphasis role="preprocessor">#define&#32;DREG_POSITION_N&#32;0x75&#32;</emphasis>
+106 <emphasis role="preprocessor">#define&#32;DREG_POSITION_E&#32;0x76&#32;</emphasis>
+107 <emphasis role="preprocessor">#define&#32;DREG_POSITION_UP&#32;0x77&#32;</emphasis>
+108 <emphasis role="preprocessor">#define&#32;DREG_POSITION_TIME&#32;0x78&#32;</emphasis>
+109 <emphasis role="preprocessor">#define&#32;DREG_VELOCITY_N&#32;0x79&#32;</emphasis>
+110 <emphasis role="preprocessor">#define&#32;DREG_VELOCITY_E&#32;0x7A&#32;</emphasis>
+111 <emphasis role="preprocessor">#define&#32;DREG_VELOCITY_UP&#32;0x7B&#32;</emphasis>
+112 <emphasis role="preprocessor">#define&#32;DREG_VELOCITY_TIME&#32;0x7C&#32;</emphasis>
+113 <emphasis role="preprocessor">#define&#32;DREG_GPS_LATITUDE&#32;0x7D&#32;</emphasis>
+114 <emphasis role="preprocessor">#define&#32;DREG_GPS_LONGITUDE&#32;0x7E&#32;</emphasis>
+115 <emphasis role="preprocessor">#define&#32;DREG_GPS_ALTITUDE&#32;0x7F&#32;</emphasis>
+116 <emphasis role="preprocessor">#define&#32;DREG_GPS_COURSE&#32;0x80&#32;</emphasis>
+117 <emphasis role="preprocessor">#define&#32;DREG_GPS_SPEED&#32;0x81&#32;</emphasis>
+118 <emphasis role="preprocessor">#define&#32;DREG_GPS_TIME&#32;0x82&#32;</emphasis>
+119 <emphasis role="preprocessor">#define&#32;DREG_GPS_SAT_1_2&#32;0x83&#32;</emphasis>
+120 <emphasis role="preprocessor">#define&#32;DREG_GPS_SAT_3_4&#32;0x84&#32;</emphasis>
+121 <emphasis role="preprocessor">#define&#32;DREG_GPS_SAT_5_6&#32;0x85&#32;</emphasis>
+122 <emphasis role="preprocessor">#define&#32;DREG_GPS_SAT_7_8&#32;0x86&#32;</emphasis>
+123 <emphasis role="preprocessor">#define&#32;DREG_GPS_SAT_9_10&#32;0x87&#32;</emphasis>
+124 <emphasis role="preprocessor">#define&#32;DREG_GPS_SAT_11_12&#32;0x88&#32;</emphasis>
+125 <emphasis role="preprocessor">#define&#32;DREG_GYRO_BIAS_X&#32;0x89&#32;</emphasis>
+126 <emphasis role="preprocessor">#define&#32;DREG_GYRO_BIAS_Y&#32;0x8A&#32;</emphasis>
+127 <emphasis role="preprocessor">#define&#32;DREG_GYRO_BIAS_Z&#32;0x8B&#32;</emphasis><emphasis role="preprocessor"></emphasis>
+129 
+135 <emphasis role="preprocessor">#define&#32;GET_FW_REVISION&#32;0xAA&#32;</emphasis>
+136 <emphasis role="preprocessor">#define&#32;FLASH_COMMIT&#32;0xAB&#32;</emphasis>
+137 <emphasis role="preprocessor">#define&#32;RESET_TO_FACTORY&#32;0xAC&#32;</emphasis>
+138 <emphasis role="preprocessor">#define&#32;ZERO_GYROS&#32;0xAD&#32;</emphasis>
+139 <emphasis role="preprocessor">#define&#32;SET_HOME_POSITION&#32;0xAE&#32;</emphasis>
+140 <emphasis role="preprocessor">#define&#32;SET_MAG_REFERENCE&#32;0xB0&#32;</emphasis>
+141 <emphasis role="preprocessor">#define&#32;CALIBRATE_ACCELEROMETERS&#32;0xB1&#32;</emphasis>
+142 <emphasis role="preprocessor">#define&#32;RESET_EKF&#32;0xB3&#32;</emphasis><emphasis role="preprocessor"></emphasis>
+144 
+145 
+146 <emphasis role="preprocessor">#define&#32;READ_DELAY&#32;100</emphasis>
+147 <emphasis role="preprocessor">#define&#32;BUFFER_LENGTH&#32;128</emphasis>
+148 <emphasis role="preprocessor">#define&#32;GET_PACKET_ATTEMPS&#32;5</emphasis>
+149 
+153 <emphasis role="keyword">typedef</emphasis>&#32;<emphasis role="keyword">struct&#32;</emphasis><link linkend="_struct_u_m7__packet__struct">UM7_packet_struct</link>&#32;{
+154 &#32;&#32;&#32;&#32;uint8_t&#32;<link linkend="_struct_u_m7__packet__struct_1a36ea4f01adb74ab46893f8dced8a7897">Address</link>;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+155 &#32;&#32;&#32;&#32;uint8_t&#32;<link linkend="_struct_u_m7__packet__struct_1a7a28de9c510ef4912f5fca928cb992df">PT</link>;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+156 &#32;&#32;&#32;&#32;uint16_t&#32;<link linkend="_struct_u_m7__packet__struct_1a0c75ae8d3689f9111a122a545de2bde3">Checksum</link>;&#32;&#32;&#32;&#32;&#32;
+157 &#32;&#32;&#32;&#32;uint8_t&#32;<link linkend="_struct_u_m7__packet__struct_1a6fb8ff6d4e3aa959f6e64bfe4ef429cd">data_length</link>;&#32;&#32;&#32;
+158 &#32;&#32;&#32;&#32;uint8_t&#32;<link linkend="_struct_u_m7__packet__struct_1aa5e4ce7efbceecdb2eecd40293fa2ed7">data</link>[30];&#32;&#32;&#32;&#32;&#32;&#32;
+159 }&#32;UM7_packet;
+160 
+168 uint8_t&#32;<link linkend="__redshift___u_m_l7_8h_1a8d9dba22e719fe66c1dfdafbe7e189ad">extract_bits</link>(uint8_t&#32;<emphasis role="keywordtype">byte</emphasis>,&#32;uint8_t&#32;start_bit,&#32;uint8_t&#32;num_bits);
+169 
+173 <emphasis role="keyword">typedef</emphasis>&#32;<emphasis role="keyword">struct&#32;</emphasis>{
+174 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;<link linkend="_struct_gyro_measurement_1a4abcb16d235472808b277643f49bc79a">gyroX</link>;&#32;&#32;&#32;
+175 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;<link linkend="_struct_gyro_measurement_1ab37508e55b3dc66e2a202d94137baf4d">gyroY</link>;&#32;&#32;&#32;
+176 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;<link linkend="_struct_gyro_measurement_1a7f8cba5276a1ea72b1d5b28a9c132f27">gyroZ</link>;&#32;&#32;&#32;
+177 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;<link linkend="_struct_gyro_measurement_1a3fb2032fccf9de830d5465f2baeceb65">gyroTime</link>;&#32;
+178 }&#32;<link linkend="_struct_gyro_measurement">GyroMeasurement</link>;
+179 
+183 <emphasis role="keyword">typedef</emphasis>&#32;<emphasis role="keyword">struct&#32;</emphasis>{
+184 &#32;&#32;&#32;&#32;int16_t&#32;<link linkend="_struct_accel_measurement_1a2ab6572704089fb11a9adde0b97e091b">accelX</link>;&#32;
+185 &#32;&#32;&#32;&#32;int16_t&#32;<link linkend="_struct_accel_measurement_1a65572f9ed3e3c1a1b04ff4985dad3247">accelY</link>;&#32;
+186 &#32;&#32;&#32;&#32;int16_t&#32;<link linkend="_struct_accel_measurement_1af65c7275f8cd6586928521cf7ace2583">accelZ</link>;&#32;
+187 }&#32;<link linkend="_struct_accel_measurement">AccelMeasurement</link>;
+188 
+192 <emphasis role="keyword">typedef</emphasis>&#32;<emphasis role="keyword">struct&#32;</emphasis>{
+193 &#32;&#32;&#32;&#32;int16_t&#32;<link linkend="_struct_mag_measurement_1a0a46902665e9a8f056786a862a22c429">magX</link>;&#32;
+194 &#32;&#32;&#32;&#32;int16_t&#32;<link linkend="_struct_mag_measurement_1a5bd977fb282c4c30011625f3d8ef715c">magY</link>;&#32;
+195 &#32;&#32;&#32;&#32;int16_t&#32;<link linkend="_struct_mag_measurement_1a453ce4445702aeaf37382779181d28d8">magZ</link>;&#32;
+196 }&#32;<link linkend="_struct_mag_measurement">MagMeasurement</link>;
+197 
+202 <emphasis role="keyword">class&#32;</emphasis><link linkend="_class_redshift___u_m_l7_1ae347879fc59c484a4a896d1bcb2d5e5a">Redshift_UML7</link>&#32;{
+203 <emphasis role="keyword">public</emphasis>:
+208 &#32;&#32;&#32;&#32;<link linkend="_class_redshift___u_m_l7_1ae347879fc59c484a4a896d1bcb2d5e5a">Redshift_UML7</link>(Stream&#32;&amp;serial);
+209 
+213 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_redshift___u_m_l7_1a382fd7bf140d8a22c515c36b18e33f44">begin</link>();
+214 
+219 &#32;&#32;&#32;&#32;String&#32;<link linkend="_class_redshift___u_m_l7_1a384c44d7960485756d1ae4f49d3d0a51">getData</link>();
+220 
+225 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_redshift___u_m_l7_1abe5f0512e1e1884276de7141d7b4d6b0">sendCommand</link>(<emphasis role="keyword">const</emphasis>&#32;String&#32;&amp;command);
+226 
+231 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_redshift___u_m_l7_1adb719463f0d5f83a685aa6e9692796be">setBaudRate</link>(<emphasis role="keywordtype">unsigned</emphasis>&#32;<emphasis role="keywordtype">long</emphasis>&#32;baudRate);
+232 
+238 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_class_redshift___u_m_l7_1a6b748b23609691e123cb6fe65f9b6c3e">parseNmeaPacket</link>(String&#32;nmeaString);
+239 
+247 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_class_redshift___u_m_l7_1a5cb2858c8ed0b98b58e6915a5111b7e1">read_register_data</link>(uint8_t&#32;registerAddress,&#32;uint8_t&#32;*data,&#32;<emphasis role="keywordtype">size_t</emphasis>&#32;length);
+248 
+254 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_class_redshift___u_m_l7_1adf3f3fc98cdb959768a9ffcebc4b6231">sendBinaryCommand</link>(uint8_t&#32;command);
+255 
+261 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;<link linkend="_class_redshift___u_m_l7_1a45807306c8b1b3a3c63634e2f8f98155">read_register_as_float</link>(uint8_t&#32;*data);
+262 
+269 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_class_redshift___u_m_l7_1a175c29d800706c78c3ff31280745608c">readPacket</link>(<link linkend="__redshift___u_m_l7_8h_1ab61dddf71d3fb0bfa520aeae95099245">UM7_packet</link>&#32;&amp;packet,&#32;u_int8_t&#32;address);
+270 
+278 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_class_redshift___u_m_l7_1a175c29d800706c78c3ff31280745608c">readPacket</link>(<link linkend="__redshift___u_m_l7_8h_1ab61dddf71d3fb0bfa520aeae95099245">UM7_packet</link>&#32;&amp;packet,&#32;<emphasis role="keywordtype">int</emphasis>&#32;packet_size,&#32;u_int8_t&#32;address);
+279 
+284 &#32;&#32;&#32;&#32;String&#32;<link linkend="_class_redshift___u_m_l7_1a51a32df641b7b5b632bec03277701f3d">getFirmwareVersion</link>();
+285 
+300 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_class_redshift___u_m_l7_1a4848d863423685560bf6e2417a54d58c">getHealthData</link>(uint16_t&#32;&amp;time,&#32;uint8_t&#32;&amp;sats_used,&#32;uint8_t&#32;&amp;sats_in_view,
+301 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;&amp;HDOP,&#32;uint8_t&#32;&amp;mode,&#32;uint8_t&#32;&amp;COM,&#32;uint8_t&#32;&amp;accel,
+302 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;uint8_t&#32;&amp;gyro,&#32;uint8_t&#32;&amp;mag,&#32;uint8_t&#32;&amp;GPS);
+303 
+311 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_class_redshift___u_m_l7_1aacd97941f30f4227230f65ce66ad5b24">readRegister</link>(uint8_t&#32;registerAddress,&#32;uint8_t&#32;*data,&#32;<emphasis role="keywordtype">size_t</emphasis>&#32;length);
+312 
+318 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_class_redshift___u_m_l7_1adc8a43c42a8fbd849286260dfec0bcff">getTemperature</link>(<emphasis role="keywordtype">float</emphasis>&#32;&amp;temp);
+319 
+325 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_class_redshift___u_m_l7_1a86c9c530e64cadc757859398dd45d538">getGpsTime</link>(<emphasis role="keywordtype">float</emphasis>&#32;&amp;gpsTime);
+326 
+341 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_class_redshift___u_m_l7_1a97f93d0f9008a2cd311e799b0c0c8b35">getHealthRegisterData</link>(uint16_t&#32;&amp;time,&#32;uint8_t&#32;&amp;sats_used,&#32;uint8_t&#32;&amp;sats_in_view,&#32;<emphasis role="keywordtype">float</emphasis>&#32;&amp;HDOP,&#32;uint8_t&#32;&amp;mode,&#32;uint8_t&#32;&amp;COM,&#32;uint8_t&#32;&amp;accel,&#32;uint8_t&#32;&amp;gyro,&#32;uint8_t&#32;&amp;mag,&#32;uint8_t&#32;&amp;GPS);
+342 
+351 &#32;&#32;&#32;&#32;uint8_t&#32;<link linkend="_class_redshift___u_m_l7_1a3caf8fe1319aedf7cd298b271ea04edc">parse_serial_data</link>(uint8_t&#32;*rx_data,&#32;uint8_t&#32;rx_length,&#32;<link linkend="__redshift___u_m_l7_8h_1ab61dddf71d3fb0bfa520aeae95099245">UM7_packet</link>&#32;*packet,&#32;uint8_t&#32;expectedAddress);
+352 
+357 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;<link linkend="_class_redshift___u_m_l7_1aea2611cdc7c7d50b11043a23f694a5a6">getRoll</link>();
+358 
+363 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;<link linkend="_class_redshift___u_m_l7_1a5aeefa473cc213298734c859905fa43c">getPitch</link>();
+364 
+369 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;<link linkend="_class_redshift___u_m_l7_1a34ff58826f81b6fd257891743b0f4601">getYaw</link>();
+370 
+378 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_class_redshift___u_m_l7_1af1d8a5a843c0524b9acd2b7edfcaca1a">getOrientation</link>(<emphasis role="keywordtype">float</emphasis>&#32;&amp;yaw,&#32;<emphasis role="keywordtype">float</emphasis>&#32;&amp;pitch,&#32;<emphasis role="keywordtype">float</emphasis>&#32;&amp;roll);
+379 
+384 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;<link linkend="_class_redshift___u_m_l7_1a7f2369df1ad96711c54119f14a3b0129">getMagX</link>();
+385 
+390 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;<link linkend="_class_redshift___u_m_l7_1a391c370eb34357a96868b78eba3b1592">getMagY</link>();
+391 
+396 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;<link linkend="_class_redshift___u_m_l7_1ad9730512fa68b36d82d81cd330d2cf11">getMagZ</link>();
+397 
+403 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_class_redshift___u_m_l7_1a34d7e9f9fa094b4cc1924751d6da9b6c">getGyroProcZ</link>(<emphasis role="keywordtype">float</emphasis>&#32;&amp;gyroZ);
+404 
+409 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_class_redshift___u_m_l7_1a13fd27638b5a6a00d8cf2f0727db00f8">resetToFactoryDefaults</link>();
+410 
+415 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_class_redshift___u_m_l7_1a13873300ea3da88397cfcf0ac9ebde4e">zeroGyroscopes</link>();
+416 
+421 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_class_redshift___u_m_l7_1a52263799b45bca3e815a28f0c7c8fe8c">setHomePosition</link>();
+422 
+427 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_class_redshift___u_m_l7_1a55a1027532cef713d5a70e57633a05de">resetEKF</link>();
+428 
+433 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_class_redshift___u_m_l7_1a96b3e4c39f0d579a3e80f5ae67a1ad8d">flashCommit</link>();
+434 
+442 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_class_redshift___u_m_l7_1a2c23fce0a4b6f1483d4ac118006a1330">readDregData</link>(uint8_t&#32;dregAddress,&#32;uint8_t&#32;*data,&#32;<emphasis role="keywordtype">size_t</emphasis>&#32;length);
+443 
+451 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_class_redshift___u_m_l7_1a2ebb72f4d1e6bf2eecad45ff805ce233">getGyroRawMeasurements</link>(int16_t&#32;&amp;gyroX,&#32;int16_t&#32;&amp;gyroY,&#32;int16_t&#32;&amp;gyroZ);
+452 
+459 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_class_redshift___u_m_l7_1a629aba415fd0474447dda6a232535632">getAccelRawXY</link>(int16_t&#32;&amp;accelX,&#32;int16_t&#32;&amp;accelY);
+460 
+466 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_class_redshift___u_m_l7_1a49706965e19a9ac9e4ee93446b635db8">getAccelRawZ</link>(int16_t&#32;&amp;accelZ);
+467 
+473 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_class_redshift___u_m_l7_1a3018e9653d11ee5de4ca50cf7cef0b82">getGyroProcessedMeasurements</link>(<link linkend="_struct_gyro_measurement">GyroMeasurement</link>&#32;&amp;gyroData);
+474 
+482 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_class_redshift___u_m_l7_1a137001536d425d0495d7a7baed780192">getAccelRawMeasurements</link>(int16_t&#32;&amp;accelX,&#32;int16_t&#32;&amp;accelY,&#32;int16_t&#32;&amp;accelZ);
+483 
+489 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_class_redshift___u_m_l7_1a115b4c1c521a1540eae09931867986af">getAccelProcX</link>(<emphasis role="keywordtype">float</emphasis>&#32;&amp;accelX);
+490 
+496 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_class_redshift___u_m_l7_1a2fe91d39b1a14c906fc49696f39aedcb">getAccelProcY</link>(<emphasis role="keywordtype">float</emphasis>&#32;&amp;accelY);
+497 
+503 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_class_redshift___u_m_l7_1ab816896dce19d17487e8edbafb9779dd">getAccelProcZ</link>(<emphasis role="keywordtype">float</emphasis>&#32;&amp;accelZ);
+504 
+510 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_class_redshift___u_m_l7_1a488d6ad2ee01f48adefc07c0d6cf6174">getGyroProcX</link>(<emphasis role="keywordtype">float</emphasis>&#32;&amp;gyroX);
+511 
+517 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_class_redshift___u_m_l7_1ad9df8a0c099b03e2f72411aef9e8f36a">getGyroProcY</link>(<emphasis role="keywordtype">float</emphasis>&#32;&amp;gyroY);
+518 
+527 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_class_redshift___u_m_l7_1a57bc8c666408a94fa6446c4a5a5b2811">getAccelProcessedMeasurements</link>(<emphasis role="keywordtype">float</emphasis>&#32;&amp;accelX,&#32;<emphasis role="keywordtype">float</emphasis>&#32;&amp;accelY,&#32;<emphasis role="keywordtype">float</emphasis>&#32;&amp;accelZ,&#32;<emphasis role="keywordtype">float</emphasis>&#32;&amp;accelTime);
+528 
+532 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_redshift___u_m_l7_1a58593e4ed4de6764625b43da1ddf34d3">printAllMeasurements</link>();
+533 
+540 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_class_redshift___u_m_l7_1a602689d2745f2b2d5d56e70b6c1d32ae">getMagRawXY</link>(int16_t&#32;&amp;magX,&#32;int16_t&#32;&amp;magY);
+541 
+546 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_redshift___u_m_l7_1a8265f4384802d0b519fbffab84b647f0">printPacket</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="__redshift___u_m_l7_8h_1ab61dddf71d3fb0bfa520aeae95099245">UM7_packet</link>&#32;&amp;packet);
+547 
+554 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">size_t</emphasis>&#32;<link linkend="_class_redshift___u_m_l7_1a8dc0c4be7140637c14c7886b9ca59738">readSerialData</link>(uint8_t&#32;*buffer,&#32;<emphasis role="keywordtype">size_t</emphasis>&#32;bufferSize);
+555 
+564 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_class_redshift___u_m_l7_1af5855047d371f6499bb0b1a7d7b6caff">parsePacket</link>(<emphasis role="keyword">const</emphasis>&#32;uint8_t&#32;*rx_data,&#32;<emphasis role="keywordtype">size_t</emphasis>&#32;rx_length,&#32;<link linkend="__redshift___u_m_l7_8h_1ab61dddf71d3fb0bfa520aeae95099245">UM7_packet</link>&#32;&amp;packet,&#32;uint8_t&#32;expectedAddress);
+565 
+574 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_class_redshift___u_m_l7_1a36cb8a1b0ac68768c9887901976d6d31">getMagneticData</link>(<emphasis role="keywordtype">float</emphasis>&#32;&amp;magX,&#32;<emphasis role="keywordtype">float</emphasis>&#32;&amp;magY,&#32;<emphasis role="keywordtype">float</emphasis>&#32;&amp;magZ,&#32;<emphasis role="keywordtype">float</emphasis>&#32;&amp;time);
+575 
+581 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_class_redshift___u_m_l7_1a0eff8f414e9834638fb4b24ca9ea130f">getGyroTime</link>(<emphasis role="keywordtype">float</emphasis>&#32;&amp;time);
+582 
+588 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_class_redshift___u_m_l7_1ad680e52c4bf660ad7eea6c6c1182bf7f">getAccelTime</link>(<emphasis role="keywordtype">float</emphasis>&#32;&amp;time);
+589 
+595 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_class_redshift___u_m_l7_1a137001536d425d0495d7a7baed780192">getAccelRawMeasurements</link>(<link linkend="_struct_accel_measurement">AccelMeasurement</link>&#32;&amp;accelData);
+596 
+602 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_class_redshift___u_m_l7_1adfe050b2a56a708a605a62b68dd0123a">getMagRawMeasurements</link>(<link linkend="_struct_mag_measurement">MagMeasurement</link>&#32;&amp;magData);
+603 
+604 <emphasis role="keyword">private</emphasis>:
+605 &#32;&#32;&#32;&#32;Stream&#32;&amp;serial;&#32;
+606 
+607 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;roll,&#32;pitch,&#32;yaw;&#32;
+608 &#32;&#32;&#32;&#32;String&#32;firmwareVersion;&#32;
+609 
+610 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Health&#32;data&#32;variables</emphasis>
+611 &#32;&#32;&#32;&#32;uint16_t&#32;health_time;&#32;
+612 &#32;&#32;&#32;&#32;uint8_t&#32;health_sats_used;&#32;
+613 &#32;&#32;&#32;&#32;uint8_t&#32;health_sats_in_view;&#32;
+614 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;health_HDOP;&#32;
+615 &#32;&#32;&#32;&#32;uint8_t&#32;health_mode;&#32;
+616 &#32;&#32;&#32;&#32;uint8_t&#32;health_COM;&#32;
+617 &#32;&#32;&#32;&#32;uint8_t&#32;health_accel;&#32;
+618 &#32;&#32;&#32;&#32;uint8_t&#32;health_gyro;&#32;
+619 &#32;&#32;&#32;&#32;uint8_t&#32;health_mag;&#32;
+620 &#32;&#32;&#32;&#32;uint8_t&#32;health_GPS;&#32;
+621 
+622 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Magnetometer&#32;data&#32;variables</emphasis>
+623 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;magX,&#32;magY,&#32;magZ;&#32;
+624 };
+625 
+626 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">//&#32;REDSHIFT_UML7_H</emphasis>
+</programlisting></section>

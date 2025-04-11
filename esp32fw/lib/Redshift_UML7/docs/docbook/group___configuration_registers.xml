@@ -1,0 +1,176 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___configuration_registers" xml:lang="en-US">
+<title>Configuration Registers</title>
+<indexterm><primary>Configuration Registers</primary></indexterm>
+<para>
+
+<para>Definitions for configuration register addresses. </para>
+ 
+</para>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_group___configuration_registers_1gadc3a31b0134193d53e99e9e089d198df"/>#define <emphasis role="strong">CREG_COM_SETTINGS</emphasis>&#160;&#160;&#160;0x00</para>
+
+<para>Baud rates for reading over the UM7, default 115200 baud. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___configuration_registers_1ga3ede1113dd93e030cf6f0fe0e9ba2b6f"/>#define <emphasis role="strong">CREG_COM_RATES1</emphasis>&#160;&#160;&#160;0x01</para>
+
+<para>Individual raw data rate. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___configuration_registers_1ga75c6f08d30b5b9aac3152311811d29fb"/>#define <emphasis role="strong">CREG_COM_RATES2</emphasis>&#160;&#160;&#160;0x02</para>
+
+<para>All raw data rate. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___configuration_registers_1ga2d4055fb7ae5b90b771728df21d8d630"/>#define <emphasis role="strong">CREG_COM_RATES3</emphasis>&#160;&#160;&#160;0x03</para>
+
+<para>Individual processed data rate. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___configuration_registers_1ga5afd87e6b62b1d09003e68211b923cff"/>#define <emphasis role="strong">CREG_COM_RATES4</emphasis>&#160;&#160;&#160;0x04</para>
+
+<para>All processed data rate. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___configuration_registers_1gadf6181b559d5aed96df9d7d31da49c45"/>#define <emphasis role="strong">CREG_COM_RATES5</emphasis>&#160;&#160;&#160;0x05</para>
+
+<para>Quaternion, Euler, position, and velocity data rate. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___configuration_registers_1ga1ddd3b1467ce88556377e73b69405e89"/>#define <emphasis role="strong">CREG_COM_RATES6</emphasis>&#160;&#160;&#160;0x06</para>
+
+<para>Pose (Euler &amp; position), health, and gyro bias estimate rates. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___configuration_registers_1gaf2bd88f9c955dc32a359518950411990"/>#define <emphasis role="strong">CREG_COM_RATES7</emphasis>&#160;&#160;&#160;0x07</para>
+
+<para>Data rate for CHR NMEA-style packets. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___configuration_registers_1ga87a5d0ae9f36507d9abab95a6af4a6a4"/>#define <emphasis role="strong">CREG_MISC_SETTINGS</emphasis>&#160;&#160;&#160;0x08</para>
+
+<para>Filter and sensor control options. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___configuration_registers_1ga716d2dbb4a9c1398029e03963805b329"/>#define <emphasis role="strong">CREG_HOME_NORTH</emphasis>&#160;&#160;&#160;0x09</para>
+
+<para>Sets north from current position. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___configuration_registers_1ga0d3cedb1b3d51a92cd1ac0ea614192e0"/>#define <emphasis role="strong">CREG_HOME_EAST</emphasis>&#160;&#160;&#160;0x0A</para>
+
+<para>Sets east from current position. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___configuration_registers_1gae14b52e1b59e879e36f0eadba4c34825"/>#define <emphasis role="strong">CREG_HOME_UP</emphasis>&#160;&#160;&#160;0x0B</para>
+
+<para>Sets home altitude in meters. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___configuration_registers_1ga5ce09d8a4b89dc84c7ccbb2d8ecfd988"/>#define <emphasis role="strong">CREG_GYRO_TRIM_X</emphasis>&#160;&#160;&#160;0x0C</para>
+
+<para>Gyroscope X-axis trim. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___configuration_registers_1ga9cded6a1ff44eb12736afad7cfc2324f"/>#define <emphasis role="strong">CREG_GYRO_TRIM_Y</emphasis>&#160;&#160;&#160;0x0D</para>
+
+<para>Gyroscope Y-axis trim. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___configuration_registers_1gabb39f3c426996c1dba679f8ebca3b8fa"/>#define <emphasis role="strong">CREG_GYRO_TRIM_Z</emphasis>&#160;&#160;&#160;0x0E</para>
+
+<para>Gyroscope Z-axis trim. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___configuration_registers_1ga4e745fdac9fb7d42e8a510104d535c60"/>#define <emphasis role="strong">CREG_MAG_CAL1_1</emphasis>&#160;&#160;&#160;0x0F</para>
+
+<para>Magnetometer calibration matrix element 1,1. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___configuration_registers_1ga5a84008bf88e292a2abee5ed3a10b92f"/>#define <emphasis role="strong">CREG_MAG_CAL1_2</emphasis>&#160;&#160;&#160;0x10</para>
+
+<para>Magnetometer calibration matrix element 1,2. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___configuration_registers_1ga7938f975bb9d807f93cf2bbcb3c9d0c6"/>#define <emphasis role="strong">CREG_MAG_CAL1_3</emphasis>&#160;&#160;&#160;0x11</para>
+
+<para>Magnetometer calibration matrix element 1,3. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___configuration_registers_1gae76289f8b30862ee6eb0e9b51c3e76ad"/>#define <emphasis role="strong">CREG_MAG_CAL2_1</emphasis>&#160;&#160;&#160;0x12</para>
+
+<para>Magnetometer calibration matrix element 2,1. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___configuration_registers_1gaf6e751f2ce0b4252428a9a1be2d13b5d"/>#define <emphasis role="strong">CREG_MAG_CAL2_2</emphasis>&#160;&#160;&#160;0x13</para>
+
+<para>Magnetometer calibration matrix element 2,2. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___configuration_registers_1ga869fda4c5e16dd70994b6ae74e8481cf"/>#define <emphasis role="strong">CREG_MAG_CAL2_3</emphasis>&#160;&#160;&#160;0x14</para>
+
+<para>Magnetometer calibration matrix element 2,3. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___configuration_registers_1gaa78b7a6085d3166fa157729caa882ccb"/>#define <emphasis role="strong">CREG_MAG_CAL3_1</emphasis>&#160;&#160;&#160;0x15</para>
+
+<para>Magnetometer calibration matrix element 3,1. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___configuration_registers_1ga87487288b0b61368227283f109d9c582"/>#define <emphasis role="strong">CREG_MAG_CAL3_2</emphasis>&#160;&#160;&#160;0x16</para>
+
+<para>Magnetometer calibration matrix element 3,2. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___configuration_registers_1ga7986de55e3f5da525b909f3c05e4ae8d"/>#define <emphasis role="strong">CREG_MAG_CAL3_3</emphasis>&#160;&#160;&#160;0x17</para>
+
+<para>Magnetometer calibration matrix element 3,3. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___configuration_registers_1ga2f3305d1526401d1de6728967aadf47a"/>#define <emphasis role="strong">CREG_MAG_BIAS_X</emphasis>&#160;&#160;&#160;0x18</para>
+
+<para>Magnetometer X-axis bias. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___configuration_registers_1ga291693c83ebd10c06a2cde83af50f598"/>#define <emphasis role="strong">CREG_MAG_BIAS_Y</emphasis>&#160;&#160;&#160;0x19</para>
+
+<para>Magnetometer Y-axis bias. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___configuration_registers_1ga3666d4d0ac49c0cf0fd8c1fe4bcc1c49"/>#define <emphasis role="strong">CREG_MAG_BIAS_Z</emphasis>&#160;&#160;&#160;0x1A</para>
+
+<para>Magnetometer Z-axis bias. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___configuration_registers_1ga647892b260adb55ac724d46966e347d9"/>#define <emphasis role="strong">CREG_ACCEL_CAL1_1</emphasis>&#160;&#160;&#160;0x1B</para>
+
+<para>Accelerometer calibration matrix element 1,1. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___configuration_registers_1ga0b468d71b85ef5ff8f4e18746df8bd9a"/>#define <emphasis role="strong">CREG_ACCEL_CAL1_2</emphasis>&#160;&#160;&#160;0x1C</para>
+
+<para>Accelerometer calibration matrix element 1,2. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___configuration_registers_1ga62fd4811d5e8cd68e8036c318f8f91a3"/>#define <emphasis role="strong">CREG_ACCEL_CAL1_3</emphasis>&#160;&#160;&#160;0x1D</para>
+
+<para>Accelerometer calibration matrix element 1,3. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___configuration_registers_1ga5e9aa9018faad7e51f0cdb1b00f3984e"/>#define <emphasis role="strong">CREG_ACCEL_CAL2_1</emphasis>&#160;&#160;&#160;0x1E</para>
+
+<para>Accelerometer calibration matrix element 2,1. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___configuration_registers_1gac3ba946f0a2cf8d7c6f1772332283136"/>#define <emphasis role="strong">CREG_ACCEL_CAL2_2</emphasis>&#160;&#160;&#160;0x1F</para>
+
+<para>Accelerometer calibration matrix element 2,2. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___configuration_registers_1ga2fae036cb14e3bb6e9f7c767837fbeea"/>#define <emphasis role="strong">CREG_ACCEL_CAL2_3</emphasis>&#160;&#160;&#160;0x20</para>
+
+<para>Accelerometer calibration matrix element 2,3. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___configuration_registers_1ga7dccbc25841074ca85ee3a1bebbc4a10"/>#define <emphasis role="strong">CREG_ACCEL_CAL3_1</emphasis>&#160;&#160;&#160;0x21</para>
+
+<para>Accelerometer calibration matrix element 3,1. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___configuration_registers_1ga1d16eaf3dbd6da9a0b52ffbf2a5bc6db"/>#define <emphasis role="strong">CREG_ACCEL_CAL3_2</emphasis>&#160;&#160;&#160;0x22</para>
+
+<para>Accelerometer calibration matrix element 3,2. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___configuration_registers_1ga7c0f63d9c71e839c5818590a7a33a45f"/>#define <emphasis role="strong">CREG_ACCEL_CAL3_3</emphasis>&#160;&#160;&#160;0x23</para>
+
+<para>Accelerometer calibration matrix element 3,3. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___configuration_registers_1ga5be9625392b3c93778ac58b2399d1ca8"/>#define <emphasis role="strong">CREG_ACCEL_BIAS_X</emphasis>&#160;&#160;&#160;0x24</para>
+
+<para>Accelerometer X-axis bias. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___configuration_registers_1ga1d74a972a7a85f9e4d66124b6b29d24d"/>#define <emphasis role="strong">CREG_ACCEL_BIAS_Y</emphasis>&#160;&#160;&#160;0x25</para>
+
+<para>Accelerometer Y-axis bias. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_group___configuration_registers_1ga92bb494ecd856de20a51c5f7c576ce79"/>#define <emphasis role="strong">CREG_ACCEL_BIAS_Z</emphasis>&#160;&#160;&#160;0x26</para>
+
+<para>Accelerometer Z-axis bias. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Definitions for configuration register addresses. </para>
+</section>
+</section>

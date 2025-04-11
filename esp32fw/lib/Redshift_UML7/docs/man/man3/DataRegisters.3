@@ -1,0 +1,243 @@
+.TH "DataRegisters" 3 "Version 1.0" "RedshiftLabls UM7 library" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+DataRegisters \- Data Registers
+.PP
+ \- Definitions for data register addresses\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBDREG_HEALTH\fP   0x55"
+.br
+.RI "Health register\&. "
+.ti -1c
+.RI "#define \fBDREG_GYRO_RAW_XY\fP   0x56"
+.br
+.RI "Raw gyroscope X and Y-axis data\&. "
+.ti -1c
+.RI "#define \fBDREG_GYRO_RAW_Z\fP   0x57"
+.br
+.RI "Raw gyroscope Z-axis data\&. "
+.ti -1c
+.RI "#define \fBDREG_GYRO_RAW_TIME\fP   0x58"
+.br
+.RI "Timestamp for raw gyroscope data\&. "
+.ti -1c
+.RI "#define \fBDREG_ACCEL_RAW_XY\fP   0x59"
+.br
+.RI "Raw accelerometer X and Y-axis data\&. "
+.ti -1c
+.RI "#define \fBDREG_ACCEL_RAW_Z\fP   0x5A"
+.br
+.RI "Raw accelerometer Z-axis data\&. "
+.ti -1c
+.RI "#define \fBDREG_ACCEL_RAW_TIME\fP   0x5B"
+.br
+.RI "Timestamp for raw accelerometer data\&. "
+.ti -1c
+.RI "#define \fBDREG_MAG_RAW_XY\fP   0x5C"
+.br
+.RI "Raw magnetometer X and Y-axis data\&. "
+.ti -1c
+.RI "#define \fBDREG_MAG_RAW_Z\fP   0x5D"
+.br
+.RI "Raw magnetometer Z-axis data\&. "
+.ti -1c
+.RI "#define \fBDREG_MAG_RAW_TIME\fP   0x5E"
+.br
+.RI "Timestamp for raw magnetometer data\&. "
+.ti -1c
+.RI "#define \fBDREG_TEMPERATURE\fP   0x5F"
+.br
+.RI "Temperature data\&. "
+.ti -1c
+.RI "#define \fBDREG_TEMPERATURE_TIME\fP   0x60"
+.br
+.RI "Timestamp for temperature data\&. "
+.ti -1c
+.RI "#define \fBDREG_GYRO_PROC_X\fP   0x61"
+.br
+.RI "Processed gyroscope X-axis data (deg/s) "
+.ti -1c
+.RI "#define \fBDREG_GYRO_PROC_Y\fP   0x62"
+.br
+.RI "Processed gyroscope Y-axis data (deg/s) "
+.ti -1c
+.RI "#define \fBDREG_GYRO_PROC_Z\fP   0x63"
+.br
+.RI "Processed gyroscope Z-axis data (deg/s) "
+.ti -1c
+.RI "#define \fBDREG_GYRO_PROC_TIME\fP   0x64"
+.br
+.RI "Timestamp for processed gyroscope data\&. "
+.ti -1c
+.RI "#define \fBDREG_ACCEL_PROC_X\fP   0x65"
+.br
+.RI "Processed accelerometer X-axis data (m/s^2) "
+.ti -1c
+.RI "#define \fBDREG_ACCEL_PROC_Y\fP   0x66"
+.br
+.RI "Processed accelerometer Y-axis data (m/s^2) "
+.ti -1c
+.RI "#define \fBDREG_ACCEL_PROC_Z\fP   0x67"
+.br
+.RI "Processed accelerometer Z-axis data (m/s^2) "
+.ti -1c
+.RI "#define \fBDREG_ACCEL_PROC_TIME\fP   0x68"
+.br
+.RI "Timestamp for processed accelerometer data\&. "
+.ti -1c
+.RI "#define \fBDREG_MAG_PROC_X\fP   0x69"
+.br
+.RI "Processed magnetometer X-axis data (T) "
+.ti -1c
+.RI "#define \fBDREG_MAG_PROC_Y\fP   0x6A"
+.br
+.RI "Processed magnetometer Y-axis data (T) "
+.ti -1c
+.RI "#define \fBDREG_MAG_PROC_Z\fP   0x6B"
+.br
+.RI "Processed magnetometer Z-axis data (T) "
+.ti -1c
+.RI "#define \fBDREG_MAG_PROC_TIME\fP   0x6C"
+.br
+.RI "Timestamp for processed magnetometer data\&. "
+.ti -1c
+.RI "#define \fBDREG_QUAT_AB\fP   0x6D"
+.br
+.RI "Quaternion components A and B\&. "
+.ti -1c
+.RI "#define \fBDREG_QUAT_CD\fP   0x6E"
+.br
+.RI "Quaternion components C and D\&. "
+.ti -1c
+.RI "#define \fBDREG_QUAT_TIME\fP   0x6F"
+.br
+.RI "Timestamp for quaternion data\&. "
+.ti -1c
+.RI "#define \fBDREG_EULER_PHI_THETA\fP   0x70"
+.br
+.RI "Euler angles phi and theta (deg) "
+.ti -1c
+.RI "#define \fBDREG_EULER_PSI\fP   0x71"
+.br
+.RI "Euler angle psi (deg) "
+.ti -1c
+.RI "#define \fBDREG_EULER_PHI_THETA_DOT\fP   0x72"
+.br
+.RI "Euler angle rates phi and theta (deg/s) "
+.ti -1c
+.RI "#define \fBDREG_EULER_PSI_DOT\fP   0x73"
+.br
+.RI "Euler angle rate psi (deg/s) "
+.ti -1c
+.RI "#define \fBDREG_EULER_TIME\fP   0x74"
+.br
+.RI "Timestamp for Euler angle data\&. "
+.ti -1c
+.RI "#define \fBDREG_POSITION_N\fP   0x75"
+.br
+.RI "Position north (m) "
+.ti -1c
+.RI "#define \fBDREG_POSITION_E\fP   0x76"
+.br
+.RI "Position east (m) "
+.ti -1c
+.RI "#define \fBDREG_POSITION_UP\fP   0x77"
+.br
+.RI "Position up (m) "
+.ti -1c
+.RI "#define \fBDREG_POSITION_TIME\fP   0x78"
+.br
+.RI "Timestamp for position data\&. "
+.ti -1c
+.RI "#define \fBDREG_VELOCITY_N\fP   0x79"
+.br
+.RI "Velocity north (m/s) "
+.ti -1c
+.RI "#define \fBDREG_VELOCITY_E\fP   0x7A"
+.br
+.RI "Velocity east (m/s) "
+.ti -1c
+.RI "#define \fBDREG_VELOCITY_UP\fP   0x7B"
+.br
+.RI "Velocity up (m/s) "
+.ti -1c
+.RI "#define \fBDREG_VELOCITY_TIME\fP   0x7C"
+.br
+.RI "Timestamp for velocity data\&. "
+.ti -1c
+.RI "#define \fBDREG_GPS_LATITUDE\fP   0x7D"
+.br
+.RI "GPS latitude (deg) "
+.ti -1c
+.RI "#define \fBDREG_GPS_LONGITUDE\fP   0x7E"
+.br
+.RI "GPS longitude (deg) "
+.ti -1c
+.RI "#define \fBDREG_GPS_ALTITUDE\fP   0x7F"
+.br
+.RI "GPS altitude (m) "
+.ti -1c
+.RI "#define \fBDREG_GPS_COURSE\fP   0x80"
+.br
+.RI "GPS course (deg) "
+.ti -1c
+.RI "#define \fBDREG_GPS_SPEED\fP   0x81"
+.br
+.RI "GPS speed (m/s) "
+.ti -1c
+.RI "#define \fBDREG_GPS_TIME\fP   0x82"
+.br
+.RI "GPS time\&. "
+.ti -1c
+.RI "#define \fBDREG_GPS_SAT_1_2\fP   0x83"
+.br
+.RI "GPS satellites 1 and 2\&. "
+.ti -1c
+.RI "#define \fBDREG_GPS_SAT_3_4\fP   0x84"
+.br
+.RI "GPS satellites 3 and 4\&. "
+.ti -1c
+.RI "#define \fBDREG_GPS_SAT_5_6\fP   0x85"
+.br
+.RI "GPS satellites 5 and 6\&. "
+.ti -1c
+.RI "#define \fBDREG_GPS_SAT_7_8\fP   0x86"
+.br
+.RI "GPS satellites 7 and 8\&. "
+.ti -1c
+.RI "#define \fBDREG_GPS_SAT_9_10\fP   0x87"
+.br
+.RI "GPS satellites 9 and 10\&. "
+.ti -1c
+.RI "#define \fBDREG_GPS_SAT_11_12\fP   0x88"
+.br
+.RI "GPS satellites 11 and 12\&. "
+.ti -1c
+.RI "#define \fBDREG_GYRO_BIAS_X\fP   0x89"
+.br
+.RI "Gyroscope X-axis bias\&. "
+.ti -1c
+.RI "#define \fBDREG_GYRO_BIAS_Y\fP   0x8A"
+.br
+.RI "Gyroscope Y-axis bias\&. "
+.ti -1c
+.RI "#define \fBDREG_GYRO_BIAS_Z\fP   0x8B"
+.br
+.RI "Gyroscope Z-axis bias\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definitions for data register addresses\&. 
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for RedshiftLabls UM7 library from the source code\&.
