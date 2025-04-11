@@ -146,7 +146,5 @@ FW_revision[4] = '\0'; // Null-terminate the FW revision so we can use it like a
 // Print the firmware revision to the terminal (or do whatever else you want…)
 printf("Got the firmware revision: %s\r\n", FW_revision);
 }
-// TODO: Check to see if any of the other packets that we care about have been found.
-// If so, do stuff with them.
 }
 }

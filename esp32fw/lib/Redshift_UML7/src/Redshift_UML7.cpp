@@ -808,7 +808,6 @@ bool Redshift_UML7::getGPSMeasurements(GPSMeasurement &gpsData){
 
 
 bool Redshift_UML7::getGPSMeasurements(float &latitude, float &longitude, float &altitude, float &time, float &course, float &speed) {
-    //TODO Implement this method
     uint8_t data[4];
     if (read_register_data(DREG_GPS_LATITUDE, data, 4)) {
         latitude = read_register_as_float(data);
