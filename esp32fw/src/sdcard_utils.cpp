@@ -214,6 +214,8 @@ bool load_config(const char* path) {
             config.wifiEnabled = (line.substring(12) == "1");
         } else if (line.startsWith("HTTPSERVER=")) {
             config.httpServer = line.substring(11);
+        } else if (line.startsWith("AUTHTOKEN=")) {
+            config.authToken = line.substring(10);
         } else if (line.startsWith("SCRAPEINTERVAL=")) { // Parse HTTPSENDINTERVAL
             config.scrapeInterval = line.substring(17).toInt();
         } else if (line.startsWith("SDCARDENABLED=")) {

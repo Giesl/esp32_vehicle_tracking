@@ -166,6 +166,7 @@ void sendPostRequest(const String& payload) {
 
     http.begin(client, config.httpServer.c_str());
     http.addHeader("Content-Type", "application/json");
+    http.addHeader("Authorization", "Bearer " + config.authToken);
     int httpResponseCode = http.POST(payload);
     if (httpResponseCode > 0) {
       String response = http.getString();

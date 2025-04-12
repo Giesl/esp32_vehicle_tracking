@@ -12,6 +12,7 @@ struct Config {
     String wifiPassword = "1111122222";
     String logFile = "/can_log.txt";
     String httpServer = "http://iot.giesl.cz/canbus_data";
+    String authToken = "token1";
     bool sdCardEnabled = true;
     int obdIIRequestInterval = 5000;
     int scrapeInterval = 10000;
