@@ -25,6 +25,8 @@ from starlette.responses import JSONResponse
 from fastapi_app.app.models import TeltonikaData
 from fastapi_app.app.teltonika_parser import teltonika_prepare_data_for_influxdb
 
+from fastapi_app.app.models import CombinedESPMessage
+
 # InfluxDB configuration
 influx_token = os.environ.get("INFLUX_TOKEN", "viGZA7zu-lkoFQpplbBZjTezXAKvmxRwziZFcU-xzF0Qq_wiERbCc6tbFVQ7cDW2WlHOunAALlUuyGdlgU0FDg==")
 influx_org = os.environ.get("INFLUX_ORG", "9934126df83fdfe2")
@@ -57,6 +59,7 @@ app.add_middleware(
 
 # List of valid API tokens
 VALID_API_TOKENS = ["token1", "token2", "token3"]
+
 #### postgres configuration
 postgres_user = "postgres"
 postgres_password = "eQG7hSXiZTn7e0E7aDkcSec3"
@@ -111,7 +114,7 @@ async def validation_exception_handler(request: Request, exc: RequestValidationE
 @app.post(
     "/canbus_data",
     tags=["ESP32"], # Group in Swagger UI
-    summary="Receive and process CAN bus data from ESP32 devices",
+    summary="Receive and process data from ESP32 devices",
     description="Receives JSON data typically sent from an ESP32 device reading a vehicle's CAN bus. Parses the data and writes relevant points to InfluxDB.",
     response_model=SuccessMessage, # Model for the success response body
     status_code=status.HTTP_200_OK, # Default success status code
@@ -123,13 +126,13 @@ async def validation_exception_handler(request: Request, exc: RequestValidationE
     },
     dependencies=[Depends(authenticate_api_token)] # Apply authentication
 )
-async def receive_canbus_data(data: dict):
+async def receive_canbus_data(data: CombinedESPMessage = Body(..., description="JSON payload from ESP32 device")):
     """
         Endpoint to receive CAN bus data from ESP32.
-
-        - **data**: The main JSON payload containing device ID, timestamp, and CAN readings.
-        """
+        - **data**: The main JSON payload containing device ID, config, timestamp, and CAN readings.
+    """
     # Process the received data here
+    data = data.dict()
     print(f'Received CAN bus data: {data}')
 
     # Write data to a file

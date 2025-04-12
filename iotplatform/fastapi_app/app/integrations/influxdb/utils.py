@@ -18,6 +18,10 @@ def print_influxdb_points(points: list):
 
 def dict_to_influxdb_points(data: dict, tags: dict, prefix:str = "") -> list:
     points = []
+    if data is None:
+        logging.warning("Received None data")
+        return points
+
     timestamp = int(time.time())
     for key, value in data.items():
         if type(value) is dict:
