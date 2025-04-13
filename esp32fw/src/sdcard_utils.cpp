@@ -211,6 +211,7 @@ bool load_config(const char* path) {
         } else if (line.startsWith("WIFIPASSWORD=")) {
             config.wifiPassword = line.substring(13);
         } else if (line.startsWith("WIFIENABLED=")) {
+            Serial.println("FOUND WIFIENABLED: " + line.substring(12)); // Debugging line
             config.wifiEnabled = (line.substring(12) == "1");
         } else if (line.startsWith("HTTPSERVER=")) {
             config.httpServer = line.substring(11);
@@ -249,6 +250,7 @@ bool load_config(const char* path) {
     Serial.println("Configuration loaded:");
     Serial.println("WiFi SSID: " + config.wifiSSID);
     Serial.println("WiFi Password: " + config.wifiPassword);
+    Serial.println("WiFi Enabled: " + String(config.wifiEnabled));
     Serial.println("HTTP Server: " + config.httpServer);
     Serial.println("SD Card Enabled: " + String(config.sdCardEnabled));
     Serial.println("OBD II request interval: " + String(config.obdIIRequestInterval));

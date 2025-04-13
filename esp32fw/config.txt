@@ -3,6 +3,7 @@
 # WiFi settings
 WIFISSID=VG
 WIFIPASSWORD=1111122222
+WIFIENABLED=0
 
 # HTTP server settings
 HTTPSERVER=http://iot.giesl.cz/canbus_data
