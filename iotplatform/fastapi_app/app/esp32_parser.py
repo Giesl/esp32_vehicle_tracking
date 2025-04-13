@@ -129,7 +129,7 @@ def parse_can_messages(messages:list, device_id: str):
 
 
 def parse_json_device_data(data: dict):
-    print(f"Parsing data: {data}")
+    logging.debug(f"Parsing data: {data}")
     points = []
     if "device_id" in data.keys():
         device_id = data.get("device_id", "undefined")

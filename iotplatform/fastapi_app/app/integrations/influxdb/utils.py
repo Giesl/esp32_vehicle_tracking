@@ -47,9 +47,7 @@ def dict_to_influxdb_points(data: dict, tags: dict, prefix:str = "") -> list:
 
 
 async def write_to_influxdb( points: list, bucket: str = "main", client: InfluxDBClient = None):
-    print("Points to write into influxdb")
-    for point in points:
-        print(point)
+    logging.debug(f"Writing points to InfluxDB: {points}")
     if client is None:
         client = InfluxDBClient(url="http://localhost:8086", token=influx_token, org=influx_org)
         write_api = client.write_api(write_options=SYNCHRONOUS)

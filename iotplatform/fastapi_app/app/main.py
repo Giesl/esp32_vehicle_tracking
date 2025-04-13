@@ -223,12 +223,13 @@ async def upload_file(data: dict):
     total_points = 0
     routes_data = []
     for data_str in data["file"]:
+        logging.info("Processing data string")
         # Extract the Base64-encoded portion
         if data_str.startswith("data:text/plain;base64,"):
             base64_data = data_str.split(",", 1)[1]  # Get the part after 'base64,'
             try:
                 decoded_data = base64.b64decode(base64_data).decode("utf-8")  # Decode Base64 and convert to string
-                print(f"Decoded data: {decoded_data}")
+                logging.info(f"Decoded data: {decoded_data}")
 
                 with open(f"/app/data/imported/decoded_data_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json", "a") as decoded_file:
                     decoded_file.write("start_time=" + data["start_time"] + "\n")
@@ -273,9 +274,9 @@ async def upload_file(data: dict):
 
                 if len(route_data) > 0:
                     routes_data.append(route_data)
-                print(f"File has {routes} routes and {total_points} data points")
-                print(f"Start time: {data['start_time']}")
-                print(f"Routes data({len(routes_data)}): {routes_data}")\
+                logging.info(f"File has {routes} routes and {total_points} data points")
+                logging.info(f"Start time: {data['start_time']}")
+                logging.info(f"Routes data({len(routes_data)}): {routes_data}")\
 
                 start_str = data.get("start_time", "")
                 start_dt = None
@@ -290,6 +291,7 @@ async def upload_file(data: dict):
                     for millis, point in route:
                         # Convert milliseconds to datetime
                         point_time = start_dt + timedelta(milliseconds=millis)
+                        logging.warning(f"Point time: {point_time} ({start_dt} + {millis} ms)")
                         data_points = parse_json_device_data(point)
                         for data_point in data_points:
                             # Add the timestamp to the point
@@ -306,7 +308,7 @@ async def upload_file(data: dict):
                     print("END ROUTE")
                     break
 
-                print("WRITING TO INFLUXDB")
+                logging.info("WRITING TO INFLUXDB")
                 await asyncio.gather(write_to_influxdb(influx_points, client=influx_client))
 
             except Exception as e:
