@@ -193,19 +193,19 @@ void connectToWiFi() {
   while (WiFi.status() != WL_CONNECTED && (millis() - startTime) < connectionTimeout) {
     delay(500);
     Serial.print(".");
-    digitalWrite(26, !digitalRead(26)); // Blink LED 26 while connecting to WiFi
+    digitalWrite(SHIELD_LED_PIN, !digitalRead(SHIELD_LED_PIN)); // Blink LED 26 while connecting to WiFi
   }
 
   if (WiFi.status() != WL_CONNECTED) {
     Serial.println("\nWiFi connection timed out");
-    digitalWrite(26, LOW); // Turn off LED 26 if WiFi connection fails
+    digitalWrite(SHIELD_LED_PIN, LOW); // Turn off LED 26 if WiFi connection fails
   } else {
     Serial.println("WiFi connected!");
     Serial.print("IP address: ");
     Serial.println(WiFi.localIP());
     Serial.print("DNS: ");
     Serial.println(WiFi.dnsIP());
-    digitalWrite(26, HIGH); // Turn on LED 26 when WiFi is connected
+    digitalWrite(SHIELD_LED_PIN, HIGH); // Turn on LED 26 when WiFi is connected
   }
 }
 
