@@ -120,7 +120,7 @@ void handle_can_message() {
     }
 
     // Apply CAN ID filter if enabled
-    /*
+
     if (config.canFilterEnabled) {
         bool idAllowed = false;
         for (uint32_t id : config.filteredCanIds) {
@@ -134,7 +134,7 @@ void handle_can_message() {
             return;
         }
     }
-        */
+
 
     // Construct the CAN message string
     String message = "0x";
