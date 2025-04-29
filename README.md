@@ -113,10 +113,20 @@ Edit `esp32fw/config.txt` to customize:
 
 ## 🔮 Possible Future Improvements
 
-- Advanced filtering and analytics on device
-- Vehicle behavior anomaly detection
+- **Integration of GSM/LTE Module**: Adding mobile network support would eliminate the dependency on external Wi-Fi and enable remote data transmission from virtually anywhere.
 
-K
+- **Real-Time Clock (RTC) Module**: Including a battery-backed RTC would ensure accurate timestamps, especially when GPS is unavailable, improving reliability in offline mode.
+
+- **Advanced Power Management**: Implementing sleep modes (e.g., ESP32 Deep Sleep) and ignition status detection would help reduce energy consumption when the vehicle is not active.
+
+- **On-Device Data Processing**: Running data filtering and event detection (e.g., hard braking or acceleration) directly on the ESP32 would reduce data transfer volume and improve responsiveness.
+
+- **Direct OBD-II PID Decoding**: Adding native support for decoding standard and proprietary OBD-II PIDs would provide immediate access to readable values like speed, RPM, and temperature.
+
+- **Bluetooth Communication**: Bluetooth could be used for convenient local configuration and log retrieval via a mobile app or PC without removing the SD card.
+
+These improvements aim to increase the system's autonomy, efficiency, and usability, bringing it closer to commercial-grade telematics solutions&#8203;:contentReference[oaicite:0]{index=0}.
+
 ## 👤 Author
 
 Created by **Vojtěch Giesl** as part of his 2025 Master's Thesis at [VŠB – Technical University of Ostrava](https://www.fei.vsb.cz/cs).
